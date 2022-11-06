@@ -19,7 +19,7 @@ create table Login(
 )
 
 create table Profile(
-	UserID varchar(MAX),
+	UserID int,
 	First_name varchar(50),
 	Last_name varchar(50),
 	Gender varchar(50),
@@ -28,9 +28,13 @@ create table Profile(
 	Phone varchar(11),
 	Profilepic image,
 	SocialID int,
+	SocialTitle varchar(20),
 	SkillID int,
+	SkillTitle varchar(20),
 	EducationID int,
-	Experience_ID int
+	EducationTitle varchar(20),
+	Experience_ID int,
+	ExperienceTitle varchar(20)
 )
 
 create table Social(
@@ -60,7 +64,7 @@ create table Education(
 
 create table Experience(
 	Experience_ID int,
-	Title varchar(11),
+	Title varchar(20),
 	Company_name varchar(11),
 	Description varchar(100),
 	Starting_Date date,
@@ -68,3 +72,20 @@ create table Experience(
 	Job_type varchar(11),
 	primary key(Experience_ID, Title)
 )
+
+
+
+
+
+
+
+
+
+alter table Register add foreign key (LoginID) references Login(LoginID)
+alter table Users add foreign key (RegisterID) references Register(RegisterID)
+alter table Profile add foreign key (UserID) references Users(UserID)
+alter table Profile add unique(UserID)
+alter table Profile add foreign key (SocialID,SocialTitle) references Social(SocialID,Title)
+alter table Profile add foreign key (SkillID,SkillTitle) references Skills(SkillID,Title)
+alter table Profile add foreign key (EducationID,EducationTitle) references Education(EducationID,Title)
+alter table Profile add foreign key (Experience_ID,ExperienceTitle) references Experience(Experience_ID,Title)
