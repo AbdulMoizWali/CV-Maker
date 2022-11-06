@@ -1,6 +1,6 @@
 create database [CV Maker]
 
-create table User(
+create table Users(
 	UserID int primary key,
 	RegisterID int
 )
