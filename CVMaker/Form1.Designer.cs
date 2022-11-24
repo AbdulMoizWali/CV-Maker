@@ -40,9 +40,6 @@ namespace CVMaker
             this.password = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.close = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -164,28 +161,6 @@ namespace CVMaker
             this.label1.TabIndex = 10;
             this.label1.Text = "Get Started";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.close);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(286, 547);
-            this.panel1.TabIndex = 21;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
-            // 
-            // close
-            // 
-            this.close.AutoSize = true;
-            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.close.Location = new System.Drawing.Point(256, 10);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(17, 17);
-            this.close.TabIndex = 0;
-            this.close.Text = "X";
-            this.close.Click += new System.EventHandler(this.close_Click);
-            // 
             // Formregister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,14 +178,10 @@ namespace CVMaker
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Formregister";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,8 +200,6 @@ namespace CVMaker
         private System.Windows.Forms.Label password;
         private System.Windows.Forms.Label username;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label close;
     }
 }
 
