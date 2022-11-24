@@ -16,5 +16,27 @@ namespace CVMaker
         {
             InitializeComponent();
         }
+
+        private void checkboxpass_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Formregister f2 = new Formregister();
+            f2.Show();
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

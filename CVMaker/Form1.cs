@@ -35,7 +35,13 @@ namespace CVMaker
 
         private void close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Formlogin f1 = new Formlogin();
+            f1.Show();
         }
     }
 }

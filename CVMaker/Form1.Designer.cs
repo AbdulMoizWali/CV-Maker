@@ -56,6 +56,7 @@ namespace CVMaker
             this.label4.Size = new System.Drawing.Size(97, 17);
             this.label4.TabIndex = 20;
             this.label4.Text = "Back to LOGIN";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -117,6 +118,7 @@ namespace CVMaker
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(38, 167);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -178,6 +180,7 @@ namespace CVMaker
             // close
             // 
             this.close.AutoSize = true;
+            this.close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close.Location = new System.Drawing.Point(256, 10);
             this.close.Name = "close";
