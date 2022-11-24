@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CVMaker
 {
-	public partial class Form1 : Form
+	public partial class Formregister : Form
 	{
-		public Form1()
+		public Formregister()
 		{
 			InitializeComponent();
 		}
