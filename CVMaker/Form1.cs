@@ -17,7 +17,7 @@ namespace CVMaker
 		{
 			InitializeComponent();
 		}
-
+    
         private void mouse_Down(object sender, MouseEventArgs e)
         {
 			mouseLocation = new Point(-e.X, -e.Y);
@@ -37,11 +37,23 @@ namespace CVMaker
         {
             Application.Exit();
         }
-
+      
         private void label4_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Formlogin f2 = new Formlogin();
             f2.Show();
+
+            
+            
+            
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Formlogin f2 = new Formlogin();
+            f2.Hide();
+        }
+
     }
 }
