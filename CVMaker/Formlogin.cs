@@ -16,6 +16,7 @@ namespace CVMaker
         public Formlogin()
         {
             InitializeComponent();
+            
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -28,7 +29,8 @@ namespace CVMaker
             this.Hide();
             Formregister f1 = new Formregister();
             f1.Show();
-           
+            f1.Opacity = 100;
+
         }
 
         private void mouse_Down(object sender, MouseEventArgs e)
@@ -42,8 +44,9 @@ namespace CVMaker
             {
                 Point mousePose = Control.MousePosition;
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
-                Location = mousePose;
+                this.Location = mousePose;
             }
+            
         }
     }
 }

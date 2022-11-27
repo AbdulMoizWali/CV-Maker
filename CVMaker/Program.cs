@@ -15,8 +15,11 @@ namespace CVMaker
 		static void Main()
 		{
 			Application.EnableVisualStyles();
+			
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Formregister());
+			Application.Run(new splashscreen());
+			//Application.Run(new adminForm2());
+			//Application.Run(new Formregister());
 		}
 	}
 }

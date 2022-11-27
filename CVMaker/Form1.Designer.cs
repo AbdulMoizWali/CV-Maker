@@ -29,6 +29,8 @@ namespace CVMaker
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formregister));
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.register = new System.Windows.Forms.Button();
@@ -42,6 +44,7 @@ namespace CVMaker
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.close = new System.Windows.Forms.Label();
+            this.timerspa = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +83,7 @@ namespace CVMaker
             this.register.TabIndex = 18;
             this.register.Text = "Register";
             this.register.UseVisualStyleBackColor = false;
+            this.register.Click += new System.EventHandler(this.register_Click);
             // 
             // checkboxpass
             // 
@@ -176,6 +180,7 @@ namespace CVMaker
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouse_Up);
             // 
             // close
             // 
@@ -187,6 +192,11 @@ namespace CVMaker
             this.close.TabIndex = 0;
             this.close.Text = "X";
             this.close.Click += new System.EventHandler(this.close_Click);
+            // 
+            // timerspa
+            // 
+            this.timerspa.Interval = 15;
+            this.timerspa.Tick += new System.EventHandler(this.timerspa_Tick);
             // 
             // Formregister
             // 
@@ -208,9 +218,11 @@ namespace CVMaker
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Formregister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Formregister_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -233,6 +245,7 @@ namespace CVMaker
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label close;
+        private System.Windows.Forms.Timer timerspa;
     }
 }
 
