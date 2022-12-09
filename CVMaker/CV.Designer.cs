@@ -1986,7 +1986,7 @@ namespace CVMaker
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Linen;
-            this.button6.Image = global::CVMaker.Properties.Resources.icons8_home_page_25;
+          
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(-33, 106);
             this.button6.Name = "button6";
