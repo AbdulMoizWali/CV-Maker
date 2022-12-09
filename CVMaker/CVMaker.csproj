@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminForm2.Designer.cs">
+      <DependentUpon>adminForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CV.Designer.cs">
+      <DependentUpon>CV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Experience.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Experience.Designer.cs">
+      <DependentUpon>Experience.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,23 +77,63 @@
     <Compile Include="Formlogin.Designer.cs">
       <DependentUpon>Formlogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="popupCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popupCV.Designer.cs">
+      <DependentUpon>popupCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="roundedpanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="skill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="skill.Designer.cs">
+      <DependentUpon>skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splashscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashscreen.Designer.cs">
+      <DependentUpon>splashscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC.Designer.cs">
+      <DependentUpon>UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winapi.cs" />
+    <EmbeddedResource Include="adminForm2.resx">
+      <DependentUpon>adminForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CV.resx">
+      <DependentUpon>CV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Experience.resx">
+      <DependentUpon>Experience.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlogin.resx">
       <DependentUpon>Formlogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="popupCV.resx">
+      <DependentUpon>popupCV.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="skill.resx">
+      <DependentUpon>skill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashscreen.resx">
+      <DependentUpon>splashscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC.resx">
+      <DependentUpon>UC.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,5 +147,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
