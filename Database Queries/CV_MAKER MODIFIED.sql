@@ -174,3 +174,11 @@ declare @Userid int
 set @Userid = (select top 1 UserID from login_log order by login_time desc)
 print @Userid
 */
+
+select * from [User]
+delete from Profile
+select * from Profile
+select * from login_log
+
+insert into login_log(UserID, login_time) values (4, GETDATE())
+insert into login_log(UserID, login_time) values (5, GETDATE())

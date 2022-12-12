@@ -376,7 +376,31 @@ namespace CVMaker
 		#region Profile
 		private void Save_Profile_Click(object sender, EventArgs e)
 		{
-            SQLConnect.InsertSQLCommand("Insert 1, '" + First_Name.Text + "',");
+            string Gender = "";
+			if (Male_Radio.Checked)
+			{
+                Gender = Male_Radio.Text;
+			}
+            else if (Female_Radio.Checked)
+            {
+                Gender = Female_Radio.Text;
+            }
+            byte[] pic = null;
+            if (ProfilePic.Image != null)
+			{
+                MemoryStream stream = new MemoryStream();
+                ProfilePic.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                pic = stream.ToArray();
+			}
+            SQLConnect.InsertSQLCommand(
+                SQLConnect.ProcedureQuery("Insert_Profile", First_Name.Text, Last_Name.Text, Gender, Country.Text, City.Text, Phone_Number.Text, "@ProfilePic"),
+                //"insert into Profile values (4, '" + First_Name.Text + "', '" + Last_Name.Text + "', '" + Gender + "', '" + Country.Text + "', '" + City.Text + "', '" + Phone_Number.Text + "', '" + "@ProfilePic')",
+                null,
+                "@ProfilePic",
+                pic
+            );
+
+
 		}
 		private void Upload_ProfilePic_Click(object sender, EventArgs e)
 		{

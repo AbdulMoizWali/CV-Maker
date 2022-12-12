@@ -57,23 +57,23 @@ namespace SQL
 		#endregion
 
 		#region SQL Command
-		public static void InsertSQLCommand(string query, Action onSuccess = null)
+		public static void InsertSQLCommand(string query, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
 		{
-			SQLCommand(query, "Inserted the record", "Enter correct data and ID cannot be duplicate", onSuccess);
+			SQLCommand(query, "Inserted the record", "Enter correct data and ID cannot be duplicate", onSuccess, ParameterName, ParameterData);
 		}
 
 
-		public static void UpdateSQLCommand(string query, Action onSuccess = null)
+		public static void UpdateSQLCommand(string query, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
 		{
-			SQLCommand(query, "Updated the record", "Cannot Update the record", onSuccess);
+			SQLCommand(query, "Updated the record", "Cannot Update the record", onSuccess, ParameterName, ParameterData);
 		}
 
-		public static void RemoveSQLCommand(string query, Action onSuccess = null)
+		public static void RemoveSQLCommand(string query, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
 		{
-			SQLCommand(query, "Removed the record", "Cannot remove the record (Id not found or it has Working Schedule)", onSuccess);
+			SQLCommand(query, "Removed the record", "Cannot remove the record (Id not found or it has Working Schedule)", onSuccess, ParameterName, ParameterData);
 		}
 
-		private static void SQLCommand(string query, string onSuccessMessage, string onFailedMessage, Action onSuccess = null)
+		private static void SQLCommand(string query, string onSuccessMessage, string onFailedMessage, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
 		{
 			if(query == "VALUEISEMPTY")
 			{
@@ -84,6 +84,10 @@ namespace SQL
 				try
 				{
 					SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+					if(ParameterName != null && ParameterData != null)
+					{
+						sqlCommand.Parameters.AddWithValue(ParameterName, ParameterData);
+					}
 					if (sqlCommand.ExecuteNonQuery() != 0)
 					{
 						MessageBox.Show(onSuccessMessage, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -94,7 +98,7 @@ namespace SQL
 						throw new NotImplementedException();
 					}
 				}
-				catch
+				catch// (Exception ex)
 				{
 					MessageBox.Show(onFailedMessage, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
