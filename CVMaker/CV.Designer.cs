@@ -42,16 +42,16 @@ namespace CVMaker
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label18 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Edit_Profile = new System.Windows.Forms.Button();
+            this.Save_Profile = new System.Windows.Forms.Button();
+            this.Upload_ProfilePic = new System.Windows.Forms.Button();
+            this.Female_Radio = new System.Windows.Forms.RadioButton();
+            this.Male_Radio = new System.Windows.Forms.RadioButton();
+            this.Phone_Number = new System.Windows.Forms.RichTextBox();
+            this.City = new System.Windows.Forms.RichTextBox();
+            this.Country = new System.Windows.Forms.RichTextBox();
+            this.Last_Name = new System.Windows.Forms.RichTextBox();
+            this.First_Name = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -59,11 +59,11 @@ namespace CVMaker
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.ProfilePic = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
+            this.Export_As_PDF = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -96,8 +96,8 @@ namespace CVMaker
             this.panaledu = new System.Windows.Forms.Panel();
             this.label34 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.canceledu = new System.Windows.Forms.Button();
-            this.saveedu = new System.Windows.Forms.Button();
+            this.cancel_edu = new System.Windows.Forms.Button();
+            this.save_edu = new System.Windows.Forms.Button();
             this.edu_end_date = new System.Windows.Forms.DateTimePicker();
             this.edu_st_date = new System.Windows.Forms.DateTimePicker();
             this.edu_city = new System.Windows.Forms.RichTextBox();
@@ -113,13 +113,13 @@ namespace CVMaker
             this.flowLayoutPanelskill = new System.Windows.Forms.FlowLayoutPanel();
             this.panelskill = new System.Windows.Forms.Panel();
             this.label38 = new System.Windows.Forms.Label();
-            this.Expert = new System.Windows.Forms.RadioButton();
-            this.Intermediate = new System.Windows.Forms.RadioButton();
-            this.Basic = new System.Windows.Forms.RadioButton();
+            this.Expert_Skill = new System.Windows.Forms.RadioButton();
+            this.Intermediate_Skill = new System.Windows.Forms.RadioButton();
+            this.Basic_Skill = new System.Windows.Forms.RadioButton();
             this.label27 = new System.Windows.Forms.Label();
-            this.cancelskill = new System.Windows.Forms.Button();
-            this.saveskill = new System.Windows.Forms.Button();
-            this.titleskill = new System.Windows.Forms.RichTextBox();
+            this.Cancel_skill = new System.Windows.Forms.Button();
+            this.Save_skill = new System.Windows.Forms.Button();
+            this.Title_Skill = new System.Windows.Forms.RichTextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.addskill = new System.Windows.Forms.PictureBox();
@@ -127,29 +127,29 @@ namespace CVMaker
             this.flowLayoutPanelexperience = new System.Windows.Forms.FlowLayoutPanel();
             this.exper_panel = new System.Windows.Forms.Panel();
             this.label48 = new System.Windows.Forms.Label();
-            this.expericedescription = new System.Windows.Forms.RichTextBox();
+            this.Experience_description = new System.Windows.Forms.RichTextBox();
             this.end_experience = new System.Windows.Forms.DateTimePicker();
-            this.start_experice = new System.Windows.Forms.DateTimePicker();
+            this.start_experience = new System.Windows.Forms.DateTimePicker();
             this.n = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.cancel_exper = new System.Windows.Forms.Button();
-            this.save_exper = new System.Windows.Forms.Button();
-            this.conmpanyname = new System.Windows.Forms.RichTextBox();
-            this.jobtype = new System.Windows.Forms.RichTextBox();
-            this.experiecetitle = new System.Windows.Forms.RichTextBox();
+            this.Cancel_Experience = new System.Windows.Forms.Button();
+            this.Save_Experience = new System.Windows.Forms.Button();
+            this.Company_Name = new System.Windows.Forms.RichTextBox();
+            this.Job_Type = new System.Windows.Forms.RichTextBox();
+            this.Experiece_Title = new System.Windows.Forms.RichTextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.experinceadd = new System.Windows.Forms.PictureBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label49 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.MailRadio = new System.Windows.Forms.RadioButton();
+            this.LinkedinRadio = new System.Windows.Forms.RadioButton();
+            this.TwitterRadio = new System.Windows.Forms.RadioButton();
+            this.InstagramRadio = new System.Windows.Forms.RadioButton();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -159,11 +159,11 @@ namespace CVMaker
             this.label46 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.richTextBox12 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.Social_Link = new System.Windows.Forms.RichTextBox();
+            this.Social_Title = new System.Windows.Forms.RichTextBox();
+            this.Edit_Social = new System.Windows.Forms.Button();
+            this.Save_Social = new System.Windows.Forms.Button();
+            this.Cancel_Social = new System.Windows.Forms.Button();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
@@ -171,7 +171,7 @@ namespace CVMaker
             this.panel1 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Logout_User = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -183,7 +183,7 @@ namespace CVMaker
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -261,7 +261,7 @@ namespace CVMaker
             // label17
             // 
             this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label17.Font = new System.Drawing.Font("ADAM.CG PRO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label17.Location = new System.Drawing.Point(644, 5);
             this.label17.Name = "label17";
@@ -307,7 +307,7 @@ namespace CVMaker
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label4.Location = new System.Drawing.Point(29, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 32);
+            this.label4.Size = new System.Drawing.Size(210, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "James Christopher";
             // 
@@ -346,16 +346,16 @@ namespace CVMaker
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.button9);
-            this.tabPage2.Controls.Add(this.button8);
-            this.tabPage2.Controls.Add(this.button7);
-            this.tabPage2.Controls.Add(this.radioButton2);
-            this.tabPage2.Controls.Add(this.radioButton1);
-            this.tabPage2.Controls.Add(this.richTextBox5);
-            this.tabPage2.Controls.Add(this.richTextBox3);
-            this.tabPage2.Controls.Add(this.richTextBox4);
-            this.tabPage2.Controls.Add(this.richTextBox2);
-            this.tabPage2.Controls.Add(this.richTextBox1);
+            this.tabPage2.Controls.Add(this.Edit_Profile);
+            this.tabPage2.Controls.Add(this.Save_Profile);
+            this.tabPage2.Controls.Add(this.Upload_ProfilePic);
+            this.tabPage2.Controls.Add(this.Female_Radio);
+            this.tabPage2.Controls.Add(this.Male_Radio);
+            this.tabPage2.Controls.Add(this.Phone_Number);
+            this.tabPage2.Controls.Add(this.City);
+            this.tabPage2.Controls.Add(this.Country);
+            this.tabPage2.Controls.Add(this.Last_Name);
+            this.tabPage2.Controls.Add(this.First_Name);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label9);
@@ -363,7 +363,7 @@ namespace CVMaker
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.pictureBox4);
+            this.tabPage2.Controls.Add(this.ProfilePic);
             this.tabPage2.Controls.Add(this.pictureBox16);
             this.tabPage2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
@@ -379,129 +379,127 @@ namespace CVMaker
             // 
             this.label18.AutoSize = true;
             this.label18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label18.Font = new System.Drawing.Font("ADAM.CG PRO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label18.Location = new System.Drawing.Point(644, 5);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(19, 15);
+            this.label18.Size = new System.Drawing.Size(18, 18);
             this.label18.TabIndex = 8;
             this.label18.Text = "X";
             this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
-            // button9
+            // Edit_Profile
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(230, 360);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(52, 33);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "Edit";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.Edit_Profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Edit_Profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Edit_Profile.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_Profile.ForeColor = System.Drawing.Color.White;
+            this.Edit_Profile.Location = new System.Drawing.Point(230, 360);
+            this.Edit_Profile.Name = "Edit_Profile";
+            this.Edit_Profile.Size = new System.Drawing.Size(52, 33);
+            this.Edit_Profile.TabIndex = 7;
+            this.Edit_Profile.Text = "Edit";
+            this.Edit_Profile.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // Save_Profile
             // 
-            this.button8.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(145, 360);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(73, 33);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Save";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.Save_Profile.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Save_Profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save_Profile.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_Profile.ForeColor = System.Drawing.Color.White;
+            this.Save_Profile.Location = new System.Drawing.Point(145, 360);
+            this.Save_Profile.Name = "Save_Profile";
+            this.Save_Profile.Size = new System.Drawing.Size(73, 33);
+            this.Save_Profile.TabIndex = 7;
+            this.Save_Profile.Text = "Save";
+            this.Save_Profile.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // Upload_ProfilePic
             // 
-            this.button7.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(482, 195);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(89, 37);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Upload";
-            this.button7.UseVisualStyleBackColor = false;
+            this.Upload_ProfilePic.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Upload_ProfilePic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Upload_ProfilePic.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Upload_ProfilePic.ForeColor = System.Drawing.Color.White;
+            this.Upload_ProfilePic.Location = new System.Drawing.Point(482, 195);
+            this.Upload_ProfilePic.Name = "Upload_ProfilePic";
+            this.Upload_ProfilePic.Size = new System.Drawing.Size(89, 37);
+            this.Upload_ProfilePic.TabIndex = 7;
+            this.Upload_ProfilePic.Text = "Upload";
+            this.Upload_ProfilePic.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // Female_Radio
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton2.Location = new System.Drawing.Point(143, 202);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(69, 21);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Female_Radio.AutoSize = true;
+            this.Female_Radio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Female_Radio.Location = new System.Drawing.Point(143, 202);
+            this.Female_Radio.Name = "Female_Radio";
+            this.Female_Radio.Size = new System.Drawing.Size(69, 21);
+            this.Female_Radio.TabIndex = 5;
+            this.Female_Radio.TabStop = true;
+            this.Female_Radio.Text = "Female";
+            this.Female_Radio.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // Male_Radio
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton1.Location = new System.Drawing.Point(143, 175);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 21);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Male_Radio.AutoSize = true;
+            this.Male_Radio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Male_Radio.Location = new System.Drawing.Point(143, 175);
+            this.Male_Radio.Name = "Male_Radio";
+            this.Male_Radio.Size = new System.Drawing.Size(55, 21);
+            this.Male_Radio.TabIndex = 5;
+            this.Male_Radio.TabStop = true;
+            this.Male_Radio.Text = "Male";
+            this.Male_Radio.UseVisualStyleBackColor = true;
             // 
-            // richTextBox5
+            // Phone_Number
             // 
-            this.richTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox5.Location = new System.Drawing.Point(143, 319);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(148, 26);
-            this.richTextBox5.TabIndex = 4;
-            this.richTextBox5.Text = "";
+            this.Phone_Number.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Phone_Number.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Phone_Number.Location = new System.Drawing.Point(143, 319);
+            this.Phone_Number.Name = "Phone_Number";
+            this.Phone_Number.Size = new System.Drawing.Size(148, 26);
+            this.Phone_Number.TabIndex = 4;
+            this.Phone_Number.Text = "";
             // 
-            // richTextBox3
+            // City
             // 
-            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Location = new System.Drawing.Point(143, 278);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(148, 26);
-            this.richTextBox3.TabIndex = 4;
-            this.richTextBox3.Text = "";
+            this.City.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.City.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.City.Location = new System.Drawing.Point(143, 278);
+            this.City.Name = "City";
+            this.City.Size = new System.Drawing.Size(148, 26);
+            this.City.TabIndex = 4;
+            this.City.Text = "";
             // 
-            // richTextBox4
+            // Country
             // 
-            this.richTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Location = new System.Drawing.Point(143, 237);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(148, 26);
-            this.richTextBox4.TabIndex = 4;
-            this.richTextBox4.Text = "";
+            this.Country.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Country.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Country.Location = new System.Drawing.Point(143, 237);
+            this.Country.Name = "Country";
+            this.Country.Size = new System.Drawing.Size(148, 26);
+            this.Country.TabIndex = 4;
+            this.Country.Text = "";
             // 
-            // richTextBox2
+            // Last_Name
             // 
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Location = new System.Drawing.Point(143, 140);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(148, 26);
-            this.richTextBox2.TabIndex = 4;
-            this.richTextBox2.Text = "";
+            this.Last_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Last_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Last_Name.Location = new System.Drawing.Point(143, 140);
+            this.Last_Name.Name = "Last_Name";
+            this.Last_Name.Size = new System.Drawing.Size(148, 26);
+            this.Last_Name.TabIndex = 4;
+            this.Last_Name.Text = "";
             // 
-            // richTextBox1
+            // First_Name
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(143, 103);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(148, 26);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.First_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.First_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.First_Name.Location = new System.Drawing.Point(143, 103);
+            this.First_Name.Name = "First_Name";
+            this.First_Name.Size = new System.Drawing.Size(148, 26);
+            this.First_Name.TabIndex = 4;
+            this.First_Name.Text = "";
             // 
             // label11
             // 
@@ -580,15 +578,15 @@ namespace CVMaker
             this.label5.TabIndex = 1;
             this.label5.Text = "Profile";
             // 
-            // pictureBox4
+            // ProfilePic
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(486, 92);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
+            this.ProfilePic.Image = ((System.Drawing.Image)(resources.GetObject("ProfilePic.Image")));
+            this.ProfilePic.Location = new System.Drawing.Point(486, 92);
+            this.ProfilePic.Name = "ProfilePic";
+            this.ProfilePic.Size = new System.Drawing.Size(80, 80);
+            this.ProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ProfilePic.TabIndex = 6;
+            this.ProfilePic.TabStop = false;
             // 
             // pictureBox16
             // 
@@ -603,7 +601,7 @@ namespace CVMaker
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.label19);
-            this.tabPage3.Controls.Add(this.button10);
+            this.tabPage3.Controls.Add(this.Export_As_PDF);
             this.tabPage3.Controls.Add(this.pictureBox8);
             this.tabPage3.Controls.Add(this.pictureBox7);
             this.tabPage3.Controls.Add(this.pictureBox6);
@@ -623,28 +621,27 @@ namespace CVMaker
             // 
             this.label19.AutoSize = true;
             this.label19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label19.Font = new System.Drawing.Font("ADAM.CG PRO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label19.Location = new System.Drawing.Point(644, 5);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(19, 15);
+            this.label19.Size = new System.Drawing.Size(18, 18);
             this.label19.TabIndex = 9;
             this.label19.Text = "X";
             this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
-            // button10
+            // Export_As_PDF
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(234, 368);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(156, 46);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "Export as PDF";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.Export_As_PDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Export_As_PDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Export_As_PDF.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Export_As_PDF.ForeColor = System.Drawing.Color.White;
+            this.Export_As_PDF.Location = new System.Drawing.Point(234, 368);
+            this.Export_As_PDF.Name = "Export_As_PDF";
+            this.Export_As_PDF.Size = new System.Drawing.Size(156, 46);
+            this.Export_As_PDF.TabIndex = 8;
+            this.Export_As_PDF.Text = "Export as PDF";
+            this.Export_As_PDF.UseVisualStyleBackColor = false;
             // 
             // pictureBox8
             // 
@@ -739,11 +736,11 @@ namespace CVMaker
             // 
             this.label20.AutoSize = true;
             this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label20.Font = new System.Drawing.Font("ADAM.CG PRO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label20.Location = new System.Drawing.Point(644, 5);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(19, 15);
+            this.label20.Size = new System.Drawing.Size(18, 18);
             this.label20.TabIndex = 4;
             this.label20.Text = "X";
             this.label20.Click += new System.EventHandler(this.label20_Click);
@@ -994,8 +991,8 @@ namespace CVMaker
             // 
             this.panaledu.Controls.Add(this.label34);
             this.panaledu.Controls.Add(this.label21);
-            this.panaledu.Controls.Add(this.canceledu);
-            this.panaledu.Controls.Add(this.saveedu);
+            this.panaledu.Controls.Add(this.cancel_edu);
+            this.panaledu.Controls.Add(this.save_edu);
             this.panaledu.Controls.Add(this.edu_end_date);
             this.panaledu.Controls.Add(this.edu_st_date);
             this.panaledu.Controls.Add(this.edu_city);
@@ -1018,11 +1015,11 @@ namespace CVMaker
             // 
             this.label34.AutoSize = true;
             this.label34.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label34.Font = new System.Drawing.Font("ADAM.CG PRO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label34.Location = new System.Drawing.Point(644, 5);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(19, 15);
+            this.label34.Size = new System.Drawing.Size(18, 18);
             this.label34.TabIndex = 9;
             this.label34.Text = "X";
             this.label34.Click += new System.EventHandler(this.label34_Click);
@@ -1038,33 +1035,32 @@ namespace CVMaker
             this.label21.TabIndex = 16;
             this.label21.Text = "Education";
             // 
-            // canceledu
+            // cancel_edu
             // 
-            this.canceledu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.canceledu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.canceledu.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.canceledu.ForeColor = System.Drawing.Color.White;
-            this.canceledu.Location = new System.Drawing.Point(208, 224);
-            this.canceledu.Name = "canceledu";
-            this.canceledu.Size = new System.Drawing.Size(81, 33);
-            this.canceledu.TabIndex = 14;
-            this.canceledu.Text = "Cancel";
-            this.canceledu.UseVisualStyleBackColor = false;
-            this.canceledu.Click += new System.EventHandler(this.canceledu_Click);
+            this.cancel_edu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.cancel_edu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel_edu.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel_edu.ForeColor = System.Drawing.Color.White;
+            this.cancel_edu.Location = new System.Drawing.Point(208, 224);
+            this.cancel_edu.Name = "cancel_edu";
+            this.cancel_edu.Size = new System.Drawing.Size(81, 33);
+            this.cancel_edu.TabIndex = 14;
+            this.cancel_edu.Text = "Cancel";
+            this.cancel_edu.UseVisualStyleBackColor = false;
+            this.cancel_edu.Click += new System.EventHandler(this.canceledu_Click);
             // 
-            // saveedu
+            // save_edu
             // 
-            this.saveedu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.saveedu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveedu.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveedu.ForeColor = System.Drawing.Color.White;
-            this.saveedu.Location = new System.Drawing.Point(123, 224);
-            this.saveedu.Name = "saveedu";
-            this.saveedu.Size = new System.Drawing.Size(73, 33);
-            this.saveedu.TabIndex = 15;
-            this.saveedu.Text = "Save";
-            this.saveedu.UseVisualStyleBackColor = false;
-            this.saveedu.Click += new System.EventHandler(this.saveedu_Click);
+            this.save_edu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.save_edu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_edu.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_edu.ForeColor = System.Drawing.Color.White;
+            this.save_edu.Location = new System.Drawing.Point(123, 224);
+            this.save_edu.Name = "save_edu";
+            this.save_edu.Size = new System.Drawing.Size(73, 33);
+            this.save_edu.TabIndex = 15;
+            this.save_edu.Text = "Save";
+            this.save_edu.UseVisualStyleBackColor = false;
             // 
             // edu_end_date
             // 
@@ -1191,86 +1187,86 @@ namespace CVMaker
             // flowLayoutPanelskill
             // 
             this.flowLayoutPanelskill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelskill.Location = new System.Drawing.Point(3, 61);
+            this.flowLayoutPanelskill.Location = new System.Drawing.Point(3, 59);
             this.flowLayoutPanelskill.Name = "flowLayoutPanelskill";
-            this.flowLayoutPanelskill.Size = new System.Drawing.Size(671, 383);
+            this.flowLayoutPanelskill.Size = new System.Drawing.Size(671, 385);
             this.flowLayoutPanelskill.TabIndex = 1;
             this.flowLayoutPanelskill.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelskill_Paint);
             // 
             // panelskill
             // 
             this.panelskill.Controls.Add(this.label38);
-            this.panelskill.Controls.Add(this.Expert);
-            this.panelskill.Controls.Add(this.Intermediate);
-            this.panelskill.Controls.Add(this.Basic);
+            this.panelskill.Controls.Add(this.Expert_Skill);
+            this.panelskill.Controls.Add(this.Intermediate_Skill);
+            this.panelskill.Controls.Add(this.Basic_Skill);
             this.panelskill.Controls.Add(this.label27);
-            this.panelskill.Controls.Add(this.cancelskill);
-            this.panelskill.Controls.Add(this.saveskill);
-            this.panelskill.Controls.Add(this.titleskill);
+            this.panelskill.Controls.Add(this.Cancel_skill);
+            this.panelskill.Controls.Add(this.Save_skill);
+            this.panelskill.Controls.Add(this.Title_Skill);
             this.panelskill.Controls.Add(this.label29);
             this.panelskill.Controls.Add(this.label28);
             this.panelskill.Controls.Add(this.addskill);
             this.panelskill.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelskill.Location = new System.Drawing.Point(3, 3);
             this.panelskill.Name = "panelskill";
-            this.panelskill.Size = new System.Drawing.Size(671, 58);
+            this.panelskill.Size = new System.Drawing.Size(671, 56);
             this.panelskill.TabIndex = 0;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
             this.label38.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label38.Font = new System.Drawing.Font("ADAM.CG PRO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label38.Location = new System.Drawing.Point(644, 5);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(19, 15);
+            this.label38.Size = new System.Drawing.Size(18, 18);
             this.label38.TabIndex = 24;
             this.label38.Text = "X";
             this.label38.Click += new System.EventHandler(this.label38_Click);
             // 
-            // Expert
+            // Expert_Skill
             // 
-            this.Expert.AutoSize = true;
-            this.Expert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Expert.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Expert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.Expert.Location = new System.Drawing.Point(132, 160);
-            this.Expert.Name = "Expert";
-            this.Expert.Size = new System.Drawing.Size(64, 21);
-            this.Expert.TabIndex = 23;
-            this.Expert.TabStop = true;
-            this.Expert.Text = "Expert";
-            this.Expert.UseVisualStyleBackColor = true;
+            this.Expert_Skill.AutoSize = true;
+            this.Expert_Skill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Expert_Skill.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Expert_Skill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.Expert_Skill.Location = new System.Drawing.Point(132, 160);
+            this.Expert_Skill.Name = "Expert_Skill";
+            this.Expert_Skill.Size = new System.Drawing.Size(64, 21);
+            this.Expert_Skill.TabIndex = 23;
+            this.Expert_Skill.TabStop = true;
+            this.Expert_Skill.Text = "Expert";
+            this.Expert_Skill.UseVisualStyleBackColor = true;
             // 
-            // Intermediate
+            // Intermediate_Skill
             // 
-            this.Intermediate.AutoSize = true;
-            this.Intermediate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Intermediate.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intermediate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.Intermediate.Location = new System.Drawing.Point(132, 137);
-            this.Intermediate.Name = "Intermediate";
-            this.Intermediate.Size = new System.Drawing.Size(104, 21);
-            this.Intermediate.TabIndex = 23;
-            this.Intermediate.TabStop = true;
-            this.Intermediate.Text = "Intermediate";
-            this.Intermediate.UseVisualStyleBackColor = true;
+            this.Intermediate_Skill.AutoSize = true;
+            this.Intermediate_Skill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Intermediate_Skill.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Intermediate_Skill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.Intermediate_Skill.Location = new System.Drawing.Point(132, 137);
+            this.Intermediate_Skill.Name = "Intermediate_Skill";
+            this.Intermediate_Skill.Size = new System.Drawing.Size(104, 21);
+            this.Intermediate_Skill.TabIndex = 23;
+            this.Intermediate_Skill.TabStop = true;
+            this.Intermediate_Skill.Text = "Intermediate";
+            this.Intermediate_Skill.UseVisualStyleBackColor = true;
             // 
-            // Basic
+            // Basic_Skill
             // 
-            this.Basic.AutoSize = true;
-            this.Basic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Basic.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Basic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.Basic.Location = new System.Drawing.Point(132, 114);
-            this.Basic.Name = "Basic";
-            this.Basic.Size = new System.Drawing.Size(56, 21);
-            this.Basic.TabIndex = 23;
-            this.Basic.TabStop = true;
-            this.Basic.Text = "Basic";
-            this.Basic.UseVisualStyleBackColor = true;
-            this.Basic.CheckedChanged += new System.EventHandler(this.Basic_CheckedChanged);
+            this.Basic_Skill.AutoSize = true;
+            this.Basic_Skill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Basic_Skill.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Basic_Skill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.Basic_Skill.Location = new System.Drawing.Point(132, 114);
+            this.Basic_Skill.Name = "Basic_Skill";
+            this.Basic_Skill.Size = new System.Drawing.Size(56, 21);
+            this.Basic_Skill.TabIndex = 23;
+            this.Basic_Skill.TabStop = true;
+            this.Basic_Skill.Text = "Basic";
+            this.Basic_Skill.UseVisualStyleBackColor = true;
+            this.Basic_Skill.CheckedChanged += new System.EventHandler(this.Basic_CheckedChanged);
             // 
             // label27
             // 
@@ -1283,43 +1279,43 @@ namespace CVMaker
             this.label27.TabIndex = 22;
             this.label27.Text = "Skill";
             // 
-            // cancelskill
+            // Cancel_skill
             // 
-            this.cancelskill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.cancelskill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelskill.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelskill.ForeColor = System.Drawing.Color.White;
-            this.cancelskill.Location = new System.Drawing.Point(217, 193);
-            this.cancelskill.Name = "cancelskill";
-            this.cancelskill.Size = new System.Drawing.Size(81, 33);
-            this.cancelskill.TabIndex = 20;
-            this.cancelskill.Text = "Cancel";
-            this.cancelskill.UseVisualStyleBackColor = false;
-            this.cancelskill.Click += new System.EventHandler(this.cancelskill_Click);
+            this.Cancel_skill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Cancel_skill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel_skill.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel_skill.ForeColor = System.Drawing.Color.White;
+            this.Cancel_skill.Location = new System.Drawing.Point(217, 193);
+            this.Cancel_skill.Name = "Cancel_skill";
+            this.Cancel_skill.Size = new System.Drawing.Size(81, 33);
+            this.Cancel_skill.TabIndex = 20;
+            this.Cancel_skill.Text = "Cancel";
+            this.Cancel_skill.UseVisualStyleBackColor = false;
+            this.Cancel_skill.Click += new System.EventHandler(this.cancelskill_Click);
             // 
-            // saveskill
+            // Save_skill
             // 
-            this.saveskill.BackColor = System.Drawing.Color.DodgerBlue;
-            this.saveskill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveskill.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveskill.ForeColor = System.Drawing.Color.White;
-            this.saveskill.Location = new System.Drawing.Point(132, 193);
-            this.saveskill.Name = "saveskill";
-            this.saveskill.Size = new System.Drawing.Size(73, 33);
-            this.saveskill.TabIndex = 21;
-            this.saveskill.Text = "Save";
-            this.saveskill.UseVisualStyleBackColor = false;
-            this.saveskill.Click += new System.EventHandler(this.saveskill_Click);
+            this.Save_skill.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Save_skill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save_skill.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_skill.ForeColor = System.Drawing.Color.White;
+            this.Save_skill.Location = new System.Drawing.Point(132, 193);
+            this.Save_skill.Name = "Save_skill";
+            this.Save_skill.Size = new System.Drawing.Size(73, 33);
+            this.Save_skill.TabIndex = 21;
+            this.Save_skill.Text = "Save";
+            this.Save_skill.UseVisualStyleBackColor = false;
+            this.Save_skill.Click += new System.EventHandler(this.saveskill_Click);
             // 
-            // titleskill
+            // Title_Skill
             // 
-            this.titleskill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.titleskill.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.titleskill.Location = new System.Drawing.Point(132, 76);
-            this.titleskill.Name = "titleskill";
-            this.titleskill.Size = new System.Drawing.Size(148, 26);
-            this.titleskill.TabIndex = 19;
-            this.titleskill.Text = "";
+            this.Title_Skill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Title_Skill.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Title_Skill.Location = new System.Drawing.Point(132, 76);
+            this.Title_Skill.Name = "Title_Skill";
+            this.Title_Skill.Size = new System.Drawing.Size(148, 26);
+            this.Title_Skill.TabIndex = 19;
+            this.Title_Skill.Text = "";
             // 
             // label29
             // 
@@ -1369,58 +1365,58 @@ namespace CVMaker
             // flowLayoutPanelexperience
             // 
             this.flowLayoutPanelexperience.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelexperience.Location = new System.Drawing.Point(3, 54);
+            this.flowLayoutPanelexperience.Location = new System.Drawing.Point(3, 66);
             this.flowLayoutPanelexperience.Name = "flowLayoutPanelexperience";
-            this.flowLayoutPanelexperience.Size = new System.Drawing.Size(671, 390);
+            this.flowLayoutPanelexperience.Size = new System.Drawing.Size(671, 378);
             this.flowLayoutPanelexperience.TabIndex = 3;
             // 
             // exper_panel
             // 
             this.exper_panel.Controls.Add(this.label48);
-            this.exper_panel.Controls.Add(this.expericedescription);
+            this.exper_panel.Controls.Add(this.Experience_description);
             this.exper_panel.Controls.Add(this.end_experience);
-            this.exper_panel.Controls.Add(this.start_experice);
+            this.exper_panel.Controls.Add(this.start_experience);
             this.exper_panel.Controls.Add(this.n);
             this.exper_panel.Controls.Add(this.label37);
             this.exper_panel.Controls.Add(this.label35);
             this.exper_panel.Controls.Add(this.label36);
             this.exper_panel.Controls.Add(this.label31);
-            this.exper_panel.Controls.Add(this.cancel_exper);
-            this.exper_panel.Controls.Add(this.save_exper);
-            this.exper_panel.Controls.Add(this.conmpanyname);
-            this.exper_panel.Controls.Add(this.jobtype);
-            this.exper_panel.Controls.Add(this.experiecetitle);
+            this.exper_panel.Controls.Add(this.Cancel_Experience);
+            this.exper_panel.Controls.Add(this.Save_Experience);
+            this.exper_panel.Controls.Add(this.Company_Name);
+            this.exper_panel.Controls.Add(this.Job_Type);
+            this.exper_panel.Controls.Add(this.Experiece_Title);
             this.exper_panel.Controls.Add(this.label32);
             this.exper_panel.Controls.Add(this.label33);
             this.exper_panel.Controls.Add(this.experinceadd);
             this.exper_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.exper_panel.Location = new System.Drawing.Point(3, 3);
             this.exper_panel.Name = "exper_panel";
-            this.exper_panel.Size = new System.Drawing.Size(671, 51);
+            this.exper_panel.Size = new System.Drawing.Size(671, 63);
             this.exper_panel.TabIndex = 2;
             // 
             // label48
             // 
             this.label48.AutoSize = true;
             this.label48.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label48.Font = new System.Drawing.Font("ADAM.CG PRO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label48.Location = new System.Drawing.Point(644, 5);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(19, 15);
+            this.label48.Size = new System.Drawing.Size(18, 18);
             this.label48.TabIndex = 28;
             this.label48.Text = "X";
             this.label48.Click += new System.EventHandler(this.label48_Click);
             // 
-            // expericedescription
+            // Experience_description
             // 
-            this.expericedescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.expericedescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.expericedescription.Location = new System.Drawing.Point(479, 76);
-            this.expericedescription.Name = "expericedescription";
-            this.expericedescription.Size = new System.Drawing.Size(179, 116);
-            this.expericedescription.TabIndex = 27;
-            this.expericedescription.Text = "";
+            this.Experience_description.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Experience_description.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Experience_description.Location = new System.Drawing.Point(479, 76);
+            this.Experience_description.Name = "Experience_description";
+            this.Experience_description.Size = new System.Drawing.Size(179, 116);
+            this.Experience_description.TabIndex = 27;
+            this.Experience_description.Text = "";
             // 
             // end_experience
             // 
@@ -1429,12 +1425,12 @@ namespace CVMaker
             this.end_experience.Size = new System.Drawing.Size(200, 20);
             this.end_experience.TabIndex = 25;
             // 
-            // start_experice
+            // start_experience
             // 
-            this.start_experice.Location = new System.Drawing.Point(158, 143);
-            this.start_experice.Name = "start_experice";
-            this.start_experice.Size = new System.Drawing.Size(200, 20);
-            this.start_experice.TabIndex = 26;
+            this.start_experience.Location = new System.Drawing.Point(158, 143);
+            this.start_experience.Name = "start_experience";
+            this.start_experience.Size = new System.Drawing.Size(200, 20);
+            this.start_experience.TabIndex = 26;
             // 
             // n
             // 
@@ -1491,63 +1487,63 @@ namespace CVMaker
             this.label31.TabIndex = 22;
             this.label31.Text = "Experience";
             // 
-            // cancel_exper
+            // Cancel_Experience
             // 
-            this.cancel_exper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.cancel_exper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_exper.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancel_exper.ForeColor = System.Drawing.Color.White;
-            this.cancel_exper.Location = new System.Drawing.Point(246, 232);
-            this.cancel_exper.Name = "cancel_exper";
-            this.cancel_exper.Size = new System.Drawing.Size(81, 33);
-            this.cancel_exper.TabIndex = 20;
-            this.cancel_exper.Text = "Cancel";
-            this.cancel_exper.UseVisualStyleBackColor = false;
-            this.cancel_exper.Click += new System.EventHandler(this.cancel_exper_Click);
+            this.Cancel_Experience.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Cancel_Experience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel_Experience.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel_Experience.ForeColor = System.Drawing.Color.White;
+            this.Cancel_Experience.Location = new System.Drawing.Point(246, 232);
+            this.Cancel_Experience.Name = "Cancel_Experience";
+            this.Cancel_Experience.Size = new System.Drawing.Size(81, 33);
+            this.Cancel_Experience.TabIndex = 20;
+            this.Cancel_Experience.Text = "Cancel";
+            this.Cancel_Experience.UseVisualStyleBackColor = false;
+            this.Cancel_Experience.Click += new System.EventHandler(this.cancel_exper_Click);
             // 
-            // save_exper
+            // Save_Experience
             // 
-            this.save_exper.BackColor = System.Drawing.Color.DodgerBlue;
-            this.save_exper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_exper.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_exper.ForeColor = System.Drawing.Color.White;
-            this.save_exper.Location = new System.Drawing.Point(154, 232);
-            this.save_exper.Name = "save_exper";
-            this.save_exper.Size = new System.Drawing.Size(73, 33);
-            this.save_exper.TabIndex = 21;
-            this.save_exper.Text = "Save";
-            this.save_exper.UseVisualStyleBackColor = false;
-            this.save_exper.Click += new System.EventHandler(this.save_exper_Click);
+            this.Save_Experience.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Save_Experience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save_Experience.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_Experience.ForeColor = System.Drawing.Color.White;
+            this.Save_Experience.Location = new System.Drawing.Point(154, 232);
+            this.Save_Experience.Name = "Save_Experience";
+            this.Save_Experience.Size = new System.Drawing.Size(73, 33);
+            this.Save_Experience.TabIndex = 21;
+            this.Save_Experience.Text = "Save";
+            this.Save_Experience.UseVisualStyleBackColor = false;
+            this.Save_Experience.Click += new System.EventHandler(this.save_exper_Click);
             // 
-            // conmpanyname
+            // Company_Name
             // 
-            this.conmpanyname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.conmpanyname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.conmpanyname.Location = new System.Drawing.Point(158, 108);
-            this.conmpanyname.Name = "conmpanyname";
-            this.conmpanyname.Size = new System.Drawing.Size(148, 26);
-            this.conmpanyname.TabIndex = 19;
-            this.conmpanyname.Text = "";
+            this.Company_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Company_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Company_Name.Location = new System.Drawing.Point(158, 108);
+            this.Company_Name.Name = "Company_Name";
+            this.Company_Name.Size = new System.Drawing.Size(148, 26);
+            this.Company_Name.TabIndex = 19;
+            this.Company_Name.Text = "";
             // 
-            // jobtype
+            // Job_Type
             // 
-            this.jobtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.jobtype.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.jobtype.Location = new System.Drawing.Point(154, 197);
-            this.jobtype.Name = "jobtype";
-            this.jobtype.Size = new System.Drawing.Size(148, 23);
-            this.jobtype.TabIndex = 19;
-            this.jobtype.Text = "";
+            this.Job_Type.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Job_Type.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Job_Type.Location = new System.Drawing.Point(154, 197);
+            this.Job_Type.Name = "Job_Type";
+            this.Job_Type.Size = new System.Drawing.Size(148, 23);
+            this.Job_Type.TabIndex = 19;
+            this.Job_Type.Text = "";
             // 
-            // experiecetitle
+            // Experiece_Title
             // 
-            this.experiecetitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.experiecetitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.experiecetitle.Location = new System.Drawing.Point(158, 76);
-            this.experiecetitle.Name = "experiecetitle";
-            this.experiecetitle.Size = new System.Drawing.Size(148, 26);
-            this.experiecetitle.TabIndex = 19;
-            this.experiecetitle.Text = "";
+            this.Experiece_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Experiece_Title.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Experiece_Title.Location = new System.Drawing.Point(158, 76);
+            this.Experiece_Title.Name = "Experiece_Title";
+            this.Experiece_Title.Size = new System.Drawing.Size(148, 26);
+            this.Experiece_Title.TabIndex = 19;
+            this.Experiece_Title.Text = "";
             // 
             // label32
             // 
@@ -1586,10 +1582,10 @@ namespace CVMaker
             // 
             this.tabPage8.Controls.Add(this.label49);
             this.tabPage8.Controls.Add(this.label47);
-            this.tabPage8.Controls.Add(this.radioButton7);
-            this.tabPage8.Controls.Add(this.radioButton6);
-            this.tabPage8.Controls.Add(this.radioButton4);
-            this.tabPage8.Controls.Add(this.radioButton5);
+            this.tabPage8.Controls.Add(this.MailRadio);
+            this.tabPage8.Controls.Add(this.LinkedinRadio);
+            this.tabPage8.Controls.Add(this.TwitterRadio);
+            this.tabPage8.Controls.Add(this.InstagramRadio);
             this.tabPage8.Controls.Add(this.label44);
             this.tabPage8.Controls.Add(this.label43);
             this.tabPage8.Controls.Add(this.label42);
@@ -1611,11 +1607,11 @@ namespace CVMaker
             // 
             this.label49.AutoSize = true;
             this.label49.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label49.Font = new System.Drawing.Font("ADAM.CG PRO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label49.Location = new System.Drawing.Point(644, 5);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(19, 15);
+            this.label49.Size = new System.Drawing.Size(18, 18);
             this.label49.TabIndex = 35;
             this.label49.Text = "X";
             this.label49.Click += new System.EventHandler(this.label49_Click);
@@ -1631,61 +1627,61 @@ namespace CVMaker
             this.label47.TabIndex = 34;
             this.label47.Text = "Social";
             // 
-            // radioButton7
+            // MailRadio
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton7.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold);
-            this.radioButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.radioButton7.Location = new System.Drawing.Point(87, 364);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(47, 17);
-            this.radioButton7.TabIndex = 31;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Mail";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.MailRadio.AutoSize = true;
+            this.MailRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MailRadio.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold);
+            this.MailRadio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.MailRadio.Location = new System.Drawing.Point(87, 364);
+            this.MailRadio.Name = "MailRadio";
+            this.MailRadio.Size = new System.Drawing.Size(47, 17);
+            this.MailRadio.TabIndex = 31;
+            this.MailRadio.TabStop = true;
+            this.MailRadio.Text = "Mail";
+            this.MailRadio.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // LinkedinRadio
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton6.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold);
-            this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.radioButton6.Location = new System.Drawing.Point(87, 275);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(69, 17);
-            this.radioButton6.TabIndex = 31;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Linkedin";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.LinkedinRadio.AutoSize = true;
+            this.LinkedinRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LinkedinRadio.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold);
+            this.LinkedinRadio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.LinkedinRadio.Location = new System.Drawing.Point(87, 275);
+            this.LinkedinRadio.Name = "LinkedinRadio";
+            this.LinkedinRadio.Size = new System.Drawing.Size(69, 17);
+            this.LinkedinRadio.TabIndex = 31;
+            this.LinkedinRadio.TabStop = true;
+            this.LinkedinRadio.Text = "Linkedin";
+            this.LinkedinRadio.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // TwitterRadio
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton4.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold);
-            this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.radioButton4.Location = new System.Drawing.Point(87, 193);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(59, 17);
-            this.radioButton4.TabIndex = 31;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Twitter";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.TwitterRadio.AutoSize = true;
+            this.TwitterRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TwitterRadio.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold);
+            this.TwitterRadio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.TwitterRadio.Location = new System.Drawing.Point(87, 193);
+            this.TwitterRadio.Name = "TwitterRadio";
+            this.TwitterRadio.Size = new System.Drawing.Size(59, 17);
+            this.TwitterRadio.TabIndex = 31;
+            this.TwitterRadio.TabStop = true;
+            this.TwitterRadio.Text = "Twitter";
+            this.TwitterRadio.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // InstagramRadio
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton5.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold);
-            this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.radioButton5.Location = new System.Drawing.Point(87, 109);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(76, 17);
-            this.radioButton5.TabIndex = 32;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Instagram";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.InstagramRadio.AutoSize = true;
+            this.InstagramRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InstagramRadio.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold);
+            this.InstagramRadio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.InstagramRadio.Location = new System.Drawing.Point(87, 109);
+            this.InstagramRadio.Name = "InstagramRadio";
+            this.InstagramRadio.Size = new System.Drawing.Size(76, 17);
+            this.InstagramRadio.TabIndex = 32;
+            this.InstagramRadio.TabStop = true;
+            this.InstagramRadio.Text = "Instagram";
+            this.InstagramRadio.UseVisualStyleBackColor = true;
             // 
             // label44
             // 
@@ -1739,11 +1735,11 @@ namespace CVMaker
             this.roundedpanel5.Controls.Add(this.label46);
             this.roundedpanel5.Controls.Add(this.label39);
             this.roundedpanel5.Controls.Add(this.label40);
-            this.roundedpanel5.Controls.Add(this.richTextBox12);
-            this.roundedpanel5.Controls.Add(this.richTextBox11);
-            this.roundedpanel5.Controls.Add(this.button14);
-            this.roundedpanel5.Controls.Add(this.button13);
-            this.roundedpanel5.Controls.Add(this.button12);
+            this.roundedpanel5.Controls.Add(this.Social_Link);
+            this.roundedpanel5.Controls.Add(this.Social_Title);
+            this.roundedpanel5.Controls.Add(this.Edit_Social);
+            this.roundedpanel5.Controls.Add(this.Save_Social);
+            this.roundedpanel5.Controls.Add(this.Cancel_Social);
             this.roundedpanel5.ForeColor = System.Drawing.Color.Black;
             this.roundedpanel5.GradientAngle = 90F;
             this.roundedpanel5.GradientBottomColor = System.Drawing.Color.Empty;
@@ -1771,7 +1767,7 @@ namespace CVMaker
             this.label46.ForeColor = System.Drawing.Color.SteelBlue;
             this.label46.Location = new System.Drawing.Point(21, 18);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(75, 32);
+            this.label46.Size = new System.Drawing.Size(74, 32);
             this.label46.TabIndex = 29;
             this.label46.Text = "Insert";
             // 
@@ -1798,64 +1794,64 @@ namespace CVMaker
             this.label40.Text = "Title";
             this.label40.Click += new System.EventHandler(this.label40_Click);
             // 
-            // richTextBox12
+            // Social_Link
             // 
-            this.richTextBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.richTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox12.Location = new System.Drawing.Point(142, 106);
-            this.richTextBox12.Name = "richTextBox12";
-            this.richTextBox12.Size = new System.Drawing.Size(148, 26);
-            this.richTextBox12.TabIndex = 24;
-            this.richTextBox12.Text = "";
+            this.Social_Link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Social_Link.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Social_Link.Location = new System.Drawing.Point(142, 106);
+            this.Social_Link.Name = "Social_Link";
+            this.Social_Link.Size = new System.Drawing.Size(148, 26);
+            this.Social_Link.TabIndex = 24;
+            this.Social_Link.Text = "";
             // 
-            // richTextBox11
+            // Social_Title
             // 
-            this.richTextBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.richTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox11.Location = new System.Drawing.Point(142, 74);
-            this.richTextBox11.Name = "richTextBox11";
-            this.richTextBox11.Size = new System.Drawing.Size(148, 26);
-            this.richTextBox11.TabIndex = 24;
-            this.richTextBox11.Text = "";
+            this.Social_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Social_Title.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Social_Title.Location = new System.Drawing.Point(142, 74);
+            this.Social_Title.Name = "Social_Title";
+            this.Social_Title.Size = new System.Drawing.Size(148, 26);
+            this.Social_Title.TabIndex = 24;
+            this.Social_Title.Text = "";
             // 
-            // button14
+            // Edit_Social
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(227, 152);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(52, 33);
-            this.button14.TabIndex = 28;
-            this.button14.Text = "Edit";
-            this.button14.UseVisualStyleBackColor = false;
+            this.Edit_Social.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Edit_Social.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Edit_Social.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_Social.ForeColor = System.Drawing.Color.White;
+            this.Edit_Social.Location = new System.Drawing.Point(227, 152);
+            this.Edit_Social.Name = "Edit_Social";
+            this.Edit_Social.Size = new System.Drawing.Size(52, 33);
+            this.Edit_Social.TabIndex = 28;
+            this.Edit_Social.Text = "Edit";
+            this.Edit_Social.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // Save_Social
             // 
-            this.button13.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(30, 152);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(73, 33);
-            this.button13.TabIndex = 27;
-            this.button13.Text = "Save";
-            this.button13.UseVisualStyleBackColor = false;
+            this.Save_Social.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Save_Social.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save_Social.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_Social.ForeColor = System.Drawing.Color.White;
+            this.Save_Social.Location = new System.Drawing.Point(30, 152);
+            this.Save_Social.Name = "Save_Social";
+            this.Save_Social.Size = new System.Drawing.Size(73, 33);
+            this.Save_Social.TabIndex = 27;
+            this.Save_Social.Text = "Save";
+            this.Save_Social.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // Cancel_Social
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(127, 152);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(81, 33);
-            this.button12.TabIndex = 26;
-            this.button12.Text = "Cancel";
-            this.button12.UseVisualStyleBackColor = false;
+            this.Cancel_Social.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Cancel_Social.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel_Social.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel_Social.ForeColor = System.Drawing.Color.White;
+            this.Cancel_Social.Location = new System.Drawing.Point(127, 152);
+            this.Cancel_Social.Name = "Cancel_Social";
+            this.Cancel_Social.Size = new System.Drawing.Size(81, 33);
+            this.Cancel_Social.TabIndex = 26;
+            this.Cancel_Social.Text = "Cancel";
+            this.Cancel_Social.UseVisualStyleBackColor = false;
             // 
             // pictureBox23
             // 
@@ -1902,7 +1898,7 @@ namespace CVMaker
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.label30);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.Logout_User);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button6);
@@ -1934,19 +1930,19 @@ namespace CVMaker
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // button5
+            // Logout_User
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button5.Location = new System.Drawing.Point(-13, 369);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 36);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Logout";
-            this.button5.UseVisualStyleBackColor = false;
+            this.Logout_User.BackColor = System.Drawing.Color.White;
+            this.Logout_User.FlatAppearance.BorderSize = 0;
+            this.Logout_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logout_User.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout_User.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Logout_User.Location = new System.Drawing.Point(-13, 369);
+            this.Logout_User.Name = "Logout_User";
+            this.Logout_User.Size = new System.Drawing.Size(131, 36);
+            this.Logout_User.TabIndex = 8;
+            this.Logout_User.Text = "Logout";
+            this.Logout_User.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -1986,7 +1982,6 @@ namespace CVMaker
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Linen;
-          
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(-33, 106);
             this.button6.Name = "button6";
@@ -2016,7 +2011,7 @@ namespace CVMaker
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(782, 450);
+            this.ClientSize = new System.Drawing.Size(782, 476);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2032,7 +2027,7 @@ namespace CVMaker
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -2097,22 +2092,22 @@ namespace CVMaker
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.PictureBox ProfilePic;
+        private System.Windows.Forms.RadioButton Female_Radio;
+        private System.Windows.Forms.RadioButton Male_Radio;
+        private System.Windows.Forms.RichTextBox Phone_Number;
+        private System.Windows.Forms.RichTextBox City;
+        private System.Windows.Forms.RichTextBox Country;
+        private System.Windows.Forms.RichTextBox Last_Name;
+        private System.Windows.Forms.RichTextBox First_Name;
+        private System.Windows.Forms.Button Upload_ProfilePic;
+        private System.Windows.Forms.Button Edit_Profile;
+        private System.Windows.Forms.Button Save_Profile;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button Export_As_PDF;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
         private roundedpanel roundedpanel1;
@@ -2136,8 +2131,8 @@ namespace CVMaker
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Button canceledu;
-        private System.Windows.Forms.Button saveedu;
+        private System.Windows.Forms.Button cancel_edu;
+        private System.Windows.Forms.Button save_edu;
         private System.Windows.Forms.DateTimePicker edu_end_date;
         private System.Windows.Forms.DateTimePicker edu_st_date;
         private System.Windows.Forms.RichTextBox edu_city;
@@ -2150,7 +2145,7 @@ namespace CVMaker
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.PictureBox pictureBoxedu;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Logout_User;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button6;
@@ -2159,13 +2154,13 @@ namespace CVMaker
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Panel panelskill;
-        private System.Windows.Forms.RadioButton Expert;
-        private System.Windows.Forms.RadioButton Intermediate;
-        private System.Windows.Forms.RadioButton Basic;
+        private System.Windows.Forms.RadioButton Expert_Skill;
+        private System.Windows.Forms.RadioButton Intermediate_Skill;
+        private System.Windows.Forms.RadioButton Basic_Skill;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button cancelskill;
-        private System.Windows.Forms.Button saveskill;
-        public System.Windows.Forms.RichTextBox titleskill;
+        private System.Windows.Forms.Button Cancel_skill;
+        private System.Windows.Forms.Button Save_skill;
+        public System.Windows.Forms.RichTextBox Title_Skill;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.PictureBox addskill;
@@ -2189,19 +2184,19 @@ namespace CVMaker
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelexperience;
         private System.Windows.Forms.Panel exper_panel;
-        private System.Windows.Forms.RichTextBox expericedescription;
+        private System.Windows.Forms.RichTextBox Experience_description;
         private System.Windows.Forms.DateTimePicker end_experience;
-        private System.Windows.Forms.DateTimePicker start_experice;
+        private System.Windows.Forms.DateTimePicker start_experience;
         private System.Windows.Forms.Label n;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Button cancel_exper;
-        private System.Windows.Forms.Button save_exper;
-        public System.Windows.Forms.RichTextBox conmpanyname;
-        public System.Windows.Forms.RichTextBox jobtype;
-        public System.Windows.Forms.RichTextBox experiecetitle;
+        private System.Windows.Forms.Button Cancel_Experience;
+        private System.Windows.Forms.Button Save_Experience;
+        public System.Windows.Forms.RichTextBox Company_Name;
+        public System.Windows.Forms.RichTextBox Job_Type;
+        public System.Windows.Forms.RichTextBox Experiece_Title;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.PictureBox experinceadd;
@@ -2210,23 +2205,23 @@ namespace CVMaker
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.PictureBox pictureBox20;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        public System.Windows.Forms.RichTextBox richTextBox11;
+        private System.Windows.Forms.Button Edit_Social;
+        private System.Windows.Forms.Button Cancel_Social;
+        private System.Windows.Forms.Button Save_Social;
+        public System.Windows.Forms.RichTextBox Social_Title;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton TwitterRadio;
+        private System.Windows.Forms.RadioButton InstagramRadio;
         private roundedpanel roundedpanel5;
         private System.Windows.Forms.Label label46;
-        public System.Windows.Forms.RichTextBox richTextBox12;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
+        public System.Windows.Forms.RichTextBox Social_Link;
+        private System.Windows.Forms.RadioButton MailRadio;
+        private System.Windows.Forms.RadioButton LinkedinRadio;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label34;
