@@ -1,6 +1,7 @@
 create database [CV Maker]
 use [CV Maker]
 
+/*
 CREATE TABLE [User] (
   [UserID] int,
   [RegisterID] int unique,
@@ -10,6 +11,19 @@ CREATE TABLE [User] (
   CONSTRAINT [FK_User.RegisterID]
     FOREIGN KEY (RegisterID)
       REFERENCES Register(RegisterID)
+);
+*/
+
+
+
+
+CREATE TABLE [user] (
+  [UserID] int identity(1, 1),
+  [username] varchar(50),
+  [password] varchar(50),
+  [register_date] date,
+  [Role] varchar(11),
+  PRIMARY KEY ([UserID])
 );
 
 
@@ -25,8 +39,8 @@ CREATE TABLE [Profile] (
   [ProfileID] int identity(1, 1),
   PRIMARY KEY ([ProfileID]),
   CONSTRAINT [FK_Profile.UserID]
-    FOREIGN KEY ([UserID])
-      REFERENCES [User](UserID)
+    FOREIGN KEY ([userID])
+      REFERENCES [user](UserID)
 );
 
 
@@ -61,7 +75,7 @@ CREATE TABLE [login_log] (
   PRIMARY KEY ([LoginID]),
   CONSTRAINT [FK_login_log.UserID]
     FOREIGN KEY ([UserID])
-      REFERENCES [User]([UserID])
+      REFERENCES [user]([UserID])
 );
 
 CREATE TABLE [Experience] (
@@ -94,6 +108,7 @@ CREATE TABLE [Education] (
       REFERENCES [Profile]([ProfileID])
 );
 
+/*
 CREATE TABLE [register] (
   [RegisterID] int identity(1, 1),
   [username] varchar(50),
@@ -101,20 +116,21 @@ CREATE TABLE [register] (
   [register_date] date,
   PRIMARY KEY ([RegisterID])
 );
+*/
 
 
 
----------  Register  ---------
+---------  User  ---------
 
-create procedure Insert_Register @Username varchar(50), @Password varchar(50), @RegisterDate date
+create procedure Insert_User @Username varchar(50), @Password varchar(50), @RegisterDate date, @Role varchar(11)
 as
-insert into Register values (@Username, @Password, @RegisterDate)
+insert into [User] values (@Username, @Password, @RegisterDate, @Role)
 
-drop procedure Insert_Register
+drop procedure Insert_User
 
-exec Insert_Register 'Siddique', 'sp21bsse0033@maju.edu.pk', '12-9-22'
-exec Insert_Register 'A.Moiz', 'sp21bsse0005@maju.edu.pk', '10-9-22'
-exec Insert_Register 'khizer', 'sp21bsse0033@maju.edu.pk', '8-9-22'
+exec Insert_User 'A.Moiz', '1', '10-9-22', 'Admin'
+exec Insert_User 'Siddique', '2', '12-9-22', 'Admin'
+exec Insert_User 'khizer', '3', '8-9-22', 'User'
 
 
 
