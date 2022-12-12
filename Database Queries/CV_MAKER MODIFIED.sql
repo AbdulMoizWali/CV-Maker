@@ -162,9 +162,15 @@ create procedure Insert_Profile
 @First_Name varchar(50), @Last_Name varchar(50), @Gender varchar(10), @Country varchar(50), @City varchar(50), 
 @Phone_Number varchar(11), @Picture image
 as
-insert into Profile(First_name, Last_name, Gender, Country, City, Phone, Profilepic) 
-values(@First_Name, @Last_Name, @Gender, @Country, @City, @Phone_Number, @Picture)
+declare @Userid int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+insert into Profile(UserID, First_name, Last_name, Gender, Country, City, Phone, Profilepic) 
+values(@Userid, @First_Name, @Last_Name, @Gender, @Country, @City, @Phone_Number, @Picture)
 
-
-
-
+/* ruff work
+insert into login_log(UserID, login_time) values(3, GETDATE())
+select *  from login_log
+declare @Userid int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+print @Userid
+*/
