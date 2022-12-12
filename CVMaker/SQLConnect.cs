@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SQL
 {
-	class SQLConnect
+	public static class SQLConnect
 	{
 		private readonly static string SQL_CONNECTION_STRING = "Data Source=HOME-PC\\SQLEXPRESS;Initial Catalog=\"CV Maker\";Integrated Security=True";
 		public static SqlConnection sqlConnection
@@ -57,41 +57,48 @@ namespace SQL
 		#endregion
 
 		#region SQL Command
-		public static void InsertSQLCommand(string query, Action onSuccess)
+		public static void InsertSQLCommand(string query, Action onSuccess = null)
 		{
 			SQLCommand(query, "Inserted the record", "Enter correct data and ID cannot be duplicate", onSuccess);
 		}
 
 
-		public static void UpdateSQLCommand(string query, Action onSuccess)
+		public static void UpdateSQLCommand(string query, Action onSuccess = null)
 		{
 			SQLCommand(query, "Updated the record", "Cannot Update the record", onSuccess);
 		}
 
-		public static void RemoveSQLCommand(string query, Action onSuccess)
+		public static void RemoveSQLCommand(string query, Action onSuccess = null)
 		{
 			SQLCommand(query, "Removed the record", "Cannot remove the record (Id not found or it has Working Schedule)", onSuccess);
 		}
 
-		private static void SQLCommand(string query, string onSuccessMessage, string onFailedMessage, Action onSuccess)
+		private static void SQLCommand(string query, string onSuccessMessage, string onFailedMessage, Action onSuccess = null)
 		{
-			try
+			if(query == "VALUEISEMPTY")
 			{
-				SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-				if (sqlCommand.ExecuteNonQuery() != 0)
-				{
-					MessageBox.Show(onSuccessMessage, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-					onSuccess?.Invoke();
-				}
-				else
-				{
-					throw new NotImplementedException();
-				}
+				return;
 			}
-			catch
+			SqlConnect(() =>
 			{
-				MessageBox.Show(onFailedMessage, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
+				try
+				{
+					SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+					if (sqlCommand.ExecuteNonQuery() != 0)
+					{
+						MessageBox.Show(onSuccessMessage, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						onSuccess?.Invoke();
+					}
+					else
+					{
+						throw new NotImplementedException();
+					}
+				}
+				catch
+				{
+					MessageBox.Show(onFailedMessage, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+			});
 		}
 		#endregion
 
@@ -232,6 +239,15 @@ namespace SQL
 				dataGridView.DataSource = dataTable;
 			});
 
+		}
+
+
+		public static void ClearValues(params TextBox[] textBoxes)
+		{
+			for (int i = 0; i < textBoxes.Length; i++)
+			{
+				textBoxes[i].Clear();
+			}
 		}
 
 		#endregion
