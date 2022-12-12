@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using SQL;
 
 namespace CVMaker
 {
@@ -369,5 +371,43 @@ namespace CVMaker
 
             }
         }
-    }
+
+
+		#region Profile
+		private void Save_Profile_Click(object sender, EventArgs e)
+		{
+            SQLConnect.InsertSQLCommand("Insert 1, '" + First_Name.Text + "',");
+		}
+		private void Upload_ProfilePic_Click(object sender, EventArgs e)
+		{
+            Stream stream = null;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image File(*.jpe; *.jpeg; *.bmp) | *.jpg; *.jpeg; *.bmp";
+
+			if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+			{
+				try
+				{
+                    if((stream = openFileDialog.OpenFile()) != null)
+					{
+                        string Filename = openFileDialog.FileName;
+                        if(stream.Length > 512000)
+						{
+                            MessageBox.Show("File size limit reached!"); ;
+						}
+						else
+						{
+                            ProfilePic.Load(Filename);
+						}
+					}
+				}
+				catch
+				{
+                    MessageBox.Show("Error");
+				}
+			}
+		}
+		#endregion
+
+	}
 }
