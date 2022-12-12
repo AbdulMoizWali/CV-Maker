@@ -156,6 +156,15 @@ join Profile on [User].UserID = Profile.UserID
 /*create procedure Insert_User 
 insert into [User] values ()*/
 
+----- Profile -----
+--insert profile--
+create procedure Insert_Profile
+@First_Name varchar(50), @Last_Name varchar(50), @Gender varchar(10), @Country varchar(50), @City varchar(50), 
+@Phone_Number varchar(11), @Picture image
+as
+insert into Profile(First_name, Last_name, Gender, Country, City, Phone, Profilepic) 
+values(@First_Name, @Last_Name, @Gender, @Country, @City, @Phone_Number, @Picture)
+
 
 
 

@@ -580,7 +580,6 @@ namespace CVMaker
             // 
             // ProfilePic
             // 
-            this.ProfilePic.Image = ((System.Drawing.Image)(resources.GetObject("ProfilePic.Image")));
             this.ProfilePic.Location = new System.Drawing.Point(486, 92);
             this.ProfilePic.Name = "ProfilePic";
             this.ProfilePic.Size = new System.Drawing.Size(80, 80);
