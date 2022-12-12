@@ -25,16 +25,11 @@ namespace CVMaker
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-            
-
-                timer1.Stop();
-                Formregister f2 = new Formregister();
-                 f2.Show();
+            timer1.Stop();
+            Formlogin f2 = new Formlogin();
+            f2.Show();
            
             this.Hide();
-            
-           
         }
     }
 }

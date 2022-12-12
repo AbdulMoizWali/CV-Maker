@@ -95,11 +95,11 @@ namespace CVMaker
         }
         private void OnMouseEnterButton2(object sender, EventArgs e)
         {
-            Logout_Admin.BackColor = Color.White; // or Color.Red or whatever you want
+            button1.BackColor = Color.White; // or Color.Red or whatever you want
         }
         private void OnMouseLeaveButton2(object sender, EventArgs e)
         {
-            Logout_Admin.BackColor = SystemColors.ButtonFace;
+            button1.BackColor = SystemColors.ButtonFace;
         }
         private void tabPage3_Click(object sender, EventArgs e)
         {

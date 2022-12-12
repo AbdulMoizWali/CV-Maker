@@ -115,6 +115,7 @@
     <Compile Include="splashscreen.Designer.cs">
       <DependentUpon>splashscreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLConnect.cs" />
     <Compile Include="UC.cs">
       <SubType>UserControl</SubType>
     </Compile>

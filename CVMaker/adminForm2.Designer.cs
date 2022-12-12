@@ -29,17 +29,16 @@ namespace CVMaker
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminForm2));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Logout_Admin = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,47 +49,48 @@ namespace CVMaker
             this.label9 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Graph = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Country_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.Total_Users_label = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.Total_CV_label = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.User_ID_Delete = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.User_Delete = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.Reset_Password = new System.Windows.Forms.Button();
-            this.User_New_Password = new System.Windows.Forms.RichTextBox();
-            this.User_ID_Reset = new System.Windows.Forms.RichTextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Graph)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Country_Chart)).BeginInit();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.Logout_Admin);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -102,32 +102,19 @@ namespace CVMaker
             this.panel1.Size = new System.Drawing.Size(121, 453);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // button1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Logout_Admin
-            // 
-            this.Logout_Admin.BackColor = System.Drawing.Color.White;
-            this.Logout_Admin.FlatAppearance.BorderSize = 0;
-            this.Logout_Admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout_Admin.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout_Admin.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Logout_Admin.Location = new System.Drawing.Point(0, 390);
-            this.Logout_Admin.Name = "Logout_Admin";
-            this.Logout_Admin.Size = new System.Drawing.Size(75, 36);
-            this.Logout_Admin.TabIndex = 0;
-            this.Logout_Admin.Text = "Logout";
-            this.Logout_Admin.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button1.Location = new System.Drawing.Point(0, 390);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 36);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -241,8 +228,8 @@ namespace CVMaker
             // tabPage1
             // 
             this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.tabPage1.Controls.Add(this.Graph);
-            this.tabPage1.Controls.Add(this.Country_Chart);
+            this.tabPage1.Controls.Add(this.chart2);
+            this.tabPage1.Controls.Add(this.chart1);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Controls.Add(this.panel5);
             this.tabPage1.ForeColor = System.Drawing.Color.Transparent;
@@ -254,98 +241,64 @@ namespace CVMaker
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // Graph
+            // chart2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.Graph.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.Graph.Legends.Add(legend1);
-            this.Graph.Location = new System.Drawing.Point(315, 148);
-            this.Graph.Name = "Graph";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.Graph.Series.Add(series1);
-            this.Graph.Size = new System.Drawing.Size(300, 207);
-            this.Graph.TabIndex = 9;
-            this.Graph.Text = "chart2";
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
+            this.chart2.Location = new System.Drawing.Point(315, 148);
+            this.chart2.Name = "chart2";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart2.Series.Add(series3);
+            this.chart2.Size = new System.Drawing.Size(300, 207);
+            this.chart2.TabIndex = 9;
+            this.chart2.Text = "chart2";
             // 
-            // Country_Chart
+            // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.Country_Chart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Country_Chart.Legends.Add(legend2);
-            this.Country_Chart.Location = new System.Drawing.Point(9, 142);
-            this.Country_Chart.Name = "Country_Chart";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Users";
-            this.Country_Chart.Series.Add(series2);
-            this.Country_Chart.Size = new System.Drawing.Size(312, 220);
-            this.Country_Chart.TabIndex = 8;
-            this.Country_Chart.Text = "chart1";
-            title1.Name = "Geography";
-            title1.Text = "Geography";
-            this.Country_Chart.Titles.Add(title1);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panel4.Controls.Add(this.Total_Users_label);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(7, -3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(262, 139);
-            this.panel4.TabIndex = 6;
-            // 
-            // Total_Users_label
-            // 
-            this.Total_Users_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.Total_Users_label.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Total_Users_label.Font = new System.Drawing.Font("Nirmala UI", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Total_Users_label.ForeColor = System.Drawing.Color.White;
-            this.Total_Users_label.Location = new System.Drawing.Point(12, 74);
-            this.Total_Users_label.Multiline = true;
-            this.Total_Users_label.Name = "Total_Users_label";
-            this.Total_Users_label.Size = new System.Drawing.Size(232, 54);
-            this.Total_Users_label.TabIndex = 1;
-            this.Total_Users_label.Text = "40";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(5, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 37);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Total Users";
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
+            this.chart1.Location = new System.Drawing.Point(9, 142);
+            this.chart1.Name = "chart1";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Legend = "Legend1";
+            series4.Name = "Users";
+            this.chart1.Series.Add(series4);
+            this.chart1.Size = new System.Drawing.Size(312, 220);
+            this.chart1.TabIndex = 8;
+            this.chart1.Text = "chart1";
+            title2.Name = "Geography";
+            title2.Text = "Geography";
+            this.chart1.Titles.Add(title2);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.panel5.Controls.Add(this.Total_CV_label);
+            this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(307, -3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(278, 139);
             this.panel5.TabIndex = 7;
             // 
-            // Total_CV_label
+            // textBox2
             // 
-            this.Total_CV_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Total_CV_label.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Total_CV_label.Font = new System.Drawing.Font("Nirmala UI", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Total_CV_label.ForeColor = System.Drawing.Color.White;
-            this.Total_CV_label.Location = new System.Drawing.Point(8, 73);
-            this.Total_CV_label.Multiline = true;
-            this.Total_CV_label.Name = "Total_CV_label";
-            this.Total_CV_label.Size = new System.Drawing.Size(290, 63);
-            this.Total_CV_label.TabIndex = 1;
-            this.Total_CV_label.Text = "34";
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(8, 73);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(290, 63);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "34";
             // 
             // label3
             // 
@@ -362,12 +315,12 @@ namespace CVMaker
             // 
             this.tabPage2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabPage2.Controls.Add(this.User_ID_Delete);
+            this.tabPage2.Controls.Add(this.richTextBox3);
             this.tabPage2.Controls.Add(this.vScrollBar1);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.User_Delete);
+            this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
@@ -377,15 +330,15 @@ namespace CVMaker
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // User_ID_Delete
+            // richTextBox3
             // 
-            this.User_ID_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.User_ID_Delete.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.User_ID_Delete.Location = new System.Drawing.Point(14, 18);
-            this.User_ID_Delete.Name = "User_ID_Delete";
-            this.User_ID_Delete.Size = new System.Drawing.Size(177, 25);
-            this.User_ID_Delete.TabIndex = 7;
-            this.User_ID_Delete.Text = "";
+            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.Location = new System.Drawing.Point(14, 18);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(177, 25);
+            this.richTextBox3.TabIndex = 7;
+            this.richTextBox3.Text = "";
             // 
             // vScrollBar1
             // 
@@ -427,19 +380,19 @@ namespace CVMaker
             this.label5.TabIndex = 4;
             this.label5.Text = "Username";
             // 
-            // User_Delete
+            // label4
             // 
-            this.User_Delete.AutoSize = true;
-            this.User_Delete.BackColor = System.Drawing.Color.DodgerBlue;
-            this.User_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.User_Delete.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.User_Delete.ForeColor = System.Drawing.Color.White;
-            this.User_Delete.Location = new System.Drawing.Point(213, 18);
-            this.User_Delete.Name = "User_Delete";
-            this.User_Delete.Padding = new System.Windows.Forms.Padding(5);
-            this.User_Delete.Size = new System.Drawing.Size(55, 25);
-            this.User_Delete.TabIndex = 3;
-            this.User_Delete.Text = "Delete";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(213, 18);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(5);
+            this.label4.Size = new System.Drawing.Size(55, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Delete";
             // 
             // panel6
             // 
@@ -451,9 +404,9 @@ namespace CVMaker
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.White;
-            this.tabPage3.Controls.Add(this.Reset_Password);
-            this.tabPage3.Controls.Add(this.User_New_Password);
-            this.tabPage3.Controls.Add(this.User_ID_Reset);
+            this.tabPage3.Controls.Add(this.button5);
+            this.tabPage3.Controls.Add(this.richTextBox2);
+            this.tabPage3.Controls.Add(this.richTextBox1);
             this.tabPage3.Controls.Add(this.label11);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -464,38 +417,38 @@ namespace CVMaker
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // Reset_Password
+            // button5
             // 
-            this.Reset_Password.BackColor = System.Drawing.Color.DodgerBlue;
-            this.Reset_Password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Reset_Password.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reset_Password.ForeColor = System.Drawing.Color.White;
-            this.Reset_Password.Location = new System.Drawing.Point(21, 128);
-            this.Reset_Password.Name = "Reset_Password";
-            this.Reset_Password.Size = new System.Drawing.Size(94, 37);
-            this.Reset_Password.TabIndex = 2;
-            this.Reset_Password.Text = "Reset";
-            this.Reset_Password.UseVisualStyleBackColor = false;
+            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(21, 128);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(94, 37);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Reset";
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // User_New_Password
+            // richTextBox2
             // 
-            this.User_New_Password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.User_New_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.User_New_Password.Location = new System.Drawing.Point(21, 95);
-            this.User_New_Password.Name = "User_New_Password";
-            this.User_New_Password.Size = new System.Drawing.Size(160, 24);
-            this.User_New_Password.TabIndex = 1;
-            this.User_New_Password.Text = "";
+            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Location = new System.Drawing.Point(21, 95);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(160, 24);
+            this.richTextBox2.TabIndex = 1;
+            this.richTextBox2.Text = "";
             // 
-            // User_ID_Reset
+            // richTextBox1
             // 
-            this.User_ID_Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.User_ID_Reset.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.User_ID_Reset.Location = new System.Drawing.Point(21, 38);
-            this.User_ID_Reset.Name = "User_ID_Reset";
-            this.User_ID_Reset.Size = new System.Drawing.Size(160, 24);
-            this.User_ID_Reset.TabIndex = 1;
-            this.User_ID_Reset.Text = "";
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Location = new System.Drawing.Point(21, 38);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(160, 24);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
             // 
             // label11
             // 
@@ -521,6 +474,53 @@ namespace CVMaker
             this.label10.TabIndex = 0;
             this.label10.Text = "New Password";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(5, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(158, 37);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Total Users";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(12, 74);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(232, 54);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "40";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(7, -3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(262, 139);
+            this.panel4.TabIndex = 6;
+            // 
             // adminForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,22 +537,22 @@ namespace CVMaker
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Dashboard";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Graph)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Country_Chart)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -564,19 +564,19 @@ namespace CVMaker
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button Logout_Admin;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart Graph;
-        private System.Windows.Forms.DataVisualization.Charting.Chart Country_Chart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox Total_CV_label;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label User_Delete;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -584,15 +584,15 @@ namespace CVMaker
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox User_New_Password;
-        private System.Windows.Forms.RichTextBox User_ID_Reset;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button Reset_Password;
-        private System.Windows.Forms.RichTextBox User_ID_Delete;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox Total_Users_label;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
     }
 }

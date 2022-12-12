@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SQL;
 
 namespace CVMaker
 {
@@ -49,26 +50,35 @@ namespace CVMaker
             
         }
 
-        private void checkboxpass_CheckedChanged(object sender, EventArgs e)
-        {
+		private void register_Click(object sender, EventArgs e)
+		{
+            bool user = SQLConnect.SearchinTable("select username from [User]", "username", textBox1);
+            bool pass = SQLConnect.SearchinTable("select password from [User]", "password", textBox2);
+            if(user && pass)
+			{
+                string role = SQLConnect.GetValueFromTable(
+                    "select Role from [User] where username = '" +
+                    textBox1.Text + "' and password = '" + textBox2.Text + "'",
+                    "Role"
+                );
 
-        }
+                this.Hide();
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       /* private void label4_Click(object sender, EventArgs e)
-        {
-            Formregister f2 = new Formregister();
-            f2.Show();
-        }
-
-        private void close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-
-        }*/
-    }
+                if(role == "Admin")
+				{
+                    adminForm2 admin = new adminForm2();
+                    admin.Show();
+				}
+				else
+				{
+                    CV cV = new CV();
+                    cV.Show();
+				}
+			}
+			else
+			{
+                MessageBox.Show("Username or Password incorrect!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+	}
 }
