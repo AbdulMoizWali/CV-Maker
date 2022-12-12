@@ -32,10 +32,10 @@ namespace CVMaker
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formlogin));
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.register = new System.Windows.Forms.Button();
-            this.checkboxpass = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Login = new System.Windows.Forms.Button();
+            this.Show_password = new System.Windows.Forms.CheckBox();
+            this.Login_password = new System.Windows.Forms.TextBox();
+            this.Login_username = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,51 +67,51 @@ namespace CVMaker
             this.label3.TabIndex = 30;
             this.label3.Text = "New to our platform?";
             // 
-            // register
+            // Login
             // 
-            this.register.BackColor = System.Drawing.Color.DodgerBlue;
-            this.register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.register.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register.ForeColor = System.Drawing.Color.White;
-            this.register.Location = new System.Drawing.Point(38, 316);
-            this.register.Name = "register";
-            this.register.Size = new System.Drawing.Size(216, 35);
-            this.register.TabIndex = 29;
-            this.register.Text = "Login";
-            this.register.UseVisualStyleBackColor = false;
+            this.Login.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Login.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login.ForeColor = System.Drawing.Color.White;
+            this.Login.Location = new System.Drawing.Point(38, 316);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(216, 35);
+            this.Login.TabIndex = 29;
+            this.Login.Text = "Login";
+            this.Login.UseVisualStyleBackColor = false;
             // 
-            // checkboxpass
+            // Show_password
             // 
-            this.checkboxpass.AutoSize = true;
-            this.checkboxpass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkboxpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkboxpass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkboxpass.Location = new System.Drawing.Point(135, 281);
-            this.checkboxpass.Name = "checkboxpass";
-            this.checkboxpass.Size = new System.Drawing.Size(119, 21);
-            this.checkboxpass.TabIndex = 28;
-            this.checkboxpass.Text = "Show Password";
-            this.checkboxpass.UseVisualStyleBackColor = true;
+            this.Show_password.AutoSize = true;
+            this.Show_password.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Show_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Show_password.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Show_password.Location = new System.Drawing.Point(135, 281);
+            this.Show_password.Name = "Show_password";
+            this.Show_password.Size = new System.Drawing.Size(119, 21);
+            this.Show_password.TabIndex = 28;
+            this.Show_password.Text = "Show Password";
+            this.Show_password.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // Login_password
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(38, 238);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 28);
-            this.textBox2.TabIndex = 26;
+            this.Login_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Login_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Login_password.Location = new System.Drawing.Point(38, 238);
+            this.Login_password.Multiline = true;
+            this.Login_password.Name = "Login_password";
+            this.Login_password.Size = new System.Drawing.Size(216, 28);
+            this.Login_password.TabIndex = 26;
             // 
-            // textBox1
+            // Login_username
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(38, 172);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 28);
-            this.textBox1.TabIndex = 25;
+            this.Login_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Login_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Login_username.Location = new System.Drawing.Point(38, 172);
+            this.Login_username.Multiline = true;
+            this.Login_username.Name = "Login_username";
+            this.Login_username.Size = new System.Drawing.Size(216, 28);
+            this.Login_username.TabIndex = 25;
             // 
             // password
             // 
@@ -174,10 +174,10 @@ namespace CVMaker
             this.ClientSize = new System.Drawing.Size(285, 544);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.register);
-            this.Controls.Add(this.checkboxpass);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Login);
+            this.Controls.Add(this.Show_password);
+            this.Controls.Add(this.Login_password);
+            this.Controls.Add(this.Login_username);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label1);
@@ -199,10 +199,10 @@ namespace CVMaker
 
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button register;
-        private System.Windows.Forms.CheckBox checkboxpass;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Login;
+        private System.Windows.Forms.CheckBox Show_password;
+        private System.Windows.Forms.TextBox Login_password;
+        private System.Windows.Forms.TextBox Login_username;
         private System.Windows.Forms.Label password;
         private System.Windows.Forms.Label username;
         private System.Windows.Forms.Label label1;

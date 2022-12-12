@@ -33,11 +33,11 @@ namespace CVMaker
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formregister));
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.register = new System.Windows.Forms.Button();
-            this.checkboxpass = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Register = new System.Windows.Forms.Button();
+            this.Show_Register_password = new System.Windows.Forms.CheckBox();
+            this.Confirm_Register_password = new System.Windows.Forms.TextBox();
+            this.Register_password = new System.Windows.Forms.TextBox();
+            this.Register_username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.Label();
@@ -71,63 +71,63 @@ namespace CVMaker
             this.label3.TabIndex = 19;
             this.label3.Text = "Already Have an Account";
             // 
-            // register
+            // Register
             // 
-            this.register.BackColor = System.Drawing.Color.DodgerBlue;
-            this.register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.register.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register.ForeColor = System.Drawing.Color.White;
-            this.register.Location = new System.Drawing.Point(38, 368);
-            this.register.Name = "register";
-            this.register.Size = new System.Drawing.Size(216, 35);
-            this.register.TabIndex = 18;
-            this.register.Text = "Register";
-            this.register.UseVisualStyleBackColor = false;
-            this.register.Click += new System.EventHandler(this.register_Click);
+            this.Register.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Register.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Register.ForeColor = System.Drawing.Color.White;
+            this.Register.Location = new System.Drawing.Point(38, 368);
+            this.Register.Name = "Register";
+            this.Register.Size = new System.Drawing.Size(216, 35);
+            this.Register.TabIndex = 18;
+            this.Register.Text = "Register";
+            this.Register.UseVisualStyleBackColor = false;
+            this.Register.Click += new System.EventHandler(this.register_Click);
             // 
-            // checkboxpass
+            // Show_Register_password
             // 
-            this.checkboxpass.AutoSize = true;
-            this.checkboxpass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkboxpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkboxpass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkboxpass.Location = new System.Drawing.Point(135, 333);
-            this.checkboxpass.Name = "checkboxpass";
-            this.checkboxpass.Size = new System.Drawing.Size(119, 21);
-            this.checkboxpass.TabIndex = 17;
-            this.checkboxpass.Text = "Show Password";
-            this.checkboxpass.UseVisualStyleBackColor = true;
+            this.Show_Register_password.AutoSize = true;
+            this.Show_Register_password.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Show_Register_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Show_Register_password.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Show_Register_password.Location = new System.Drawing.Point(135, 333);
+            this.Show_Register_password.Name = "Show_Register_password";
+            this.Show_Register_password.Size = new System.Drawing.Size(119, 21);
+            this.Show_Register_password.TabIndex = 17;
+            this.Show_Register_password.Text = "Show Password";
+            this.Show_Register_password.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // Confirm_Register_password
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(38, 296);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(216, 28);
-            this.textBox3.TabIndex = 16;
+            this.Confirm_Register_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Confirm_Register_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Confirm_Register_password.Location = new System.Drawing.Point(38, 296);
+            this.Confirm_Register_password.Multiline = true;
+            this.Confirm_Register_password.Name = "Confirm_Register_password";
+            this.Confirm_Register_password.Size = new System.Drawing.Size(216, 28);
+            this.Confirm_Register_password.TabIndex = 16;
             // 
-            // textBox2
+            // Register_password
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(38, 233);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 28);
-            this.textBox2.TabIndex = 15;
+            this.Register_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Register_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Register_password.Location = new System.Drawing.Point(38, 233);
+            this.Register_password.Multiline = true;
+            this.Register_password.Name = "Register_password";
+            this.Register_password.Size = new System.Drawing.Size(216, 28);
+            this.Register_password.TabIndex = 15;
             // 
-            // textBox1
+            // Register_username
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(38, 167);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 28);
-            this.textBox1.TabIndex = 14;
+            this.Register_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Register_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Register_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Register_username.Location = new System.Drawing.Point(38, 167);
+            this.Register_username.Multiline = true;
+            this.Register_username.Name = "Register_username";
+            this.Register_username.Size = new System.Drawing.Size(216, 28);
+            this.Register_username.TabIndex = 14;
             // 
             // label2
             // 
@@ -208,11 +208,11 @@ namespace CVMaker
             this.ClientSize = new System.Drawing.Size(285, 544);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.register);
-            this.Controls.Add(this.checkboxpass);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Register);
+            this.Controls.Add(this.Show_Register_password);
+            this.Controls.Add(this.Confirm_Register_password);
+            this.Controls.Add(this.Register_password);
+            this.Controls.Add(this.Register_username);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
@@ -236,11 +236,11 @@ namespace CVMaker
 
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button register;
-        private System.Windows.Forms.CheckBox checkboxpass;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Register;
+        private System.Windows.Forms.CheckBox Show_Register_password;
+        private System.Windows.Forms.TextBox Confirm_Register_password;
+        private System.Windows.Forms.TextBox Register_password;
+        private System.Windows.Forms.TextBox Register_username;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label password;
         private System.Windows.Forms.Label username;

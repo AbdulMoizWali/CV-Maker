@@ -49,25 +49,9 @@ namespace CVMaker
             button1.BackColor = Color.DodgerBlue;
 
         }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
         private bool display1WasClicked = false;
 
         popupCV ab = new popupCV();
-
-        public void button10_Click(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void displaydoubleclick(object sender, EventArgs e)
         {
@@ -257,7 +241,7 @@ namespace CVMaker
         {
             panelskill.Height = 50;
             skill person1 = new skill();
-            person1.title_skill.Text = titleskill.Text;
+            person1.title_skill.Text = Title_Skill.Text;
             flowLayoutPanelskill.Controls.Add(person1);
 
         }
@@ -320,7 +304,7 @@ namespace CVMaker
         {
             exper_panel.Height = 50;
             Experience person3 = new Experience();
-            person3.titleexperience.Text = experiecetitle.Text;
+            person3.titleexperience.Text = Experiece_Title.Text;
             flowLayoutPanelexperience.Controls.Add(person3);
         }
 
