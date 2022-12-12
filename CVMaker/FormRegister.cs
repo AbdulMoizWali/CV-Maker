@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SQL;
 
 namespace CVMaker
 {
@@ -68,10 +69,6 @@ namespace CVMaker
 
         }
 
-        private void register_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Formregister_Load(object sender, EventArgs e)
         {
@@ -90,6 +87,36 @@ namespace CVMaker
                 timerspa.Stop();
             }
         }
-    }
+
+		private void checkboxpass_CheckedChanged(object sender, EventArgs e)
+		{
+            if (checkboxpass.Checked)
+            {
+                textBox2.PasswordChar = '*';
+                textBox3.PasswordChar = '*';
+            }
+            else
+            {
+                textBox2.PasswordChar = '\0';
+                textBox3.PasswordChar = '\0';
+            }
+        }
+        private void register_Click(object sender, EventArgs e)
+        {
+            if(textBox2.Text != textBox3.Text)
+			{
+                MessageBox.Show("Password should be matched!");
+                return;
+			}
+
+            SQLConnect.InsertSQLCommand(
+                SQLConnect.ProcedureQuery("Insert_User", textBox1.Text, textBox2.Text, DateTime.Now.ToString("d"), "User"),
+				() =>
+				{
+                    SQLConnect.ClearValues(textBox1, textBox2, textBox3);
+				}
+            );
+        }
+	}
 
 }
