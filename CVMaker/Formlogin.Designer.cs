@@ -84,6 +84,8 @@ namespace CVMaker
 			// checkboxpass
 			// 
 			this.checkboxpass.AutoSize = true;
+			this.checkboxpass.Checked = true;
+			this.checkboxpass.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.checkboxpass.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.checkboxpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.checkboxpass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,6 +95,7 @@ namespace CVMaker
 			this.checkboxpass.TabIndex = 28;
 			this.checkboxpass.Text = "Show Password";
 			this.checkboxpass.UseVisualStyleBackColor = true;
+			this.checkboxpass.CheckedChanged += new System.EventHandler(this.checkboxpass_CheckedChanged);
 			// 
 			// textBox2
 			// 
@@ -101,6 +104,7 @@ namespace CVMaker
 			this.textBox2.Location = new System.Drawing.Point(38, 238);
 			this.textBox2.Multiline = true;
 			this.textBox2.Name = "textBox2";
+			this.textBox2.PasswordChar = '*';
 			this.textBox2.Size = new System.Drawing.Size(216, 28);
 			this.textBox2.TabIndex = 26;
 			// 

@@ -80,5 +80,17 @@ namespace CVMaker
                 MessageBox.Show("Username or Password incorrect!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
+
+		private void checkboxpass_CheckedChanged(object sender, EventArgs e)
+		{
+			if (checkboxpass.Checked)
+			{
+                textBox2.PasswordChar = '*';
+            }
+			else
+			{
+                textBox2.PasswordChar = '\0';
+			}
+		}
 	}
 }
