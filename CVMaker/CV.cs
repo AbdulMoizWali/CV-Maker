@@ -31,6 +31,7 @@ namespace CVMaker
         public CV()
         {
             InitializeComponent();
+            this.FormClosing += Save_Logout_Entry;
             CVtopopup1();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 7, 7));
@@ -374,6 +375,8 @@ namespace CVMaker
 
 
 		#region Profile
+
+		#region Save
 		private void Save_Profile_Click(object sender, EventArgs e)
 		{
             string Gender = "";
@@ -392,17 +395,50 @@ namespace CVMaker
                 ProfilePic.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
                 pic = stream.ToArray();
 			}
-            SQLConnect.InsertSQLCommand(
+            SQLConnect.SQLCommand(
                 SQLConnect.ProcedureQuery("Insert_Profile", First_Name.Text, Last_Name.Text, Gender, Country.Text, City.Text, Phone_Number.Text, "@ProfilePic"),
-                //"insert into Profile values (4, '" + First_Name.Text + "', '" + Last_Name.Text + "', '" + Gender + "', '" + Country.Text + "', '" + City.Text + "', '" + Phone_Number.Text + "', '" + "@ProfilePic')",
+                "Profile Created and Information Added",
+                "User has already created profile",
                 null,
                 "@ProfilePic",
                 pic
             );
-
-
 		}
-		private void Upload_ProfilePic_Click(object sender, EventArgs e)
+
+        #endregion
+
+        #region Edit
+
+        private void Edit_Profile_Click(object sender, EventArgs e)
+        {
+            //Update_Profile
+            string Gender = "";
+            if (Male_Radio.Checked)
+            {
+                Gender = Male_Radio.Text;
+            }
+            else if (Female_Radio.Checked)
+            {
+                Gender = Female_Radio.Text;
+            }
+            byte[] pic = null;
+            if (ProfilePic.Image != null)
+            {
+                MemoryStream stream = new MemoryStream();
+                ProfilePic.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                pic = stream.ToArray();
+            }
+            SQLConnect.UpdateSQLCommand(
+                SQLConnect.ProcedureQuery("Update_Profile", First_Name.Text, Last_Name.Text, Gender, Country.Text, City.Text, Phone_Number.Text, "@ProfilePic"),
+                null,
+                "@ProfilePic",
+                pic
+            );
+        }
+
+        #endregion
+
+        private void Upload_ProfilePic_Click(object sender, EventArgs e)
 		{
             Stream stream = null;
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -433,5 +469,24 @@ namespace CVMaker
 		}
 		#endregion
 
+		#region Logout
+		private void Logout_User_Click(object sender, EventArgs e)
+		{
+            Save_Logout_Entry(sender, e);
+            Formlogin formlogin = new Formlogin();
+            formlogin.Show();
+            this.Close();
+		}
+
+
+        private void Save_Logout_Entry(object sender, EventArgs e)
+		{
+            SQLConnect.InsertSQLCommand(
+                   SQLConnect.ProcedureQuery("Insert_LoginLogs_Logouttime"),
+                   false
+            );
+            this.FormClosing -= Save_Logout_Entry;
+        }
+		#endregion
 	}
 }

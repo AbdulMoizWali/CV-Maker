@@ -400,6 +400,7 @@ namespace CVMaker
 			this.Edit_Profile.TabIndex = 7;
 			this.Edit_Profile.Text = "Edit";
 			this.Edit_Profile.UseVisualStyleBackColor = false;
+			this.Edit_Profile.Click += new System.EventHandler(this.Edit_Profile_Click);
 			// 
 			// Save_Profile
 			// 
@@ -1944,6 +1945,7 @@ namespace CVMaker
 			this.Logout_User.TabIndex = 8;
 			this.Logout_User.Text = "Logout";
 			this.Logout_User.UseVisualStyleBackColor = false;
+			this.Logout_User.Click += new System.EventHandler(this.Logout_User_Click);
 			// 
 			// button1
 			// 
