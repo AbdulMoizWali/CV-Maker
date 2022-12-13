@@ -128,17 +128,41 @@ insert into [User] values (@Username, @Password, @RegisterDate, @Role)
 
 drop procedure Insert_User
 
-exec Insert_User 'A.Moiz', '1', '10-9-22', 'Admin'
+exec Insert_User 'A.Moiz', '12', '10-9-22', 'User'
 exec Insert_User 'Siddique', '2', '12-9-22', 'Admin'
 exec Insert_User 'khizer', '3', '8-9-22', 'User'
+
+create procedure Search_User_by_UserPass @Username varchar(50), @Password varchar(50)
+as
+declare @userid int
+select @userid = UserID from [User] where username = @Username and password = @Password
+return @userid
+
+drop procedure Search_User_by_UserPass
+
+
 
 
 
 
 --------  Login Logs  --------
-create procedure Insert_LoginLogs @UserID int, @LoginTime datetime, @LogoutTime datetime
+create procedure Insert_LoginLogs @Username varchar(50), @Password varchar(50), @LoginTime datetime
 as
-insert into login_log values (@UserID, @LoginTime, @LogoutTime)
+declare @userid int
+exec @userid = Search_User_by_UserPass @Username, @Password
+insert into login_log(UserID, login_time) values (@userid, @LoginTime)
+
+exec Insert_LoginLogs 'A.Moiz', '1', '2011-2-25'
+
+drop procedure Insert_LoginLogs
+
+create procedure Insert_LoginLogs_Logouttime
+as
+declare @LoginID int
+set @LoginID = (select top 1 LoginID from login_log order by login_time desc)
+update login_log set logout_time = GETDATE() where LoginID = @LoginID
+
+exec Insert_LoginLogs_Logouttime
 
 
 create procedure Get_LoginLogs
@@ -152,9 +176,10 @@ join [User] on login_log.UserID = [User].UserID
 join Profile on [User].UserID = Profile.UserID
 
 
--------- User  ---------
-/*create procedure Insert_User 
-insert into [User] values ()*/
+
+
+
+
 
 ----- Profile -----
 --insert profile--
@@ -167,6 +192,26 @@ set @Userid = (select top 1 UserID from login_log order by login_time desc)
 insert into Profile(UserID, First_name, Last_name, Gender, Country, City, Phone, Profilepic) 
 values(@Userid, @First_Name, @Last_Name, @Gender, @Country, @City, @Phone_Number, @Picture)
 
+
+
+create procedure Update_Profile
+@First_Name varchar(50), @Last_Name varchar(50), @Gender varchar(10), @Country varchar(50), @City varchar(50), 
+@Phone_Number varchar(11), @Picture image
+as
+declare @Userid int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+update Profile set  
+First_name = @First_Name, 
+Last_name = @Last_Name, 
+Gender = @Gender, 
+Country = @Country, 
+City = @City, 
+Phone = @Phone_Number, 
+Profilepic = @Picture
+where UserID = @Userid
+
+
+
 /* ruff work
 insert into login_log(UserID, login_time) values(3, GETDATE())
 select *  from login_log
@@ -175,6 +220,10 @@ set @Userid = (select top 1 UserID from login_log order by login_time desc)
 print @Userid
 */
 
+
+
+
+
 select * from [User]
 delete from Profile
 select * from Profile
@@ -182,3 +231,6 @@ select * from login_log
 
 insert into login_log(UserID, login_time) values (4, GETDATE())
 insert into login_log(UserID, login_time) values (5, GETDATE())
+
+delete from login_log
+delete from Profile where ProfileID = 7
