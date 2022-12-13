@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SQL;
 
 namespace CVMaker
 {
@@ -46,7 +47,7 @@ namespace CVMaker
         {
            
             InitializeComponent();
-          
+            this.FormClosing += Save_Logout_Entry;
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 7, 7));
         }
@@ -129,6 +130,28 @@ namespace CVMaker
             Application.Exit();
         }
 
-        
+
+
+
+        #region Logout
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Save_Logout_Entry(sender, e);
+            Formlogin formlogin = new Formlogin();
+            formlogin.Show();
+            this.Close();
+        }
+
+
+        private void Save_Logout_Entry(object sender, EventArgs e)
+        {
+            SQLConnect.InsertSQLCommand(
+                   SQLConnect.ProcedureQuery("Insert_LoginLogs_Logouttime"),
+                   false
+           );
+            this.FormClosing -= Save_Logout_Entry;
+        }
+        #endregion
+
     }
 }
