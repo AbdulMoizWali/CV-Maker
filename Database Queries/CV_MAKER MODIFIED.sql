@@ -192,7 +192,8 @@ set @Userid = (select top 1 UserID from login_log order by login_time desc)
 insert into Profile(UserID, First_name, Last_name, Gender, Country, City, Phone, Profilepic) 
 values(@Userid, @First_Name, @Last_Name, @Gender, @Country, @City, @Phone_Number, @Picture)
 
-
+select * from Profile
+select ProfileID from Profile where UserID = 3
 
 create procedure Update_Profile
 @First_Name varchar(50), @Last_Name varchar(50), @Gender varchar(10), @Country varchar(50), @City varchar(50), 
@@ -210,8 +211,17 @@ Phone = @Phone_Number,
 Profilepic = @Picture
 where UserID = @Userid
 
+/*
+create procedure get_last_login_UserID
+as
+declare @Userid int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+return @Userid
 
-
+declare @value int
+exec @value get_last_login_UserID
+print @value
+*/
 /* ruff work
 insert into login_log(UserID, login_time) values(3, GETDATE())
 select *  from login_log
@@ -234,3 +244,64 @@ insert into login_log(UserID, login_time) values (5, GETDATE())
 
 delete from login_log
 delete from Profile where ProfileID = 7
+
+--Skills--
+--Insert Skill--
+create procedure Insert_Skill
+@Title varchar(20), @Level int
+as
+declare @Userid int, @Profile_ID int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
+insert into Skills(ProfileID, Title, Level) values(@Profile_ID, @Title, @Level)
+
+--------
+--delete Skill
+--create procedure Delete_Skill
+
+
+exec Insert_Skill 'UI design', 2
+exec Insert_Skill 'Graphics design', 3
+
+--Education--
+--Insert Education
+create procedure Insert_Education
+@Title varchar(50), @Institute varchar(50), @City varchar(20), @Country varchar(20), @Starting_Date date, @Ending_Date date
+as
+declare @Userid int, @Profile_ID int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
+insert into Education(ProfileID, Title, Institute, City, Country, Starting_Date, Ending_Date)
+values(@Profile_ID, @Title, @Institute, @City, @Country, @Starting_Date, @Ending_Date)
+
+exec Insert_Education 'FSC', 'Government college', 'Karachi', 'Pakistan', '14-Dec-2020', '17-Jan-2021'
+
+--Experience--
+--Insert Experience
+create procedure Insert_Experience
+@Title varchar(50), @Company_name varchar(50), @Description varchar(20), @Starting_Date date, @Ending_Date date, @Job_type varchar(20)
+as
+declare @Userid int, @Profile_ID int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
+insert into Experience(ProfileID, Title, Company_name, Description, Starting_Date, Ending_Date, Job_type)
+values(@Profile_ID, @Title, @Company_name, @Description, @Starting_Date, @Ending_Date, @Job_type)
+
+exec Insert_Experience 'Intership', 'Maju', 'Kashif nay mujay salary nahi di', '21-sep-2021', '21-oct-2021', 'Part-time'
+
+--Social--
+--Insert Social
+create procedure Insert_Social
+@Title varchar(20), @Link varchar(100)
+as
+declare @Userid int, @Profile_ID int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
+insert into Social(ProfileID, Title, Link) values(@Profile_ID, @Title, @Link)
+
+exec Insert_Social 'Instagram', 'Instagram.com'
+
+select * from Education
+select * from Experience
+select * from Social
+select * from Skills
