@@ -62,7 +62,11 @@ namespace CVMaker
                     "Role"
                 );
 
-                this.Hide();
+
+                SQLConnect.InsertSQLCommand(
+                    SQLConnect.ProcedureQuery("Insert_LoginLogs", textBox1.Text, textBox2.Text, DateTime.Now.ToString()),
+                    false
+                );
 
                 if(role == "Admin")
 				{
@@ -74,6 +78,7 @@ namespace CVMaker
                     CV cV = new CV();
                     cV.Show();
 				}
+                this.Close();
 			}
 			else
 			{
