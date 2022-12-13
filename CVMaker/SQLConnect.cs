@@ -62,10 +62,20 @@ namespace SQL
 			SQLCommand(query, "Inserted the record", "Enter correct data and ID cannot be duplicate", onSuccess, ParameterName, ParameterData);
 		}
 
+		public static void InsertSQLCommand(string query, bool ShowMessageBox, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
+		{
+			SQLCommand(query, ShowMessageBox, null, null, onSuccess, ParameterName, ParameterData);
+		}
+
 
 		public static void UpdateSQLCommand(string query, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
 		{
 			SQLCommand(query, "Updated the record", "Cannot Update the record", onSuccess, ParameterName, ParameterData);
+		}
+
+		public static void UpdateSQLCommand(string query, bool ShowMessageBox, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
+		{
+			SQLCommand(query, ShowMessageBox, null, null, onSuccess, ParameterName, ParameterData);
 		}
 
 		public static void RemoveSQLCommand(string query, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
@@ -73,9 +83,14 @@ namespace SQL
 			SQLCommand(query, "Removed the record", "Cannot remove the record (Id not found or it has Working Schedule)", onSuccess, ParameterName, ParameterData);
 		}
 
-		private static void SQLCommand(string query, string onSuccessMessage, string onFailedMessage, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
+		public static void SQLCommand(string query, string onSuccessMessage, string onFailedMessage, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
 		{
-			if(query == "VALUEISEMPTY")
+			SQLCommand(query, true, onSuccessMessage, onFailedMessage, onSuccess, ParameterName, ParameterData);
+		}
+
+		private static void SQLCommand(string query, bool showMessageBox, string onSuccessMessage = null, string onFailedMessage = null, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
+		{
+			if (query == "VALUEISEMPTY")
 			{
 				return;
 			}
@@ -84,13 +99,16 @@ namespace SQL
 				try
 				{
 					SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-					if(ParameterName != null && ParameterData != null)
+					if (ParameterName != null && ParameterData != null)
 					{
 						sqlCommand.Parameters.AddWithValue(ParameterName, ParameterData);
 					}
 					if (sqlCommand.ExecuteNonQuery() != 0)
 					{
-						MessageBox.Show(onSuccessMessage, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						if (showMessageBox)
+						{
+							MessageBox.Show(onSuccessMessage, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						}
 						onSuccess?.Invoke();
 					}
 					else
@@ -100,7 +118,10 @@ namespace SQL
 				}
 				catch// (Exception ex)
 				{
-					MessageBox.Show(onFailedMessage, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					if (showMessageBox)
+					{
+						MessageBox.Show(onFailedMessage, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
 				}
 			});
 		}
