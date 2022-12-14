@@ -74,6 +74,12 @@
     <Compile Include="CV.Designer.cs">
       <DependentUpon>CV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Education_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Education_UC.designer.cs">
+      <DependentUpon>Education_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Experience.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,18 +122,15 @@
       <DependentUpon>splashscreen.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLConnect.cs" />
-    <Compile Include="UC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC.Designer.cs">
-      <DependentUpon>UC.cs</DependentUpon>
-    </Compile>
     <Compile Include="Winapi.cs" />
     <EmbeddedResource Include="adminForm2.resx">
       <DependentUpon>adminForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CV.resx">
       <DependentUpon>CV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Education_UC.resx">
+      <DependentUpon>Education_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Experience.resx">
       <DependentUpon>Experience.cs</DependentUpon>
@@ -146,9 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="splashscreen.resx">
       <DependentUpon>splashscreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC.resx">
-      <DependentUpon>UC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

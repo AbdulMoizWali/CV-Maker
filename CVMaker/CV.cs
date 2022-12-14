@@ -219,33 +219,44 @@ namespace CVMaker
             tabPage7.Hide();
             tabPage2.Hide();
             tabPage1.Hide();
-            
+            MakeSkill();
         }
 
         private void MakeSkill()
         {
-            DataTable dataTable = new DataTable();
-            ///
+            flowLayoutPanelskill.Controls.Clear();
             string Title = "";
             string Level = "";
-            for (int i = 0; i < dataTable.Rows.Count; i++)
-            {
-                Title = dataTable.Rows[i]["Title"].ToString();
-                if (dataTable.Rows[i]["Level"] == 1) {
-                    Level = dataTable.Rows[i]["Beginner"].ToString();
-                }   
-                else if(dataTable.Rows[i]["Level"] == 2)
+            SQLConnect.GetDataTableFromTable(
+                SQLConnect.ProcedureQuery("Get_ActiveUserProfile_Skills"),
+                (dataTable) =>
                 {
-                    Level = dataTable.Rows[i]["Intermediate"].ToString();
-                }   
-                else if (dataTable.Rows[i]["Level"] == 3)
-                {
-                    Level = dataTable.Rows[i]["Expert"].ToString();
-                }
-                  
-                skill skill1 = new skill(Title, Level);
-                flowLayoutPanelskill.Controls.Add(skill1);
-            }
+                    for (int i = 0; i < dataTable.Rows.Count; i++)
+                    {
+                        Title = dataTable.Rows[i]["Title"].ToString();
+
+                        if (dataTable.Rows[i]["Level"].ToString() == "1")
+                        {
+                            Level = "Beginner";
+                        }
+                        else if (dataTable.Rows[i]["Level"].ToString() == "2")
+                        {
+                            Level = "Intermediate";
+                        }
+                        else if (dataTable.Rows[i]["Level"].ToString() == "3")
+                        {
+                            Level = "Expert";
+                        }
+
+                        skill skill1 = new skill(Title, Level);
+                        flowLayoutPanelskill.Controls.Add(skill1);
+                    }
+                },
+                () =>
+				{
+                    MessageBox.Show("No Record");
+				}
+           );            
         }
 
         private void addskill_Click(object sender, EventArgs e)

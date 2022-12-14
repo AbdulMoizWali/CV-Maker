@@ -11,7 +11,7 @@ namespace SQL
 {
 	public static class SQLConnect
 	{
-		private readonly static string SQL_CONNECTION_STRING = "Data Source=DESKTOP-616GIMI;Initial Catalog=\"CV Maker\";Integrated Security=True";
+		private readonly static string SQL_CONNECTION_STRING = "Data Source=HOME-PC\\SQLEXPRESS;Initial Catalog=\"CV Maker\";Integrated Security=True";
 		public static SqlConnection sqlConnection
 		{
 			get;
@@ -226,6 +226,24 @@ namespace SQL
 			}
 		}
 
+		public static void GetDataTableFromTable(string query, Action<DataTable> onSuccess, Action onFailed = null)
+		{
+			DataTable dataTable = new DataTable();
+			SqlConnect(() =>
+			{
+				try
+				{
+					SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sqlConnection);
+					sqlDataAdapter.Fill(dataTable);
+					onSuccess?.Invoke(dataTable);
+				}
+				catch
+				{
+					onFailed?.Invoke();
+				}
+			});
+		}
+
 
 		public static string GetValueFromTable(string query, string column_name)
 		{
@@ -277,6 +295,7 @@ namespace SQL
 		}
 
 		#endregion
+
 
 
 	}
