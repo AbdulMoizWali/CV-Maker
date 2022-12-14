@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CVMaker
 {
-    public partial class UC : UserControl
+    public partial class Education_UC : UserControl
     {
-        public UC()
+        public Education_UC()
         {
             InitializeComponent();
         }

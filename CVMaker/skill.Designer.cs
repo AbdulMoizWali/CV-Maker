@@ -31,15 +31,15 @@ namespace CVMaker
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(skill));
             this.panelskill = new System.Windows.Forms.Panel();
-            this.deleteskill = new System.Windows.Forms.PictureBox();
             this.roundedpanelskill = new CVMaker.roundedpanel();
             this.level_skill = new System.Windows.Forms.Label();
             this.title_skill = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.deleteskill = new System.Windows.Forms.PictureBox();
             this.panelskill.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deleteskill)).BeginInit();
             this.roundedpanelskill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deleteskill)).BeginInit();
             this.SuspendLayout();
             // 
             // panelskill
@@ -52,17 +52,6 @@ namespace CVMaker
             this.panelskill.Size = new System.Drawing.Size(388, 108);
             this.panelskill.TabIndex = 2;
             this.panelskill.Paint += new System.Windows.Forms.PaintEventHandler(this.panelskill_Paint);
-            // 
-            // deleteskill
-            // 
-            this.deleteskill.Image = ((System.Drawing.Image)(resources.GetObject("deleteskill.Image")));
-            this.deleteskill.Location = new System.Drawing.Point(1, 26);
-            this.deleteskill.Name = "deleteskill";
-            this.deleteskill.Size = new System.Drawing.Size(81, 40);
-            this.deleteskill.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.deleteskill.TabIndex = 0;
-            this.deleteskill.TabStop = false;
-            this.deleteskill.Click += new System.EventHandler(this.deleteskill_Click);
             // 
             // roundedpanelskill
             // 
@@ -112,6 +101,17 @@ namespace CVMaker
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.deleteskill_Click);
             // 
+            // deleteskill
+            // 
+            this.deleteskill.Image = ((System.Drawing.Image)(resources.GetObject("deleteskill.Image")));
+            this.deleteskill.Location = new System.Drawing.Point(1, 26);
+            this.deleteskill.Name = "deleteskill";
+            this.deleteskill.Size = new System.Drawing.Size(81, 40);
+            this.deleteskill.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.deleteskill.TabIndex = 0;
+            this.deleteskill.TabStop = false;
+            this.deleteskill.Click += new System.EventHandler(this.deleteskill_Click);
+            // 
             // skill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,9 +120,9 @@ namespace CVMaker
             this.Name = "skill";
             this.Size = new System.Drawing.Size(290, 108);
             this.panelskill.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.deleteskill)).EndInit();
             this.roundedpanelskill.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deleteskill)).EndInit();
             this.ResumeLayout(false);
 
         }

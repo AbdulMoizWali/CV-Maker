@@ -1,7 +1,7 @@
 ﻿
 namespace CVMaker
 {
-    partial class UC
+    partial class Education_UC
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace CVMaker
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Education_UC));
             this.panelll = new System.Windows.Forms.Panel();
             this.editeducation = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -122,14 +122,14 @@ namespace CVMaker
             this.title_edu.Size = new System.Drawing.Size(251, 35);
             this.title_edu.TabIndex = 0;
             // 
-            // UC
+            // Education_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.roundedpanel1);
             this.Controls.Add(this.panelll);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "UC";
+            this.Name = "Education_UC";
             this.Size = new System.Drawing.Size(290, 108);
             this.panelll.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.editeducation)).EndInit();

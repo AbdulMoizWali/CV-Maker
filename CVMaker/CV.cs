@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using SQL;
+using System.Reflection.Emit;
 
 namespace CVMaker
 {
@@ -109,17 +110,7 @@ namespace CVMaker
 
         }
 
-        private void saveedu_Click(object sender, EventArgs e)
-        {
-            panaledu.Height = 50;
-            UC person1 = new UC();
-            person1.title_edu.Text = edu_name.Text;
-            person1.start_edu.Text = edu_st_date.Value.ToString("mm/dd/yyyy");
-            person1.end_edu.Text = edu_end_date.Value.ToString("mm/dd/yyyy");
-            flowLayoutPaneledu.Controls.Add(person1);
-            flowLayoutPaneledu.Controls.IndexOf(person1);
 
-        }
 
         private void canceledu_Click(object sender, EventArgs e)
         {
@@ -228,6 +219,33 @@ namespace CVMaker
             tabPage7.Hide();
             tabPage2.Hide();
             tabPage1.Hide();
+            
+        }
+
+        private void MakeSkill()
+        {
+            DataTable dataTable = new DataTable();
+            ///
+            string Title = "";
+            string Level = "";
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+                Title = dataTable.Rows[i]["Title"].ToString();
+                if (dataTable.Rows[i]["Level"] == 1) {
+                    Level = dataTable.Rows[i]["Beginner"].ToString();
+                }   
+                else if(dataTable.Rows[i]["Level"] == 2)
+                {
+                    Level = dataTable.Rows[i]["Intermediate"].ToString();
+                }   
+                else if (dataTable.Rows[i]["Level"] == 3)
+                {
+                    Level = dataTable.Rows[i]["Expert"].ToString();
+                }
+                  
+                skill skill1 = new skill(Title, Level);
+                flowLayoutPanelskill.Controls.Add(skill1);
+            }
         }
 
         private void addskill_Click(object sender, EventArgs e)
@@ -242,10 +260,31 @@ namespace CVMaker
 
         private void saveskill_Click(object sender, EventArgs e)
         {
-            panelskill.Height = 50;
-            skill person1 = new skill();
-            person1.title_skill.Text = Title_Skill.Text;
-            flowLayoutPanelskill.Controls.Add(person1);
+            int level = 0;
+            if (Basic_Skill.Checked)
+            {
+                level = 1;
+            }
+            else if (Intermediate_Skill.Checked)
+            {
+                level = 2;
+            }
+            else if (Expert_Skill.Checked)
+            {
+                level = 3;
+            }
+            SQLConnect.InsertSQLCommand(
+                SQLConnect.ProcedureQuery("Insert_Skill", true, Title_Skill.Text, level.ToString()),
+                () =>
+                {
+                    panelskill.Height = 50;
+                    skill person1 = new skill();
+                    person1.title_skill.Text = Title_Skill.Text;
+                    flowLayoutPanelskill.Controls.Add(person1);
+                }
+            );
+
+            
 
         }
 
@@ -305,10 +344,18 @@ namespace CVMaker
 
         private void save_exper_Click(object sender, EventArgs e)
         {
-            exper_panel.Height = 50;
-            Experience person3 = new Experience();
-            person3.titleexperience.Text = Experiece_Title.Text;
-            flowLayoutPanelexperience.Controls.Add(person3);
+            SQLConnect.InsertSQLCommand(
+                SQLConnect.ProcedureQuery("Insert_Experience", true, Experiece_Title.Text, Company_Name.Text, 
+                Experience_description.Text, start_experience.Value.ToString("d"), 
+                end_experience.Value.ToString("d"), Job_Type.Text), () =>
+                {
+                    exper_panel.Height = 50;
+                    Experience person3 = new Experience();
+                    person3.titleexperience.Text = Experiece_Title.Text;
+                    flowLayoutPanelexperience.Controls.Add(person3);
+                }
+               );
+            
         }
 
         private void cancel_exper_Click(object sender, EventArgs e)
@@ -487,6 +534,30 @@ namespace CVMaker
             );
             this.FormClosing -= Save_Logout_Entry;
         }
-		#endregion
-	}
+        #endregion
+
+        private void save_edu_Click(object sender, EventArgs e)
+        {
+            SQLConnect.InsertSQLCommand(
+               SQLConnect.ProcedureQuery("Insert_Education", true, edu_name.Text, edu_institute.Text,
+               edu_city.Text, edu_country.Text, edu_st_date.Value.ToString("d"),
+               edu_end_date.Value.ToString("d")), () =>
+               {
+                   panaledu.Height = 50;
+                   Education_UC person1 = new Education_UC();
+                   person1.title_edu.Text = edu_name.Text;
+                   person1.start_edu.Text = edu_st_date.Value.ToString("mm/dd/yyyy");
+                   person1.end_edu.Text = edu_end_date.Value.ToString("mm/dd/yyyy");
+                   flowLayoutPaneledu.Controls.Add(person1);
+                   flowLayoutPaneledu.Controls.IndexOf(person1);
+               }
+              ) ;
+            
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -17,6 +17,13 @@ namespace CVMaker
             InitializeComponent();
         }
 
+        public skill(string Title, string level)
+        {
+            InitializeComponent();
+            title_skill.Text = Title;
+            level_skill.Text = level;
+        }
+
         private void deleteskill_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
