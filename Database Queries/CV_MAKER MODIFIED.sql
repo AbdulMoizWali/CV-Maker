@@ -255,6 +255,13 @@ set @Userid = (select top 1 UserID from login_log order by login_time desc)
 set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
 insert into Skills(ProfileID, Title, Level) values(@Profile_ID, @Title, @Level)
 
+
+create procedure Get_ActiveUserProfile_Skills
+as
+declare @Userid int, @Profile_ID int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
+select Title, Level from Skills where ProfileID = @Profile_ID
 --------
 --delete Skill
 --create procedure Delete_Skill
