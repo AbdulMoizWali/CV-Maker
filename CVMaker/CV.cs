@@ -129,6 +129,7 @@ namespace CVMaker
             tabPage1.Hide();
             tabPage4.Hide();
             tabPage6.Show();
+            makeEducation();
         }
 
         private void label18_Click(object sender, EventArgs e)
@@ -220,6 +221,7 @@ namespace CVMaker
             tabPage2.Hide();
             tabPage1.Hide();
             MakeSkill();
+
         }
 
         private void MakeSkill()
@@ -257,6 +259,60 @@ namespace CVMaker
                     MessageBox.Show("No Record");
 				}
            );            
+        }
+
+        private void makeEducation()
+        {
+            flowLayoutPaneledu.Controls.Clear();
+            string Title;
+            string start_date;
+            string end_date;
+            SQLConnect.GetDataTableFromTable(
+               SQLConnect.ProcedureQuery("Get_ActiveUserProfile_Education"),
+               (dataTable) =>
+               {
+                   for (int i = 0; i < dataTable.Rows.Count; i++)
+                   {
+                       Title = dataTable.Rows[i]["Title"].ToString();
+                       start_date = dataTable.Rows[i]["Starting_Date"].ToString();
+                       end_date = dataTable.Rows[i]["Ending_Date"].ToString();
+
+                       Education_UC edu1 = new Education_UC(Title, start_date, end_date);
+                       flowLayoutPaneledu.Controls.Add(edu1);
+                   }
+               },
+               () =>
+               {
+                   MessageBox.Show("No Record");
+               }
+          );
+        }
+
+        private void makeExperience()
+        {
+            flowLayoutPanelexperience.Controls.Clear();
+            string Title;
+            string start_date;
+            string end_date;
+            SQLConnect.GetDataTableFromTable(
+               SQLConnect.ProcedureQuery("Get_ActiveUserProfile_Experience"),
+               (dataTable) =>
+               {
+                   for (int i = 0; i < dataTable.Rows.Count; i++)
+                   {
+                       Title = dataTable.Rows[i]["Title"].ToString();
+                       start_date = dataTable.Rows[i]["Starting_Date"].ToString();
+                       end_date = dataTable.Rows[i]["Ending_Date"].ToString();
+
+                       Education_UC edu1 = new Education_UC(Title, start_date, end_date);
+                       flowLayoutPanelexperience.Controls.Add(edu1);
+                   }
+               },
+               () =>
+               {
+                   MessageBox.Show("No Record");
+               }
+          );
         }
 
         private void addskill_Click(object sender, EventArgs e)
@@ -334,6 +390,7 @@ namespace CVMaker
             tabPage7.Show();
             tabPage2.Hide();
             tabPage1.Hide();
+            makeExperience();
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

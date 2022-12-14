@@ -18,6 +18,14 @@ namespace CVMaker
             InitializeComponent();
         }
 
+        public Education_UC(string title, string start_date, string end_date)
+        {
+            InitializeComponent();
+            title_edu.Text = title;
+            start_edu.Text = start_date;
+            end_edu.Text = end_date;
+        }
+
         private void pnlperson(object sender, EventArgs e)
         {
             

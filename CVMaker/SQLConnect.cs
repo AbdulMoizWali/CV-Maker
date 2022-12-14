@@ -11,7 +11,7 @@ namespace SQL
 {
 	public static class SQLConnect
 	{
-		private readonly static string SQL_CONNECTION_STRING = "Data Source=HOME-PC\\SQLEXPRESS;Initial Catalog=\"CV Maker\";Integrated Security=True";
+		private readonly static string SQL_CONNECTION_STRING = "Data Source=DESKTOP-616GIMI;Initial Catalog=\"CV Maker\";Integrated Security=True";
 		public static SqlConnection sqlConnection
 		{
 			get;

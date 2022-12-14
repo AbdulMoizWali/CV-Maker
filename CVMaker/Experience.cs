@@ -17,6 +17,15 @@ namespace CVMaker
             InitializeComponent();
         }
 
+        public Experience(string Title, string start_date, string end_date)
+        {
+            InitializeComponent();
+            titleexperience.Text = Title;
+            start_experience.Text = start_date;
+            end_experience.Text = end_date;
+        }
+
+
         private void expericebtnclick(object sender, EventArgs e)
         {
             if (experiencepanel.Location.X <= 2)
