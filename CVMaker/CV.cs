@@ -213,7 +213,7 @@ namespace CVMaker
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             tabPage6.Hide();
-            tabPage8.Hide();
+            tabPage9.Hide();
             tabPage5.Show();
             tabPage4.Hide();
             tabPage3.Hide();
@@ -315,6 +315,30 @@ namespace CVMaker
           );
         }
 
+
+        private void MakeSocials()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            string Title = "";
+            SQLConnect.GetDataTableFromTable(
+                SQLConnect.ProcedureQuery("Get_ActiveUserProfile_Social"),
+                (dataTable) =>
+                {
+                    for (int i = 0; i < dataTable.Rows.Count; i++)
+                    {
+                        Title = dataTable.Rows[i]["Title"].ToString();
+                        skill social = new skill();
+                        social.title_skill.Text = Title;
+                        flowLayoutPanel1.Controls.Add(social);
+                    }
+                },
+                () =>
+                {
+                    MessageBox.Show("No Record");
+                }
+           );
+        }
+
         private void addskill_Click(object sender, EventArgs e)
         {
             panelskill.Height = 260;
@@ -383,7 +407,7 @@ namespace CVMaker
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             tabPage6.Hide();
-            tabPage8.Hide();
+            tabPage9.Hide();
             tabPage5.Hide();
             tabPage4.Hide();
             tabPage3.Hide();
@@ -396,13 +420,14 @@ namespace CVMaker
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             tabPage6.Hide();
-            tabPage8.Show();
+            tabPage9.Show();
             tabPage5.Hide();
             tabPage4.Hide();
             tabPage3.Hide();
             tabPage7.Hide();
             tabPage2.Hide();
             tabPage1.Hide();
+            MakeSocials();
         }
 
         private void experinceadd_Click(object sender, EventArgs e)
@@ -627,5 +652,29 @@ namespace CVMaker
         {
 
         }
-    }
+
+		private void AddSocial_Click(object sender, EventArgs e)
+		{
+            panel2.Height = 205;
+        }
+
+		private void cancelSocial_Click(object sender, EventArgs e)
+		{
+            panel2.Height = 50;
+        }
+
+		private void saveSocial_Click(object sender, EventArgs e)
+		{
+            SQLConnect.InsertSQLCommand(
+                SQLConnect.ProcedureQuery("Insert_Social", true, Social_Title_txt.Text, Social_Link_txt.Text),
+                () =>
+                {
+                    panel2.Height = 50;
+                    skill person1 = new skill();
+                    person1.title_skill.Text = Social_Title_txt.Text;
+                    flowLayoutPanel1.Controls.Add(person1);
+                }
+            );
+        }
+	}
 }
