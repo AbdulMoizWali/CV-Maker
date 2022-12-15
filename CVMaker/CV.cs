@@ -36,6 +36,8 @@ namespace CVMaker
             CVtopopup1();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 7, 7));
+            Home_Username.Text = SQLConnect.GetValueFromTable(SQLConnect.ProcedureQuery("Get_ActiveUser"), "username");
+            
         }
         public void CVtopopup1()
         {

@@ -160,7 +160,7 @@ namespace CVMaker
 			this.pictureBox15 = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
+			this.Home_Username = new System.Windows.Forms.Label();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.label3 = new System.Windows.Forms.Label();
@@ -1732,7 +1732,7 @@ namespace CVMaker
 			this.tabPage1.Controls.Add(this.label3);
 			this.tabPage1.Controls.Add(this.pictureBox3);
 			this.tabPage1.Controls.Add(this.pictureBox2);
-			this.tabPage1.Controls.Add(this.label4);
+			this.tabPage1.Controls.Add(this.Home_Username);
 			this.tabPage1.Controls.Add(this.label2);
 			this.tabPage1.Controls.Add(this.label1);
 			this.tabPage1.Controls.Add(this.pictureBox15);
@@ -1777,16 +1777,16 @@ namespace CVMaker
 			this.label2.TabIndex = 0;
 			this.label2.Text = "Welcome To CV Maker";
 			// 
-			// label4
+			// Home_Username
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Nirmala UI", 18F);
-			this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.label4.Location = new System.Drawing.Point(29, 67);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(211, 32);
-			this.label4.TabIndex = 0;
-			this.label4.Text = "James Christopher";
+			this.Home_Username.AutoSize = true;
+			this.Home_Username.Font = new System.Drawing.Font("Nirmala UI", 18F);
+			this.Home_Username.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.Home_Username.Location = new System.Drawing.Point(29, 67);
+			this.Home_Username.Name = "Home_Username";
+			this.Home_Username.Size = new System.Drawing.Size(211, 32);
+			this.Home_Username.TabIndex = 0;
+			this.Home_Username.Text = "James Christopher";
 			// 
 			// pictureBox2
 			// 
@@ -2049,7 +2049,7 @@ namespace CVMaker
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.PictureBox pictureBox2;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label Home_Username;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox15;

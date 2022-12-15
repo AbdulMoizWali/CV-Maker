@@ -157,6 +157,12 @@ drop procedure Delete_User
 select * from Profile
 
 
+create procedure Get_ActiveUser
+as
+select top 1 [User].UserID, [User].username, [User].password, [User].Role, [User].register_date from login_log 
+join [User] on [User].UserID = login_log.UserID
+order by login_time desc
+
 create procedure Update_User @UserID int, @Password varchar(50)
 as
 update [User] set password = @Password where UserID = @UserID
