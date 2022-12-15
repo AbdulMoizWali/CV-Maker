@@ -119,7 +119,7 @@ namespace CVMaker
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            panaledu.Height = 260;
+            panaledu.Height = 300;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
