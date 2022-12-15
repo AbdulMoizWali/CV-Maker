@@ -122,6 +122,7 @@
       <DependentUpon>splashscreen.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLConnect.cs" />
+    <Compile Include="SQLConnectionString.cs" />
     <Compile Include="Winapi.cs" />
     <EmbeddedResource Include="adminForm2.resx">
       <DependentUpon>adminForm2.cs</DependentUpon>
