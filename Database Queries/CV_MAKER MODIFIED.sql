@@ -140,6 +140,26 @@ return @userid
 
 drop procedure Search_User_by_UserPass
 
+create procedure Delete_User @Userid int
+as
+declare @ProfileID int
+select @ProfileID = ProfileID from Profile where UserID = @Userid
+delete from Education where ProfileID = @ProfileID
+delete from Experience where ProfileID = @ProfileID
+delete from Skills where ProfileID = @ProfileID
+delete from Social where ProfileID = @ProfileID
+delete from login_log where UserID = @Userid
+delete from Profile where ProfileID = @ProfileID
+delete from [User] where UserID = @Userid
+
+drop procedure Delete_User
+
+select * from Profile
+
+
+create procedure Update_User @UserID int, @Password varchar(50)
+as
+update [User] set password = @Password where UserID = @UserID
 
 
 
@@ -168,16 +188,16 @@ exec Insert_LoginLogs_Logouttime
 create procedure Get_LoginLogs
 as
 select 
-CONCAT(Profile.First_name, ' ', Profile.Last_name) as [Username],
+[User].UserID,
+[User].username,
 login_log.login_time,
 login_log.logout_time
 from login_log
 join [User] on login_log.UserID = [User].UserID
-join Profile on [User].UserID = Profile.UserID
 
+drop procedure Get_LoginLogs
 
-
-
+exec Get_LoginLogs
 
 
 
@@ -234,16 +254,19 @@ print @Userid
 
 
 
-select * from [User]
-delete from Profile
-select * from Profile
-select * from login_log
+
 
 insert into login_log(UserID, login_time) values (4, GETDATE())
 insert into login_log(UserID, login_time) values (5, GETDATE())
 
 delete from login_log
 delete from Profile where ProfileID = 7
+
+
+
+
+
+
 
 --Skills--
 --Insert Skill--
@@ -270,6 +293,9 @@ select Title, Level from Skills where ProfileID = @Profile_ID
 exec Insert_Skill 'UI design', 2
 exec Insert_Skill 'Graphics design', 3
 
+
+
+
 --Education--
 --Insert Education
 create procedure Insert_Education
@@ -289,6 +315,9 @@ set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
 select Title, Institute, Institute, City, Country, Starting_Date, Ending_Date from Education where ProfileID = @Profile_ID
 
 exec Insert_Education 'FSC', 'Government college', 'Karachi', 'Pakistan', '14-Dec-2020', '17-Jan-2021'
+
+
+
 
 --Experience--
 --Insert Experience
@@ -329,7 +358,11 @@ select Title, Link from Social where ProfileID=@Profile_ID
 
 exec Insert_Social 'Instagram', 'Instagram.com'
 
+
+select * from [User]
+select * from Profile
+select * from login_log
 select * from Education
 select * from Experience
-select * from Social
 select * from Skills
+select * from Social

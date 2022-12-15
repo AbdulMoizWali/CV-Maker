@@ -50,6 +50,11 @@ namespace CVMaker
             this.FormClosing += Save_Logout_Entry;
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 7, 7));
+            string TotalUsers = SQLConnect.GetValueFromTable("select count(UserID) as [Users] from [User]", "Users");
+            textBox1.Text = TotalUsers;
+
+            string TotalProfile = SQLConnect.GetValueFromTable("select count(ProfileID) as [Profiles] from [Profile]", "Profiles");
+            textBox2.Text = TotalProfile;
         }
 
      
@@ -72,21 +77,38 @@ namespace CVMaker
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+		#region Display
+
+		private void button3_Click(object sender, EventArgs e)
         {
             tabPage1.Hide();
             tabPage3.Hide();
             tabPage2.Show();
-            
+            SQLConnect.ShowSQLDataOutputInGridView(
+                SQLConnect.ProcedureQuery("Get_LoginLogs"),
+                dataGridView1
+            );
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
-           
-
+            SQLConnect.RemoveSQLCommand(
+                SQLConnect.ProcedureQuery("Delete_User", richTextBox3.Text),
+                null
+            );
         }
 
-        
+        #endregion
+
+        #region Admin Password Reset
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SQLConnect.UpdateSQLCommand(
+                SQLConnect.ProcedureQuery("Update_User", richTextBox1.Text, richTextBox2.Text)
+            );
+        }
+
+        #endregion
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -151,7 +173,13 @@ namespace CVMaker
            );
             this.FormClosing -= Save_Logout_Entry;
         }
-        #endregion
+		#endregion
 
-    }
+		private void panel6_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		
+	}
 }

@@ -30,13 +30,14 @@ namespace CVMaker
         private void InitializeComponent()
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminForm2));
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.button1 = new System.Windows.Forms.Button();
@@ -59,13 +60,10 @@ namespace CVMaker
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-			this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.richTextBox3 = new System.Windows.Forms.RichTextBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.panel6 = new System.Windows.Forms.Panel();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.button5 = new System.Windows.Forms.Button();
 			this.richTextBox2 = new System.Windows.Forms.RichTextBox();
@@ -83,6 +81,7 @@ namespace CVMaker
 			this.panel4.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.tabPage2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.tabPage3.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -99,7 +98,7 @@ namespace CVMaker
 			this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(121, 453);
+			this.panel1.Size = new System.Drawing.Size(121, 517);
 			this.panel1.TabIndex = 0;
 			// 
 			// pictureBox1
@@ -140,7 +139,7 @@ namespace CVMaker
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(170, 54);
 			this.button4.TabIndex = 2;
-			this.button4.Text = "ADMIN";
+			this.button4.Text = "Reset Password";
 			this.button4.UseVisualStyleBackColor = false;
 			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
@@ -257,39 +256,39 @@ namespace CVMaker
 			// 
 			// chart2
 			// 
-			chartArea1.Name = "ChartArea1";
-			this.chart2.ChartAreas.Add(chartArea1);
-			legend1.Name = "Legend1";
-			this.chart2.Legends.Add(legend1);
+			chartArea3.Name = "ChartArea1";
+			this.chart2.ChartAreas.Add(chartArea3);
+			legend3.Name = "Legend1";
+			this.chart2.Legends.Add(legend3);
 			this.chart2.Location = new System.Drawing.Point(315, 148);
 			this.chart2.Name = "chart2";
-			series1.ChartArea = "ChartArea1";
-			series1.Legend = "Legend1";
-			series1.Name = "Series1";
-			this.chart2.Series.Add(series1);
+			series3.ChartArea = "ChartArea1";
+			series3.Legend = "Legend1";
+			series3.Name = "Series1";
+			this.chart2.Series.Add(series3);
 			this.chart2.Size = new System.Drawing.Size(300, 207);
 			this.chart2.TabIndex = 9;
 			this.chart2.Text = "chart2";
 			// 
 			// chart1
 			// 
-			chartArea2.Name = "ChartArea1";
-			this.chart1.ChartAreas.Add(chartArea2);
-			legend2.Name = "Legend1";
-			this.chart1.Legends.Add(legend2);
+			chartArea4.Name = "ChartArea1";
+			this.chart1.ChartAreas.Add(chartArea4);
+			legend4.Name = "Legend1";
+			this.chart1.Legends.Add(legend4);
 			this.chart1.Location = new System.Drawing.Point(9, 142);
 			this.chart1.Name = "chart1";
-			series2.ChartArea = "ChartArea1";
-			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-			series2.Legend = "Legend1";
-			series2.Name = "Users";
-			this.chart1.Series.Add(series2);
+			series4.ChartArea = "ChartArea1";
+			series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+			series4.Legend = "Legend1";
+			series4.Name = "Users";
+			this.chart1.Series.Add(series4);
 			this.chart1.Size = new System.Drawing.Size(312, 220);
 			this.chart1.TabIndex = 8;
 			this.chart1.Text = "chart1";
-			title1.Name = "Geography";
-			title1.Text = "Geography";
-			this.chart1.Titles.Add(title1);
+			title2.Name = "Geography";
+			title2.Text = "Geography";
+			this.chart1.Titles.Add(title2);
 			// 
 			// panel4
 			// 
@@ -363,13 +362,10 @@ namespace CVMaker
 			// 
 			this.tabPage2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
 			this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.tabPage2.Controls.Add(this.richTextBox3);
-			this.tabPage2.Controls.Add(this.vScrollBar1);
-			this.tabPage2.Controls.Add(this.label8);
-			this.tabPage2.Controls.Add(this.label7);
 			this.tabPage2.Controls.Add(this.label5);
+			this.tabPage2.Controls.Add(this.dataGridView1);
+			this.tabPage2.Controls.Add(this.richTextBox3);
 			this.tabPage2.Controls.Add(this.label4);
-			this.tabPage2.Controls.Add(this.panel6);
 			this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.tabPage2.Location = new System.Drawing.Point(4, 4);
 			this.tabPage2.Name = "tabPage2";
@@ -378,55 +374,47 @@ namespace CVMaker
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
+			// label5
+			// 
+			this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.ForeColor = System.Drawing.Color.Black;
+			this.label5.Location = new System.Drawing.Point(14, 16);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(68, 25);
+			this.label5.TabIndex = 9;
+			this.label5.Text = "User ID";
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.AllowUserToAddRows = false;
+			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this.dataGridView1.ColumnHeadersHeight = 30;
+			this.dataGridView1.Location = new System.Drawing.Point(14, 62);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.ReadOnly = true;
+			this.dataGridView1.Size = new System.Drawing.Size(629, 294);
+			this.dataGridView1.TabIndex = 8;
+			// 
 			// richTextBox3
 			// 
 			this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
 			this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.richTextBox3.Location = new System.Drawing.Point(14, 18);
+			this.richTextBox3.Location = new System.Drawing.Point(79, 16);
 			this.richTextBox3.Name = "richTextBox3";
 			this.richTextBox3.Size = new System.Drawing.Size(177, 25);
 			this.richTextBox3.TabIndex = 7;
 			this.richTextBox3.Text = "";
-			// 
-			// vScrollBar1
-			// 
-			this.vScrollBar1.Location = new System.Drawing.Point(605, 3);
-			this.vScrollBar1.Name = "vScrollBar1";
-			this.vScrollBar1.Size = new System.Drawing.Size(17, 350);
-			this.vScrollBar1.TabIndex = 5;
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-			this.label8.Location = new System.Drawing.Point(285, 61);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(81, 17);
-			this.label8.TabIndex = 4;
-			this.label8.Text = "Last Logout";
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-			this.label7.Location = new System.Drawing.Point(154, 60);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(72, 17);
-			this.label7.TabIndex = 4;
-			this.label7.Text = "Last Login";
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-			this.label5.Location = new System.Drawing.Point(23, 60);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(69, 17);
-			this.label5.TabIndex = 4;
-			this.label5.Text = "Username";
 			// 
 			// label4
 			// 
@@ -435,19 +423,13 @@ namespace CVMaker
 			this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.label4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.ForeColor = System.Drawing.Color.White;
-			this.label4.Location = new System.Drawing.Point(213, 18);
+			this.label4.Location = new System.Drawing.Point(262, 16);
 			this.label4.Name = "label4";
 			this.label4.Padding = new System.Windows.Forms.Padding(5);
 			this.label4.Size = new System.Drawing.Size(55, 25);
 			this.label4.TabIndex = 3;
 			this.label4.Text = "Delete";
-			// 
-			// panel6
-			// 
-			this.panel6.Location = new System.Drawing.Point(14, 49);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(510, 301);
-			this.panel6.TabIndex = 6;
+			this.label4.Click += new System.EventHandler(this.label4_Click);
 			// 
 			// tabPage3
 			// 
@@ -477,6 +459,7 @@ namespace CVMaker
 			this.button5.TabIndex = 2;
 			this.button5.Text = "Reset";
 			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// richTextBox2
 			// 
@@ -527,7 +510,7 @@ namespace CVMaker
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(797, 453);
+			this.ClientSize = new System.Drawing.Size(797, 517);
 			this.Controls.Add(this.tabControl2);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel2);
@@ -552,6 +535,7 @@ namespace CVMaker
 			this.panel5.PerformLayout();
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.tabPage3.ResumeLayout(false);
 			this.tabPage3.PerformLayout();
 			this.ResumeLayout(false);
@@ -578,11 +562,6 @@ namespace CVMaker
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox richTextBox2;
@@ -595,5 +574,7 @@ namespace CVMaker
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-    }
+		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.Label label5;
+	}
 }

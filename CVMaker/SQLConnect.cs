@@ -79,9 +79,14 @@ namespace SQL
 			SQLCommand(query, ShowMessageBox, null, null, onSuccess, ParameterName, ParameterData);
 		}
 
+		public static void RemoveSQLCommand(string query, Action onSuccess = null)
+		{
+			SQLCommand(query, "Removed the record", "Cannot remove the record (User Id not found)", onSuccess);
+		}
+
 		public static void RemoveSQLCommand(string query, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
 		{
-			SQLCommand(query, "Removed the record", "Cannot remove the record (Id not found or it has Working Schedule)", onSuccess, ParameterName, ParameterData);
+			SQLCommand(query, "Removed the record", "Cannot remove the record (User Id not found)", onSuccess, ParameterName, ParameterData);
 		}
 
 		public static void SQLCommand(string query, string onSuccessMessage, string onFailedMessage, Action onSuccess = null, string ParameterName = null, byte[] ParameterData = null)
@@ -269,16 +274,12 @@ namespace SQL
 		}
 
 
-		public static void ShowSQLDataOutputInGridView(string Query, DataGridView dataGridView, DataTable OutputdataTable = null)
+		public static void ShowSQLDataOutputInGridView(string Query, DataGridView dataGridView)
 		{
 			SqlConnect(() => {
 				SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(Query, sqlConnection);
 				DataTable dataTable = new DataTable();
 				sqlDataAdapter.Fill(dataTable);
-				if (OutputdataTable != null)
-				{
-					OutputdataTable = dataTable;
-				}
 				dataGridView.Columns.Clear();
 				dataGridView.DataSource = dataTable;
 			});
