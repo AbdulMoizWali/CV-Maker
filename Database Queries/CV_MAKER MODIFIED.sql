@@ -281,6 +281,13 @@ set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
 insert into Education(ProfileID, Title, Institute, City, Country, Starting_Date, Ending_Date)
 values(@Profile_ID, @Title, @Institute, @City, @Country, @Starting_Date, @Ending_Date)
 
+create procedure Get_ActiveUserProfile_Education
+as
+declare @Userid int, @Profile_ID int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
+select Title, Institute, Institute, City, Country, Starting_Date, Ending_Date from Education where ProfileID = @Profile_ID
+
 exec Insert_Education 'FSC', 'Government college', 'Karachi', 'Pakistan', '14-Dec-2020', '17-Jan-2021'
 
 --Experience--
@@ -294,6 +301,13 @@ set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
 insert into Experience(ProfileID, Title, Company_name, Description, Starting_Date, Ending_Date, Job_type)
 values(@Profile_ID, @Title, @Company_name, @Description, @Starting_Date, @Ending_Date, @Job_type)
 
+create procedure Get_ActiveUserProfile_Experience
+as
+declare @Userid int, @Profile_ID int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
+select Title, Company_name, Description, Starting_Date, Ending_Date, Job_type from Experience where ProfileID=@Profile_ID
+
 exec Insert_Experience 'Intership', 'Maju', 'Kashif nay mujay salary nahi di', '21-sep-2021', '21-oct-2021', 'Part-time'
 
 --Social--
@@ -305,6 +319,13 @@ declare @Userid int, @Profile_ID int
 set @Userid = (select top 1 UserID from login_log order by login_time desc)
 set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
 insert into Social(ProfileID, Title, Link) values(@Profile_ID, @Title, @Link)
+
+create procedure Get_ActiveUserProfile_Social
+as
+declare @Userid int, @Profile_ID int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
+select Title, Link from Social where ProfileID=@Profile_ID
 
 exec Insert_Social 'Instagram', 'Instagram.com'
 
