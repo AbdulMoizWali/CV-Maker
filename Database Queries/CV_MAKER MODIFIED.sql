@@ -168,7 +168,7 @@ as
 update [User] set password = @Password where UserID = @UserID
 
 
-
+exec Get_ActiveUser
 
 
 --------  Login Logs  --------
@@ -237,6 +237,22 @@ Phone = @Phone_Number,
 Profilepic = @Picture
 where UserID = @Userid
 
+
+
+
+
+
+
+create procedure Get_ActiveUserProfile
+as
+declare @Userid int
+set @Userid = (select top 1 UserID from login_log order by login_time desc)
+select * from Profile where UserID = @Userid
+
+exec Get_ActiveUserProfile
+
+
+
 /*
 create procedure get_last_login_UserID
 as
@@ -255,7 +271,6 @@ declare @Userid int
 set @Userid = (select top 1 UserID from login_log order by login_time desc)
 print @Userid
 */
-
 
 
 
@@ -318,10 +333,11 @@ as
 declare @Userid int, @Profile_ID int
 set @Userid = (select top 1 UserID from login_log order by login_time desc)
 set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
-select Title, Institute, Institute, City, Country, Starting_Date, Ending_Date from Education where ProfileID = @Profile_ID
+select Title, Institute, City, Country, Starting_Date, Ending_Date from Education where ProfileID = @Profile_ID
 
 exec Insert_Education 'FSC', 'Government college', 'Karachi', 'Pakistan', '14-Dec-2020', '17-Jan-2021'
 
+exec Get_ActiveUserProfile_Education
 
 
 
@@ -342,6 +358,7 @@ declare @Userid int, @Profile_ID int
 set @Userid = (select top 1 UserID from login_log order by login_time desc)
 set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
 select Title, Company_name, Description, Starting_Date, Ending_Date, Job_type from Experience where ProfileID=@Profile_ID
+
 
 exec Insert_Experience 'Intership', 'Maju', 'Kashif nay mujay salary nahi di', '21-sep-2021', '21-oct-2021', 'Part-time'
 

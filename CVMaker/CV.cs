@@ -678,5 +678,51 @@ namespace CVMaker
                 }
             );
         }
+
+		private void TestExport_Click(object sender, EventArgs e)
+		{
+            Profile profile = new Profile();
+            label4.Text += profile.ProfileID + "\n";
+            label4.Text += profile.First_name + profile.Last_name + "\n";
+            label4.Text += profile.Gender + "\n";
+            label4.Text += profile.Country + "\n";
+            label4.Text += profile.City + "\n";
+            label4.Text += profile.Phone + "\n";
+            pictureBox4.Image = profile.ProfilePic;
+            
+            for (int i = 0; i < profile.Socials.Count; i++)
+			{
+                label4.Text += profile.Socials[i].Title + "\n";
+                label4.Text += profile.Socials[i].Link + "\n";
+            }
+
+
+            for (int i = 0; i < profile.Skills.Count; i++)
+            {
+                label4.Text += profile.Skills[i].Title + "\n";
+                label4.Text += profile.Skills[i].Level + "\n";
+            }
+
+            for (int i = 0; i < profile.Experiences.Count; i++)
+            {
+                label4.Text += profile.Experiences[i].Title + "\n";
+                label4.Text += profile.Experiences[i].CompanyName + "\n";
+                label4.Text += profile.Experiences[i].Description + "\n";
+                label4.Text += profile.Experiences[i].StartingDate + "\n";
+                label4.Text += profile.Experiences[i].EndingDate + "\n";
+                label4.Text += profile.Experiences[i].Job_type + "\n";
+            }
+
+
+            for (int i = 0; i < profile.Educations.Count; i++)
+            {
+                label4.Text += profile.Educations[i].Title + "\n";
+                label4.Text += profile.Educations[i].Institute + "\n";
+                label4.Text += profile.Educations[i].City + "\n";
+                label4.Text += profile.Educations[i].Country + "\n";
+                label4.Text += profile.Educations[i].StartingDate + "\n";
+                label4.Text += profile.Educations[i].EndingDate + "\n";
+            }
+        }
 	}
 }
