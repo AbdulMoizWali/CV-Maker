@@ -41,8 +41,7 @@ namespace CVMaker
         }
         public void CVtopopup1()
         {
-            pictureBox5.ImageLocation = @"F:\cv maker project\source\repos\CV-Maker\images\cv2.jpg";
-            popupCV.dp.ImageLocation = @"F:\cv maker project\source\repos\CV-Maker\images\cv2.jpg";
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -79,7 +78,7 @@ namespace CVMaker
                 ab = new popupCV();
             }
             ab.Show();
-            popupCV.dp.ImageLocation = @"F:\cv maker project\source\repos\CV-Maker\images\cv1.jpg";
+           
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -269,6 +268,7 @@ namespace CVMaker
             string Title;
             string start_date;
             string end_date;
+            string EducationID;
             SQLConnect.GetDataTableFromTable(
                SQLConnect.ProcedureQuery("Get_ActiveUserProfile_Education"),
                (dataTable) =>
@@ -278,8 +278,8 @@ namespace CVMaker
                        Title = dataTable.Rows[i]["Title"].ToString();
                        start_date = dataTable.Rows[i]["Starting_Date"].ToString();
                        end_date = dataTable.Rows[i]["Ending_Date"].ToString();
-
-                       Education_UC edu1 = new Education_UC(Title, start_date, end_date);
+                       EducationID = dataTable.Rows[i]["EducationID"].ToString();
+                       Education_UC edu1 = new Education_UC(Title, start_date, end_date,EducationID);
                        flowLayoutPaneledu.Controls.Add(edu1);
                    }
                },
@@ -306,8 +306,8 @@ namespace CVMaker
                        start_date = dataTable.Rows[i]["Starting_Date"].ToString();
                        end_date = dataTable.Rows[i]["Ending_Date"].ToString();
 
-                       Education_UC edu1 = new Education_UC(Title, start_date, end_date);
-                       flowLayoutPanelexperience.Controls.Add(edu1);
+                      Experience exp1 = new Experience(Title, start_date, end_date);
+                       flowLayoutPanelexperience.Controls.Add(exp1);
                    }
                },
                () =>

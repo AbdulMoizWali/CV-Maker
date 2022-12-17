@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace CVMaker
 {
@@ -17,13 +19,15 @@ namespace CVMaker
         {
             InitializeComponent();
         }
-
-        public Education_UC(string title, string start_date, string end_date)
+        string eduid1;
+        public Education_UC(string title, string start_date, string end_date,string EducationID)
         {
             InitializeComponent();
             title_edu.Text = title;
             start_edu.Text = start_date;
             end_edu.Text = end_date;
+            eduid.Text = EducationID;
+            eduid1 = eduid.Text;
         }
 
         private void pnlperson(object sender, EventArgs e)
@@ -48,8 +52,27 @@ namespace CVMaker
 
         private void deletebtnclick(object sender, EventArgs e)
         {
+            SqlConnection sqlcon = new SqlConnection();
+            sqlcon.ConnectionString = "Data Source=DESKTOP-M29OVEL;Initial Catalog=\"CV Maker\";Integrated Security=TrueData Source=DESKTOP-M29OVEL;Initial Catalog=\"CV Maker\";Integrated Security=True";
+        
+        sqlcon.Open();
             this.Controls.Clear();
-                this.Dispose();
+            this.Dispose();
+            string query = "delete from Education where EducationID = '" + eduid1 + "'";
+            SqlCommand cmd = new SqlCommand(query, sqlcon);
+            cmd.Connection = sqlcon;
+            cmd.CommandType = CommandType.Text;
+            int a = cmd.ExecuteNonQuery();
+            
+            if (a != -1)
+            {
+                MessageBox.Show("Delete Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+            
           
             
         }

@@ -22,6 +22,7 @@ namespace CVMaker
 			Application.Run(new splashscreen());
 			//Application.Run(new adminForm2());
 			//Application.Run(new Formregister());
+			//Application.Run(new popupCV());
 		}
 	}
 }

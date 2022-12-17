@@ -31,21 +31,20 @@ namespace CVMaker
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Education_UC));
             this.panelll = new System.Windows.Forms.Panel();
-            this.editeducation = new System.Windows.Forms.PictureBox();
+            this.eduid = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.roundedpanel1 = new CVMaker.roundedpanel();
             this.end_edu = new System.Windows.Forms.Label();
             this.start_edu = new System.Windows.Forms.Label();
             this.title_edu = new System.Windows.Forms.Label();
             this.panelll.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.editeducation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.roundedpanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelll
             // 
-            this.panelll.Controls.Add(this.editeducation);
+            this.panelll.Controls.Add(this.eduid);
             this.panelll.Controls.Add(this.pictureBox1);
             this.panelll.Location = new System.Drawing.Point(0, 0);
             this.panelll.Name = "panelll";
@@ -53,15 +52,14 @@ namespace CVMaker
             this.panelll.TabIndex = 1;
             this.panelll.Paint += new System.Windows.Forms.PaintEventHandler(this.panelll_Paint);
             // 
-            // editeducation
+            // eduid
             // 
-            this.editeducation.Image = ((System.Drawing.Image)(resources.GetObject("editeducation.Image")));
-            this.editeducation.Location = new System.Drawing.Point(78, 26);
-            this.editeducation.Name = "editeducation";
-            this.editeducation.Size = new System.Drawing.Size(45, 40);
-            this.editeducation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.editeducation.TabIndex = 1;
-            this.editeducation.TabStop = false;
+            this.eduid.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eduid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.eduid.Location = new System.Drawing.Point(78, 26);
+            this.eduid.Name = "eduid";
+            this.eduid.Size = new System.Drawing.Size(45, 40);
+            this.eduid.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -132,7 +130,6 @@ namespace CVMaker
             this.Name = "Education_UC";
             this.Size = new System.Drawing.Size(290, 108);
             this.panelll.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.editeducation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.roundedpanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -147,6 +144,6 @@ namespace CVMaker
         public System.Windows.Forms.Label start_edu;
         public System.Windows.Forms.Label title_edu;
         public System.Windows.Forms.Label end_edu;
-        private System.Windows.Forms.PictureBox editeducation;
+        private System.Windows.Forms.Label eduid;
     }
 }

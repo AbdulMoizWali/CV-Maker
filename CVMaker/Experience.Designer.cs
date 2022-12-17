@@ -31,38 +31,26 @@ namespace CVMaker
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Experience));
             this.panelex = new System.Windows.Forms.Panel();
-            this.deleteexperience = new System.Windows.Forms.PictureBox();
             this.experiencepanel = new CVMaker.roundedpanel();
             this.end_experience = new System.Windows.Forms.Label();
             this.start_experience = new System.Windows.Forms.Label();
             this.titleexperience = new System.Windows.Forms.Label();
-            this.edit = new System.Windows.Forms.PictureBox();
+            this.deleteexperience = new System.Windows.Forms.PictureBox();
+            this.expid = new System.Windows.Forms.Label();
             this.panelex.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deleteexperience)).BeginInit();
             this.experiencepanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deleteexperience)).BeginInit();
             this.SuspendLayout();
             // 
             // panelex
             // 
             this.panelex.Controls.Add(this.experiencepanel);
-            this.panelex.Controls.Add(this.edit);
             this.panelex.Controls.Add(this.deleteexperience);
+            this.panelex.Controls.Add(this.expid);
             this.panelex.Location = new System.Drawing.Point(0, 0);
             this.panelex.Name = "panelex";
             this.panelex.Size = new System.Drawing.Size(388, 108);
             this.panelex.TabIndex = 2;
-            // 
-            // deleteexperience
-            // 
-            this.deleteexperience.Image = ((System.Drawing.Image)(resources.GetObject("deleteexperience.Image")));
-            this.deleteexperience.Location = new System.Drawing.Point(1, 26);
-            this.deleteexperience.Name = "deleteexperience";
-            this.deleteexperience.Size = new System.Drawing.Size(81, 40);
-            this.deleteexperience.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.deleteexperience.TabIndex = 0;
-            this.deleteexperience.TabStop = false;
-            this.deleteexperience.Click += new System.EventHandler(this.deleteexperience_Click);
             // 
             // experiencepanel
             // 
@@ -111,15 +99,25 @@ namespace CVMaker
             this.titleexperience.Size = new System.Drawing.Size(251, 35);
             this.titleexperience.TabIndex = 0;
             // 
-            // edit
+            // deleteexperience
             // 
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(78, 26);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(45, 40);
-            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.edit.TabIndex = 0;
-            this.edit.TabStop = false;
+            this.deleteexperience.Image = ((System.Drawing.Image)(resources.GetObject("deleteexperience.Image")));
+            this.deleteexperience.Location = new System.Drawing.Point(1, 26);
+            this.deleteexperience.Name = "deleteexperience";
+            this.deleteexperience.Size = new System.Drawing.Size(81, 40);
+            this.deleteexperience.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.deleteexperience.TabIndex = 0;
+            this.deleteexperience.TabStop = false;
+            this.deleteexperience.Click += new System.EventHandler(this.deleteexperience_Click);
+            // 
+            // expid
+            // 
+            this.expid.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.expid.Location = new System.Drawing.Point(78, 26);
+            this.expid.Name = "expid";
+            this.expid.Size = new System.Drawing.Size(45, 40);
+            this.expid.TabIndex = 3;
             // 
             // Experience
             // 
@@ -129,9 +127,8 @@ namespace CVMaker
             this.Name = "Experience";
             this.Size = new System.Drawing.Size(291, 108);
             this.panelex.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.deleteexperience)).EndInit();
             this.experiencepanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deleteexperience)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -144,6 +141,6 @@ namespace CVMaker
         public System.Windows.Forms.Label end_experience;
         public System.Windows.Forms.Label start_experience;
         public System.Windows.Forms.Label titleexperience;
-        private System.Windows.Forms.PictureBox edit;
+        private System.Windows.Forms.Label expid;
     }
 }

@@ -36,6 +36,7 @@ namespace CVMaker
             this.title_skill = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.deleteskill = new System.Windows.Forms.PictureBox();
+            this.skillid = new System.Windows.Forms.Label();
             this.panelskill.SuspendLayout();
             this.roundedpanelskill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,6 +48,7 @@ namespace CVMaker
             this.panelskill.Controls.Add(this.roundedpanelskill);
             this.panelskill.Controls.Add(this.pictureBox1);
             this.panelskill.Controls.Add(this.deleteskill);
+            this.panelskill.Controls.Add(this.skillid);
             this.panelskill.Location = new System.Drawing.Point(0, 0);
             this.panelskill.Name = "panelskill";
             this.panelskill.Size = new System.Drawing.Size(388, 108);
@@ -112,6 +114,15 @@ namespace CVMaker
             this.deleteskill.TabStop = false;
             this.deleteskill.Click += new System.EventHandler(this.deleteskill_Click);
             // 
+            // skillid
+            // 
+            this.skillid.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skillid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.skillid.Location = new System.Drawing.Point(78, 26);
+            this.skillid.Name = "skillid";
+            this.skillid.Size = new System.Drawing.Size(45, 40);
+            this.skillid.TabIndex = 4;
+            // 
             // skill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,5 +146,6 @@ namespace CVMaker
         public System.Windows.Forms.Label level_skill;
         public System.Windows.Forms.Label title_skill;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label skillid;
     }
 }

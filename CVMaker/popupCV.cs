@@ -18,11 +18,16 @@ namespace CVMaker
         public popupCV()
         {
             InitializeComponent();
-            dp = displaybox;
-            dp.Show();
+         
             
         }
         public static PictureBox dp;
+        
+     
+        private void popupCV_Load(object sender, EventArgs e)
+        {
+          
+        }
     }
     
 }
