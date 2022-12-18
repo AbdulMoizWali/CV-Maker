@@ -305,10 +305,10 @@ as
 declare @Userid int, @Profile_ID int
 set @Userid = (select top 1 UserID from login_log order by login_time desc)
 set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
-select Title, Level from Skills where ProfileID = @Profile_ID
+select SkillID, Title, Level from Skills where ProfileID = @Profile_ID
+
 --------
 --delete Skill
---create procedure Delete_Skill
 
 
 exec Insert_Skill 'UI design', 2
@@ -333,9 +333,12 @@ as
 declare @Userid int, @Profile_ID int
 set @Userid = (select top 1 UserID from login_log order by login_time desc)
 set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
-select Title, Institute, City, Country, Starting_Date, Ending_Date from Education where ProfileID = @Profile_ID
+select EducationID, Title, Institute, City, Country, Starting_Date, Ending_Date from Education where ProfileID = @Profile_ID
+
 
 exec Insert_Education 'FSC', 'Government college', 'Karachi', 'Pakistan', '14-Dec-2020', '17-Jan-2021'
+
+--delete Education
 
 exec Get_ActiveUserProfile_Education
 
@@ -357,10 +360,12 @@ as
 declare @Userid int, @Profile_ID int
 set @Userid = (select top 1 UserID from login_log order by login_time desc)
 set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
-select Title, Company_name, Description, Starting_Date, Ending_Date, Job_type from Experience where ProfileID=@Profile_ID
+select ExperienceID, Title, Company_name, Description, Starting_Date, Ending_Date, Job_type from Experience where ProfileID=@Profile_ID
 
 
 exec Insert_Experience 'Intership', 'Maju', 'Kashif nay mujay salary nahi di', '21-sep-2021', '21-oct-2021', 'Part-time'
+
+--delete Experience
 
 --Social--
 --Insert Social
@@ -377,9 +382,13 @@ as
 declare @Userid int, @Profile_ID int
 set @Userid = (select top 1 UserID from login_log order by login_time desc)
 set @Profile_ID = (select ProfileID from Profile where UserID = @Userid)
-select Title, Link from Social where ProfileID=@Profile_ID
+select SocialID, Title, Link from Social where ProfileID=@Profile_ID
+
+drop procedure Get_ActiveUserProfile_Social
 
 exec Insert_Social 'Instagram', 'Instagram.com'
+
+--delete Social
 
 
 select * from [User]
