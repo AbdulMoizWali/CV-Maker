@@ -15,7 +15,6 @@ namespace CVMaker
 {
     public partial class popupCV : Profile
     {
-            Profile profile = new Profile();
 
 
         public popupCV()
@@ -23,11 +22,12 @@ namespace CVMaker
 
             InitializeComponent();
 
-            label21.Text += profile.First_name + profile.Last_name + "\n";
-            genderCV.Text += profile.Gender + "\n";
-            countryCV.Text += profile.Country + "\n";
-            cityCV.Text += profile.City + "\n";
-            phoneCV.Text += profile.Phone + "\n";
+            Profile profile = new Profile();
+            label21.Text = profile.First_name + profile.Last_name + "\n";
+            genderCV.Text = profile.Gender + "\n";
+            countryCV.Text = profile.Country + "\n";
+            cityCV.Text = profile.City + "\n";
+            phoneCV.Text = profile.Phone + "\n";
             pictureBox1.Image = profile.ProfilePic;
 
             for (int i = 0; i < profile.Socials.Count; i++)

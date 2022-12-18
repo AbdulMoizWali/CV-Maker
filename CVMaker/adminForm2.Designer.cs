@@ -98,7 +98,7 @@ namespace CVMaker
 			this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(121, 517);
+			this.panel1.Size = new System.Drawing.Size(121, 449);
 			this.panel1.TabIndex = 0;
 			// 
 			// pictureBox1
@@ -272,6 +272,8 @@ namespace CVMaker
 			// 
 			// chart1
 			// 
+			chartArea4.Area3DStyle.Enable3D = true;
+			chartArea4.Area3DStyle.Inclination = 15;
 			chartArea4.Name = "ChartArea1";
 			this.chart1.ChartAreas.Add(chartArea4);
 			legend4.Name = "Legend1";
@@ -281,7 +283,7 @@ namespace CVMaker
 			series4.ChartArea = "ChartArea1";
 			series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
 			series4.Legend = "Legend1";
-			series4.Name = "Users";
+			series4.Name = "Series1";
 			this.chart1.Series.Add(series4);
 			this.chart1.Size = new System.Drawing.Size(312, 220);
 			this.chart1.TabIndex = 8;
@@ -510,7 +512,7 @@ namespace CVMaker
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(797, 517);
+			this.ClientSize = new System.Drawing.Size(797, 449);
 			this.Controls.Add(this.tabControl2);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel2);

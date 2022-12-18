@@ -107,7 +107,7 @@ namespace SQL
 					SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
 					if (ParameterName != null && ParameterData != null)
 					{
-						sqlCommand.Parameters.AddWithValue(ParameterName, ParameterData);
+						sqlCommand.Parameters.Add( new SqlParameter(ParameterName, ParameterData));
 					}
 					if (sqlCommand.ExecuteNonQuery() != 0)
 					{

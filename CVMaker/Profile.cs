@@ -53,7 +53,8 @@ namespace CVMaker
 					Country = dataTable.Rows[0]["Country"].ToString();
 					City = dataTable.Rows[0]["City"].ToString();
 					Phone = dataTable.Rows[0]["Phone"].ToString();
-					ProfilePic = ConvertByteToImage( (byte[]) dataTable.Rows[0]["ProfilePic"]);
+					byte[] img = (byte[])dataTable.Rows[0]["Profilepic"];
+					ProfilePic = ConvertByteToImage((byte[])dataTable.Rows[0]["Profilepic"]);
 				}
 			);
 
@@ -131,10 +132,13 @@ namespace CVMaker
 			);
 		}
 
-		private Image ConvertByteToImage(byte[] img)
+		private Image ConvertByteToImage(byte[] imgB)
 		{
-			MemoryStream ms = new MemoryStream(img);
-			return Image.FromStream(ms);
+			using (MemoryStream memstr = new MemoryStream(imgB))
+			{
+				Image img = Image.FromStream(memstr);
+				return img;
+			}
 		}
 
 	}

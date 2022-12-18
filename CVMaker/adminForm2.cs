@@ -55,17 +55,35 @@ namespace CVMaker
 
             string TotalProfile = SQLConnect.GetValueFromTable("select count(ProfileID) as [Profiles] from [Profile]", "Profiles");
             textBox2.Text = TotalProfile;
+
+            AssignPieChart();
+            AssignBarChart();
         }
 
-     
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void AssignPieChart()
+		{
+            SQLConnect.GetDataTableFromTable(
+                SQLConnect.ProcedureQuery("Get_UserProfile_Country"),
+				(dataTable) =>
+				{
+                    chart1.DataSource = dataTable;
+                    chart1.Series["Series1"].XValueMember = "Country";
+                    chart1.Series["Series1"].YValueMembers = "Total CV";
+                }
+            );
+		}
+
+        private void AssignBarChart()
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            SQLConnect.GetDataTableFromTable(
+                SQLConnect.ProcedureQuery("Get_UserProfile_Gender"),
+                (dataTable) =>
+                {
+                    chart2.DataSource = dataTable;
+                    chart2.Series["Series1"].XValueMember = "Gender";
+                    chart2.Series["Series1"].YValueMembers = "Total CV";
+                }
+            );
         }
 
         private void button2_Click(object sender, EventArgs e)

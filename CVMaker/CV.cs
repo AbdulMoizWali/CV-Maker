@@ -518,11 +518,11 @@ namespace CVMaker
 
             }
         }
-        
 
 
-		#region Profile
 
+        #region Profile
+        private string imgLoc = "";
 		#region Save
 		private void Save_Profile_Click(object sender, EventArgs e)
 		{
@@ -535,20 +535,20 @@ namespace CVMaker
             {
                 Gender = Female_Radio.Text;
             }
-            byte[] pic = null;
+            byte[] img = null;
             if (ProfilePic.Image != null)
 			{
                 MemoryStream stream = new MemoryStream();
                 ProfilePic.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
-                pic = stream.ToArray();
+                img = stream.ToArray();
 			}
             SQLConnect.SQLCommand(
-                SQLConnect.ProcedureQuery("Insert_Profile", First_Name.Text, Last_Name.Text, Gender, Country.Text, City.Text, Phone_Number.Text, "@ProfilePic"),
+                "exec Insert_Profile '"+ First_Name.Text +"', '"+ Last_Name.Text + "', '" + Gender + "', '" + Country.Text + "', '" + City.Text + "', '" + Phone_Number.Text + "', @ProfilePic",
                 "Profile Created and Information Added",
                 "User has already created profile",
                 null,
                 "@ProfilePic",
-                pic
+                img
             );
 		}
 
@@ -576,7 +576,8 @@ namespace CVMaker
                 pic = stream.ToArray();
             }
             SQLConnect.UpdateSQLCommand(
-                SQLConnect.ProcedureQuery("Update_Profile", First_Name.Text, Last_Name.Text, Gender, Country.Text, City.Text, Phone_Number.Text, "@ProfilePic"),
+                "exec Update_Profile '" + First_Name.Text + "', '" + Last_Name.Text + "', '" + Gender + "', '" + Country.Text + "', '" + City.Text + "', '" + Phone_Number.Text + "', @ProfilePic",
+//                SQLConnect.ProcedureQuery("Update_Profile", First_Name.Text, Last_Name.Text, Gender, Country.Text, City.Text, Phone_Number.Text, "@ProfilePic"),
                 null,
                 "@ProfilePic",
                 pic
@@ -587,31 +588,47 @@ namespace CVMaker
 
         private void Upload_ProfilePic_Click(object sender, EventArgs e)
 		{
-            Stream stream = null;
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image File(*.jpe; *.jpeg; *.bmp) | *.jpg; *.jpeg; *.bmp";
+			/*Stream stream = null;
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Filter = "Image File(*.jpe; *.jpeg; *.bmp) | *.jpg; *.jpeg; *.bmp";
 
 			if (openFileDialog.ShowDialog(this) == DialogResult.OK)
 			{
 				try
 				{
-                    if((stream = openFileDialog.OpenFile()) != null)
+					if ((stream = openFileDialog.OpenFile()) != null)
 					{
-                        string Filename = openFileDialog.FileName;
-                        if(stream.Length > 512000)
+						string Filename = openFileDialog.FileName;
+						if (stream.Length > 512000)
 						{
-                            MessageBox.Show("File size limit reached!"); ;
+							MessageBox.Show("File size limit reached!"); ;
 						}
 						else
 						{
-                            ProfilePic.Load(Filename);
+							ProfilePic.Load(Filename);
 						}
 					}
 				}
 				catch
 				{
-                    MessageBox.Show("Error");
+					MessageBox.Show("Error");
 				}
+			}*/
+
+			try
+			{
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+                openFileDialog.Title = "Select Profile Picture";
+                if(openFileDialog.ShowDialog() == DialogResult.OK)
+				{
+                    imgLoc = openFileDialog.FileName.ToString();
+                    ProfilePic.ImageLocation = imgLoc;
+                }
+			}
+            catch (Exception ex)
+			{
+                MessageBox.Show(ex.Message);
 			}
 		}
 		#endregion
@@ -706,5 +723,16 @@ namespace CVMaker
             popupCV cv1 = new popupCV();
             cv1.ShowDialog();
         }
-    }
+
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+            button2_Click(sender, e);
+        }
+
+		private void roundedpanel5_Click(object sender, EventArgs e)
+		{
+            button2_Click(sender, e);
+        }
+	}
 }

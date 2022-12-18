@@ -14,7 +14,7 @@ CREATE TABLE [User] (
 );
 */
 
-
+exec Get_ActiveUserProfile
 
 
 CREATE TABLE [user] (
@@ -239,10 +239,6 @@ where UserID = @Userid
 
 
 
-
-
-
-
 create procedure Get_ActiveUserProfile
 as
 declare @Userid int
@@ -251,6 +247,21 @@ select * from Profile where UserID = @Userid
 
 exec Get_ActiveUserProfile
 
+
+
+create procedure Get_UserProfile_Country
+as
+Select count(ProfileID) * 100.0 / (Select count(ProfileID) from Profile) as 'Total CV',
+Country
+from Profile
+group by Country
+
+
+create procedure Get_UserProfile_Gender
+as
+select count(ProfileID) as 'Total CV', Gender
+from Profile
+group by Gender
 
 
 /*
@@ -313,7 +324,6 @@ select SkillID, Title, Level from Skills where ProfileID = @Profile_ID
 
 exec Insert_Skill 'UI design', 2
 exec Insert_Skill 'Graphics design', 3
-
 
 
 
@@ -391,7 +401,7 @@ exec Insert_Social 'Instagram', 'Instagram.com'
 --delete Social
 
 
-select * from [User]
+	
 select * from Profile
 select * from login_log
 select * from Education
