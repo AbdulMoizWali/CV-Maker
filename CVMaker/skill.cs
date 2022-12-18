@@ -38,7 +38,7 @@ namespace CVMaker
         private void deleteskill_Click(object sender, EventArgs e)
         {
             SqlConnection sqlcon = new SqlConnection();
-            sqlcon.ConnectionString = "Data Source=DESKTOP-616GIMI;Initial Catalog=\"CV Maker\";Integrated Security=True";
+            sqlcon.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\git\\CV-Maker\\CVMaker\\Cvmakerdb.mdf;Integrated Security=True";
 
             sqlcon.Open();
             this.Controls.Clear();
