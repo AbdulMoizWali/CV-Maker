@@ -5,11 +5,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using SQL;
 
 namespace CVMaker
 {
-	public class Profile
+	public class Profile : Form
 	{
 		private String profileID;
 		private String first_name;

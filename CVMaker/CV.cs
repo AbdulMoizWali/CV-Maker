@@ -83,7 +83,7 @@ namespace CVMaker
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -514,6 +514,7 @@ namespace CVMaker
 
             }
         }
+        
 
 
 		#region Profile
@@ -681,7 +682,8 @@ namespace CVMaker
 
 		private void TestExport_Click(object sender, EventArgs e)
 		{
-            Profile profile = new Profile();
+            
+           /* Profile profile = new Profile();
             label4.Text += profile.ProfileID + "\n";
             label4.Text += profile.First_name + profile.Last_name + "\n";
             label4.Text += profile.Gender + "\n";
@@ -723,6 +725,30 @@ namespace CVMaker
                 label4.Text += profile.Educations[i].StartingDate + "\n";
                 label4.Text += profile.Educations[i].EndingDate + "\n";
             }
+           */
         }
-	}
+
+        private void Export_As_PDF_Click(object sender, EventArgs e)
+        {
+            popupCV cv1 = new popupCV();
+            cv1.ShowDialog();
+
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox7_Click_1(object sender, EventArgs e)
+        {
+            popupCV cv1 = new popupCV();
+            cv1.ShowDialog();
+        }
+    }
 }

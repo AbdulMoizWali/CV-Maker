@@ -74,6 +74,12 @@
     <Compile Include="CV.Designer.cs">
       <DependentUpon>CV.cs</DependentUpon>
     </Compile>
+    <Compile Include="EducationCV_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EducationCV_UC.Designer.cs">
+      <DependentUpon>EducationCV_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Education_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="Experience.Designer.cs">
       <DependentUpon>Experience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExperienceCV_UV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExperienceCV_UV.Designer.cs">
+      <DependentUpon>ExperienceCV_UV.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegister.cs">
       <SubType>Form</SubType>
@@ -104,7 +116,9 @@
     <Compile Include="popupCV.Designer.cs">
       <DependentUpon>popupCV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Profile.cs" />
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -136,11 +150,17 @@
     <EmbeddedResource Include="CV.resx">
       <DependentUpon>CV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EducationCV_UC.resx">
+      <DependentUpon>EducationCV_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Education_UC.resx">
       <DependentUpon>Education_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Experience.resx">
       <DependentUpon>Experience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExperienceCV_UV.resx">
+      <DependentUpon>ExperienceCV_UV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>

@@ -20,6 +20,15 @@ namespace CVMaker
             InitializeComponent();
         }
         string eduid1;
+
+        public Education_UC(string title, string start_date, string end_date)
+        {
+            InitializeComponent();
+            title_edu.Text = title;
+            start_edu.Text = start_date;
+            end_edu.Text = end_date;
+            eduid1 = eduid.Text;
+        }
         public Education_UC(string title, string start_date, string end_date,string EducationID)
         {
             InitializeComponent();
