@@ -230,6 +230,7 @@ namespace CVMaker
             flowLayoutPanelskill.Controls.Clear();
             string Title = "";
             string Level = "";
+            string skillid = "";
             SQLConnect.GetDataTableFromTable(
                 SQLConnect.ProcedureQuery("Get_ActiveUserProfile_Skills"),
                 (dataTable) =>
@@ -250,8 +251,9 @@ namespace CVMaker
                         {
                             Level = "Expert";
                         }
-
-                        skill skill1 = new skill(Title, Level);
+                        skillid = dataTable.Rows[i]["SkillID"].ToString();
+                        
+                        skill skill1 = new skill(Title, Level, skillid);
                         flowLayoutPanelskill.Controls.Add(skill1);
                     }
                 },
@@ -296,6 +298,7 @@ namespace CVMaker
             string Title;
             string start_date;
             string end_date;
+            string exp_id;
             SQLConnect.GetDataTableFromTable(
                SQLConnect.ProcedureQuery("Get_ActiveUserProfile_Experience"),
                (dataTable) =>
@@ -305,8 +308,8 @@ namespace CVMaker
                        Title = dataTable.Rows[i]["Title"].ToString();
                        start_date = dataTable.Rows[i]["Starting_Date"].ToString();
                        end_date = dataTable.Rows[i]["Ending_Date"].ToString();
-
-                      Experience exp1 = new Experience(Title, start_date, end_date);
+                       exp_id = dataTable.Rows[i]["ExperienceID"].ToString();
+                       Experience exp1 = new Experience(Title, start_date, end_date, exp_id);
                        flowLayoutPanelexperience.Controls.Add(exp1);
                    }
                },
@@ -320,8 +323,9 @@ namespace CVMaker
 
         private void MakeSocials()
         {
-            flowLayoutPanel1.Controls.Clear();
+            flowLayoutSocial.Controls.Clear();
             string Title = "";
+            string social_id = "";
             SQLConnect.GetDataTableFromTable(
                 SQLConnect.ProcedureQuery("Get_ActiveUserProfile_Social"),
                 (dataTable) =>
@@ -329,9 +333,9 @@ namespace CVMaker
                     for (int i = 0; i < dataTable.Rows.Count; i++)
                     {
                         Title = dataTable.Rows[i]["Title"].ToString();
-                        skill social = new skill();
-                        social.title_skill.Text = Title;
-                        flowLayoutPanel1.Controls.Add(social);
+                        social_id = dataTable.Rows[i]["SocialID"].ToString();
+                        SocialUC social = new SocialUC(Title, social_id);
+                        flowLayoutSocial.Controls.Add(social);
                     }
                 },
                 () =>
@@ -675,57 +679,9 @@ namespace CVMaker
                     panel2.Height = 50;
                     skill person1 = new skill();
                     person1.title_skill.Text = Social_Title_txt.Text;
-                    flowLayoutPanel1.Controls.Add(person1);
+                    flowLayoutSocial.Controls.Add(person1);
                 }
             );
-        }
-
-		private void TestExport_Click(object sender, EventArgs e)
-		{
-            
-           /* Profile profile = new Profile();
-            label4.Text += profile.ProfileID + "\n";
-            label4.Text += profile.First_name + profile.Last_name + "\n";
-            label4.Text += profile.Gender + "\n";
-            label4.Text += profile.Country + "\n";
-            label4.Text += profile.City + "\n";
-            label4.Text += profile.Phone + "\n";
-            pictureBox4.Image = profile.ProfilePic;
-            
-            for (int i = 0; i < profile.Socials.Count; i++)
-			{
-                label4.Text += profile.Socials[i].Title + "\n";
-                label4.Text += profile.Socials[i].Link + "\n";
-            }
-
-
-            for (int i = 0; i < profile.Skills.Count; i++)
-            {
-                label4.Text += profile.Skills[i].Title + "\n";
-                label4.Text += profile.Skills[i].Level + "\n";
-            }
-
-            for (int i = 0; i < profile.Experiences.Count; i++)
-            {
-                label4.Text += profile.Experiences[i].Title + "\n";
-                label4.Text += profile.Experiences[i].CompanyName + "\n";
-                label4.Text += profile.Experiences[i].Description + "\n";
-                label4.Text += profile.Experiences[i].StartingDate + "\n";
-                label4.Text += profile.Experiences[i].EndingDate + "\n";
-                label4.Text += profile.Experiences[i].Job_type + "\n";
-            }
-
-
-            for (int i = 0; i < profile.Educations.Count; i++)
-            {
-                label4.Text += profile.Educations[i].Title + "\n";
-                label4.Text += profile.Educations[i].Institute + "\n";
-                label4.Text += profile.Educations[i].City + "\n";
-                label4.Text += profile.Educations[i].Country + "\n";
-                label4.Text += profile.Educations[i].StartingDate + "\n";
-                label4.Text += profile.Educations[i].EndingDate + "\n";
-            }
-           */
         }
 
         private void Export_As_PDF_Click(object sender, EventArgs e)

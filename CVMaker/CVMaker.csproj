@@ -135,6 +135,12 @@
     <Compile Include="skill.Designer.cs">
       <DependentUpon>skill.cs</DependentUpon>
     </Compile>
+    <Compile Include="SocialUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SocialUC.Designer.cs">
+      <DependentUpon>SocialUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="splashscreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="skill.resx">
       <DependentUpon>skill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SocialUC.resx">
+      <DependentUpon>SocialUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splashscreen.resx">
       <DependentUpon>splashscreen.cs</DependentUpon>

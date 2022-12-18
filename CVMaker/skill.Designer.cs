@@ -34,19 +34,16 @@ namespace CVMaker
             this.roundedpanelskill = new CVMaker.roundedpanel();
             this.level_skill = new System.Windows.Forms.Label();
             this.title_skill = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.deleteskill = new System.Windows.Forms.PictureBox();
             this.skillid = new System.Windows.Forms.Label();
             this.panelskill.SuspendLayout();
             this.roundedpanelskill.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteskill)).BeginInit();
             this.SuspendLayout();
             // 
             // panelskill
             // 
             this.panelskill.Controls.Add(this.roundedpanelskill);
-            this.panelskill.Controls.Add(this.pictureBox1);
             this.panelskill.Controls.Add(this.deleteskill);
             this.panelskill.Controls.Add(this.skillid);
             this.panelskill.Location = new System.Drawing.Point(0, 0);
@@ -65,7 +62,7 @@ namespace CVMaker
             this.roundedpanelskill.GradientAngle = 90F;
             this.roundedpanelskill.GradientBottomColor = System.Drawing.Color.Empty;
             this.roundedpanelskill.GradientTopColor = System.Drawing.Color.Empty;
-            this.roundedpanelskill.Location = new System.Drawing.Point(22, 1);
+            this.roundedpanelskill.Location = new System.Drawing.Point(20, 3);
             this.roundedpanelskill.Name = "roundedpanelskill";
             this.roundedpanelskill.Size = new System.Drawing.Size(267, 84);
             this.roundedpanelskill.TabIndex = 3;
@@ -91,17 +88,6 @@ namespace CVMaker
             this.title_skill.Name = "title_skill";
             this.title_skill.Size = new System.Drawing.Size(251, 35);
             this.title_skill.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(78, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.deleteskill_Click);
             // 
             // deleteskill
             // 
@@ -132,7 +118,6 @@ namespace CVMaker
             this.Size = new System.Drawing.Size(290, 108);
             this.panelskill.ResumeLayout(false);
             this.roundedpanelskill.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteskill)).EndInit();
             this.ResumeLayout(false);
 
@@ -145,7 +130,6 @@ namespace CVMaker
         private roundedpanel roundedpanelskill;
         public System.Windows.Forms.Label level_skill;
         public System.Windows.Forms.Label title_skill;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label skillid;
     }
 }

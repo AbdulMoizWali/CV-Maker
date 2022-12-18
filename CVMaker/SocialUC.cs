@@ -11,53 +11,48 @@ using System.Windows.Forms;
 
 namespace CVMaker
 {
-    public partial class Experience : UserControl
+    public partial class SocialUC : UserControl
     {
-        public Experience()
+        public SocialUC()
         {
             InitializeComponent();
         }
-        string exp_ID;
-        public Experience(string Title, string start_date, string end_date)
+        string social_ID;
+        public SocialUC(string Title)
         {
             InitializeComponent();
-            titleexperience.Text = Title;
-            start_experience.Text = start_date;
-            end_experience.Text = end_date;
+            title_social.Text = Title;
+
         }
 
-        public Experience(string Title, string start_date, string end_date, string Exp_id)
+        public SocialUC(string title, string social_id)
         {
             InitializeComponent();
-            titleexperience.Text = Title;
-            start_experience.Text = start_date;
-            end_experience.Text = end_date;
-            expid.Text = Exp_id;
-            exp_ID = expid.Text;
+            title_social.Text = title;
+            socialid.Text = social_id;
+            social_ID = socialid.Text;
         }
 
-
-
-        private void expericebtnclick(object sender, EventArgs e)
+        private void roundedpanelsocial_Click(object sender, EventArgs e)
         {
-            if (experiencepanel.Location.X <= 2)
+            if (roundedpanelsocial.Location.X <= 2)
             {
                 for (int i = 0; i < 130; i += 2)
                 {
-                   experiencepanel.Location = new Point(i, 0);
+                    roundedpanelsocial.Location = new Point(i, 0);
 
                 }
             }
             else
             {
-                for (int i =70; i > 0; i -= 2)
+                for (int i = 70; i > 0; i -= 2)
                 {
-                    experiencepanel.Location = new Point(i, 0);
+                    roundedpanelsocial.Location = new Point(i, 0);
                 }
             }
         }
 
-        private void deleteexperience_Click(object sender, EventArgs e)
+        private void deletesocial_Click(object sender, EventArgs e)
         {
             SqlConnection sqlcon = new SqlConnection();
             sqlcon.ConnectionString = "Data Source=DESKTOP-616GIMI;Initial Catalog=\"CV Maker\";Integrated Security=True";
@@ -65,7 +60,7 @@ namespace CVMaker
             sqlcon.Open();
             this.Controls.Clear();
             this.Dispose();
-            string query = "delete from Experience where ExperienceID = '" + exp_ID + "'";
+            string query = "delete from Social where SocialID = '" + social_ID + "'";
             SqlCommand cmd = new SqlCommand(query, sqlcon);
             cmd.Connection = sqlcon;
             cmd.CommandType = CommandType.Text;

@@ -62,9 +62,9 @@ namespace CVMaker
         private void deletebtnclick(object sender, EventArgs e)
         {
             SqlConnection sqlcon = new SqlConnection();
-            sqlcon.ConnectionString = "Data Source=DESKTOP-M29OVEL;Initial Catalog=\"CV Maker\";Integrated Security=TrueData Source=DESKTOP-M29OVEL;Initial Catalog=\"CV Maker\";Integrated Security=True";
+            sqlcon.ConnectionString = "Data Source=DESKTOP-616GIMI;Initial Catalog=\"CV Maker\";Integrated Security=True";
         
-        sqlcon.Open();
+            sqlcon.Open();
             this.Controls.Clear();
             this.Dispose();
             string query = "delete from Education where EducationID = '" + eduid1 + "'";
