@@ -74,6 +74,12 @@
     <Compile Include="CV.Designer.cs">
       <DependentUpon>CV.cs</DependentUpon>
     </Compile>
+    <Compile Include="CVSkillsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CVSkillsUC.Designer.cs">
+      <DependentUpon>CVSkillsUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="EducationCV_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CV.resx">
       <DependentUpon>CV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CVSkillsUC.resx">
+      <DependentUpon>CVSkillsUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EducationCV_UC.resx">
       <DependentUpon>EducationCV_UC.cs</DependentUpon>

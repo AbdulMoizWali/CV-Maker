@@ -734,5 +734,10 @@ namespace CVMaker
 		{
             button2_Click(sender, e);
         }
-	}
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

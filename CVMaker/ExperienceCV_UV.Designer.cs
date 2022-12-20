@@ -39,7 +39,7 @@
             // 
             this.titleCV.Font = new System.Drawing.Font("Nirmala UI", 10F);
             this.titleCV.ForeColor = System.Drawing.Color.SteelBlue;
-            this.titleCV.Location = new System.Drawing.Point(14, 60);
+            this.titleCV.Location = new System.Drawing.Point(10, 55);
             this.titleCV.Name = "titleCV";
             this.titleCV.Size = new System.Drawing.Size(340, 24);
             this.titleCV.TabIndex = 24;
@@ -49,7 +49,7 @@
             // 
             this.end_dateCV.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.end_dateCV.ForeColor = System.Drawing.Color.SteelBlue;
-            this.end_dateCV.Location = new System.Drawing.Point(256, 14);
+            this.end_dateCV.Location = new System.Drawing.Point(252, 9);
             this.end_dateCV.Name = "end_dateCV";
             this.end_dateCV.Size = new System.Drawing.Size(82, 22);
             this.end_dateCV.TabIndex = 26;
@@ -59,7 +59,7 @@
             // 
             this.start_dateCV.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.start_dateCV.ForeColor = System.Drawing.Color.SteelBlue;
-            this.start_dateCV.Location = new System.Drawing.Point(14, 14);
+            this.start_dateCV.Location = new System.Drawing.Point(10, 9);
             this.start_dateCV.Name = "start_dateCV";
             this.start_dateCV.Size = new System.Drawing.Size(92, 22);
             this.start_dateCV.TabIndex = 25;
@@ -69,7 +69,7 @@
             // 
             this.descriptionCV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionCV.Font = new System.Drawing.Font("Nirmala UI", 10F);
-            this.descriptionCV.Location = new System.Drawing.Point(18, 87);
+            this.descriptionCV.Location = new System.Drawing.Point(14, 82);
             this.descriptionCV.Name = "descriptionCV";
             this.descriptionCV.Size = new System.Drawing.Size(531, 75);
             this.descriptionCV.TabIndex = 27;
@@ -79,7 +79,7 @@
             // 
             this.company_nameCV.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.company_nameCV.ForeColor = System.Drawing.Color.SteelBlue;
-            this.company_nameCV.Location = new System.Drawing.Point(14, 36);
+            this.company_nameCV.Location = new System.Drawing.Point(10, 31);
             this.company_nameCV.Name = "company_nameCV";
             this.company_nameCV.Size = new System.Drawing.Size(340, 24);
             this.company_nameCV.TabIndex = 23;
@@ -95,7 +95,7 @@
             this.Controls.Add(this.descriptionCV);
             this.Controls.Add(this.company_nameCV);
             this.Name = "ExperienceCV_UV";
-            this.Size = new System.Drawing.Size(556, 177);
+            this.Size = new System.Drawing.Size(556, 170);
             this.ResumeLayout(false);
 
         }

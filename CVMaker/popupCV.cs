@@ -23,7 +23,7 @@ namespace CVMaker
             InitializeComponent();
 
             Profile profile = new Profile();
-            label21.Text = profile.First_name + profile.Last_name + "\n";
+            label21.Text = profile.First_name + " " + profile.Last_name + "\n";
             genderCV.Text = profile.Gender + "\n";
             countryCV.Text = profile.Country + "\n";
             cityCV.Text = profile.City + "\n";
@@ -38,8 +38,11 @@ namespace CVMaker
 
             for (int i = 0; i < profile.Skills.Count; i++)
             {
-                label7.Text += profile.Skills[i].Title + "\n";
-                label1.Text += profile.Skills[i].Level + "\n";
+                CVSkillsUC skill_UC = new CVSkillsUC(profile.Skills[i].Title, profile.Skills[i].Level);
+                skill_UC.Dock = DockStyle.Top;
+                panel5.Controls.Add(skill_UC);
+                skill_UC.BringToFront();
+
             }
 
             for (int i = 0; i < profile.Experiences.Count; i++)
@@ -114,7 +117,23 @@ namespace CVMaker
 
         private void label21_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             Print(this.panel1);
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            popupCV cv1 = new popupCV();
+            cv1.Hide();
         }
     }
     
