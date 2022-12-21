@@ -80,6 +80,7 @@ namespace CVMaker
                 (dataTable) =>
                 {
                     chart2.DataSource = dataTable;
+                    chart2.Series["Series1"].LegendText = "Gender";
                     chart2.Series["Series1"].XValueMember = "Gender";
                     chart2.Series["Series1"].YValueMembers = "Total CV";
                 }
