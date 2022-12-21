@@ -408,3 +408,16 @@ select * from Education
 select * from Experience
 select * from Skills
 select * from Social
+
+
+
+Create Trigger Insert_Profile_Phonenumber
+on Profile For Insert, Update As
+Begin
+  If Exists(Select * From inserted Where Len(Phone) != 11) 
+  Begin
+    RollBack
+  End
+End
+
+select * from Profile

@@ -62,7 +62,6 @@ namespace CVMaker
                     "Role"
                 );
 
-
                 SQLConnect.InsertSQLCommand(
                     SQLConnect.ProcedureQuery("Insert_LoginLogs", textBox1.Text, textBox2.Text, DateTime.Now.ToString()),
                     false
@@ -73,11 +72,16 @@ namespace CVMaker
                     adminForm2 admin = new adminForm2();
                     admin.Show();
 				}
-				else
+				else if(role == "User")
 				{
                     CV cV = new CV();
                     cV.Show();
 				}
+				else
+				{
+                    MessageBox.Show("Username or Password incorrect!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 this.Close();
 			}
 			else

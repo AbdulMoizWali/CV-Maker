@@ -545,7 +545,7 @@ namespace CVMaker
             SQLConnect.SQLCommand(
                 "exec Insert_Profile '"+ First_Name.Text +"', '"+ Last_Name.Text + "', '" + Gender + "', '" + Country.Text + "', '" + City.Text + "', '" + Phone_Number.Text + "', @ProfilePic",
                 "Profile Created and Information Added",
-                "User has already created profile",
+                "User has already created profile or Phone number length is not 11",
                 null,
                 "@ProfilePic",
                 img
@@ -575,13 +575,21 @@ namespace CVMaker
                 ProfilePic.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
                 pic = stream.ToArray();
             }
-            SQLConnect.UpdateSQLCommand(
+            /*SQLConnect.UpdateSQLCommand(
                 "exec Update_Profile '" + First_Name.Text + "', '" + Last_Name.Text + "', '" + Gender + "', '" + Country.Text + "', '" + City.Text + "', '" + Phone_Number.Text + "', @ProfilePic",
 //                SQLConnect.ProcedureQuery("Update_Profile", First_Name.Text, Last_Name.Text, Gender, Country.Text, City.Text, Phone_Number.Text, "@ProfilePic"),
                 null,
                 "@ProfilePic",
                 pic
-            );
+            );*/
+            SQLConnect.SQLCommand(
+               "exec Update_Profile '" + First_Name.Text + "', '" + Last_Name.Text + "', '" + Gender + "', '" + Country.Text + "', '" + City.Text + "', '" + Phone_Number.Text + "', @ProfilePic",
+               "Profile Updated and Information Added",
+               "Phone number length is not 11",
+               null,
+               "@ProfilePic",
+               pic
+           );
         }
 
         #endregion
