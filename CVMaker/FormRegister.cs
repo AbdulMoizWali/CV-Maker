@@ -92,13 +92,13 @@ namespace CVMaker
 		{
             if (checkboxpass.Checked)
             {
-                textBox2.PasswordChar = '*';
-                textBox3.PasswordChar = '*';
+                textBox2.PasswordChar = '\0';
+                textBox3.PasswordChar = '\0';
             }
             else
             {
-                textBox2.PasswordChar = '\0';
-                textBox3.PasswordChar = '\0';
+                textBox2.PasswordChar = '*';
+                textBox3.PasswordChar = '*';
             }
         }
         private void register_Click(object sender, EventArgs e)

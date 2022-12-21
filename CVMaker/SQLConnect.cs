@@ -100,6 +100,7 @@ namespace SQL
 			{
 				return;
 			}
+			//MessageBox.Show(query);
 			SqlConnect(() =>
 			{
 				try

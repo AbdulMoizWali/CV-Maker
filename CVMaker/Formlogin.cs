@@ -90,11 +90,11 @@ namespace CVMaker
 		{
 			if (checkboxpass.Checked)
 			{
-                textBox2.PasswordChar = '*';
+                textBox2.PasswordChar = '\0';
             }
 			else
 			{
-                textBox2.PasswordChar = '\0';
+                textBox2.PasswordChar = '*';
 			}
 		}
 	}

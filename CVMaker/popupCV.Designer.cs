@@ -44,6 +44,7 @@ namespace CVMaker
             this.panel1 = new System.Windows.Forms.Panel();
             this.countryCV = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,7 +54,6 @@ namespace CVMaker
             this.button1 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -211,6 +211,16 @@ namespace CVMaker
             this.panel2.Size = new System.Drawing.Size(197, 1170);
             this.panel2.TabIndex = 14;
             // 
+            // panel5
+            // 
+            this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel5.Location = new System.Drawing.Point(16, 807);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(174, 290);
+            this.panel5.TabIndex = 6;
+            // 
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(3, 376);
@@ -231,7 +241,7 @@ namespace CVMaker
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 47);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(146, 184);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -292,16 +302,6 @@ namespace CVMaker
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
-            // 
-            // panel5
-            // 
-            this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel5.Location = new System.Drawing.Point(16, 807);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(174, 290);
-            this.panel5.TabIndex = 6;
             // 
             // popupCV
             // 

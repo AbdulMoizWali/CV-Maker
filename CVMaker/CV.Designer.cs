@@ -107,7 +107,6 @@ namespace CVMaker
             this.pictureBoxedu = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label20 = new System.Windows.Forms.Label();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
             this.Export_As_PDF = new System.Windows.Forms.Button();
@@ -161,6 +160,7 @@ namespace CVMaker
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage9.SuspendLayout();
@@ -176,7 +176,6 @@ namespace CVMaker
             this.panaledu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxedu)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -196,6 +195,7 @@ namespace CVMaker
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.roundedpanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -469,9 +469,9 @@ namespace CVMaker
             // flowLayoutPanelexperience
             // 
             this.flowLayoutPanelexperience.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelexperience.Location = new System.Drawing.Point(3, 70);
+            this.flowLayoutPanelexperience.Location = new System.Drawing.Point(3, 66);
             this.flowLayoutPanelexperience.Name = "flowLayoutPanelexperience";
-            this.flowLayoutPanelexperience.Size = new System.Drawing.Size(671, 374);
+            this.flowLayoutPanelexperience.Size = new System.Drawing.Size(671, 378);
             this.flowLayoutPanelexperience.TabIndex = 3;
             // 
             // exper_panel
@@ -496,7 +496,7 @@ namespace CVMaker
             this.exper_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.exper_panel.Location = new System.Drawing.Point(3, 3);
             this.exper_panel.Name = "exper_panel";
-            this.exper_panel.Size = new System.Drawing.Size(671, 67);
+            this.exper_panel.Size = new System.Drawing.Size(671, 63);
             this.exper_panel.TabIndex = 2;
             // 
             // label48
@@ -1098,7 +1098,7 @@ namespace CVMaker
             this.tabPage4.Controls.Add(this.roundedpanel3);
             this.tabPage4.Controls.Add(this.roundedpanel2);
             this.tabPage4.Controls.Add(this.roundedpanel1);
-            this.tabPage4.Controls.Add(this.pictureBox18);
+            this.tabPage4.Controls.Add(this.pictureBox2);
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -1120,16 +1120,6 @@ namespace CVMaker
             this.label20.TabIndex = 4;
             this.label20.Text = "X";
             this.label20.Click += new System.EventHandler(this.label20_Click);
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(315, 3);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(359, 441);
-            this.pictureBox18.TabIndex = 10;
-            this.pictureBox18.TabStop = false;
             // 
             // tabPage3
             // 
@@ -1786,16 +1776,26 @@ namespace CVMaker
             this.label12.ForeColor = System.Drawing.Color.Transparent;
             this.label12.Location = new System.Drawing.Point(92, 42);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 37);
+            this.label12.Size = new System.Drawing.Size(144, 37);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Eduction";
+            this.label12.Text = "Education";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(315, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(359, 441);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // CV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(782, 449);
+            this.ClientSize = new System.Drawing.Size(782, 450);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1824,7 +1824,6 @@ namespace CVMaker
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxedu)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -1852,6 +1851,7 @@ namespace CVMaker
             this.roundedpanel1.ResumeLayout(false);
             this.roundedpanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1983,11 +1983,11 @@ namespace CVMaker
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
 		private roundedpanel roundedpanel5;
 		private roundedpanel roundedpanel6;
-	}
+        private System.Windows.Forms.PictureBox pictureBox2;
+    }
 }
